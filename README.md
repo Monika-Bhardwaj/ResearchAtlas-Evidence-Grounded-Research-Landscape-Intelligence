@@ -5,14 +5,14 @@ and long-term memory for LLM agents) as typed entities and relationships, then p
 previously unseen research proposal within that landscape. It reports what the indexed corpus
 does and does not contain. It never claims novelty.
 
-**Status: Milestone 1 (specification and ontology), awaiting review.** No corpus, no graph, no
+**Status: Milestone 1 approved; Milestone 2 (ingestion and corpus) in progress.** No graph, no
 gold data and no reasoning code exist yet.
 
 | Milestone | Scope | Status |
 |---|---|---|
 | M0 | Reconnaissance, A-J design review | done |
-| M1 | Ontology, schemas, provenance, validators, contract | **built, awaiting review** |
-| M2 | Ingestion and corpus | not started |
+| M1 | Ontology, schemas, provenance, validators, contract | **approved/frozen** |
+| M2 | Ingestion and corpus | **in progress** |
 | M3 | Knowledge construction | not started |
 | M4 | Proposal reasoning and CLI | not started |
 | M5 | Evaluation and adversarial testing | not started |
@@ -30,7 +30,7 @@ gold data and no reasoning code exist yet.
     src/knowledge/    provenance and knowledge-state models, validators, canonical I/O, curation formats
     src/evaluation/   gold-set schema, structural validators, sealing
     src/output/       runtime output schema
-    config/           all constants; PROPOSED values are marked
+    config/           all constants; M1 values are frozen
     schemas/          JSON Schemas, so the knowledge state can be checked without our code
     docs/             ontology, relation-source inventory, research contract, ADRs, review guide
     data/             blank human-authored templates only

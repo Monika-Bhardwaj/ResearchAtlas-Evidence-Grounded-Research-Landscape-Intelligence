@@ -27,7 +27,7 @@ def test_every_m1_artifact_is_mapped_to_the_contract_and_exists():
 def test_contract_contains_the_frozen_structure():
     for needle in ("H1 (primary, accuracy; the ONLY confirmatory hypothesis)", "H1b", "H2 (structure matters", "H3 (calibration",
                    "## 49.5b Ranking→positioning adapter and fairness rules", "## 49.12 Parameters", "LOWER IS BETTER",
-                   "never stored in the knowledge state", "Status: PROPOSED", "FROZEN AT MILESTONE 1 APPROVAL"):
+                   "never stored in the knowledge state", "Status: APPROVED AND FROZEN", "FROZEN AT MILESTONE 1 APPROVAL"):
         assert needle in CONTRACT, needle
 
 

@@ -442,11 +442,11 @@ No parameter in either list may change after the frozen test set is first run.
 
 # Part 2. Milestone 1 instantiation
 
-**Status: PROPOSED.** Nothing below is frozen until the human researcher approves Milestone 1. After approval the Section 49 text and the Part 2.1 parameters are frozen under 49.10: amendments require an ADR whose rationale uses no test-set run, and nothing changes after the frozen test set is first run.
+**Status: APPROVED AND FROZEN at Milestone 1 (2026-10-07).** The Section 49 text and the Part 2.1 parameters are frozen under 49.10: amendments require an ADR whose rationale uses no test-set run, and nothing changes after the frozen test set is first run.
 
-## 2.1 Proposed 49.12 parameters
+## 2.1 Frozen 49.12 parameters
 
-| Parameter | Proposed value | Rationale |
+| Parameter | Fixed value | Rationale |
 |---|---|---|
 | nDCG@5 guard δ | **0.10 absolute** | Chosen for interpretability, not for what n can demonstrate (see 2.1a). |
 | Guard bound | One-sided 95%: the 5th percentile of the paired bootstrap of Δ = system − strongest baseline must exceed −δ | Standard non-inferiority convention. H1's superiority condition keeps the two-sided 95% CI lower bound. |

@@ -1,5 +1,5 @@
 # ResearchMap configuration (Milestone 1).
-# Values marked PROPOSED become frozen when Milestone 1 is approved (Section 49.10 / 49.12).
+# M1 values are frozen in Contract v0.1 (Section 49.10 / 49.12).
 schema_version: "0.1.0"
 ontology_version: "0.1.0"
 
@@ -19,7 +19,7 @@ scoring_weights:      # Section 21 starting points; tuned on the DEV set only. M
   citation_connectivity: 0.10
   temporal_relevance: 0.05
 
-gold:                 # PROPOSED (49.12): gold-set structure rules
+gold:                 # Frozen M1 (49.12): gold-set structure rules
   facets_min: 3
   facets_max: 5
   require_combination_facet: true
