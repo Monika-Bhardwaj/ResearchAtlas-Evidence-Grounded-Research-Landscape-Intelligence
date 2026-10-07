@@ -2,159 +2,226 @@
 
 ## 1. Problem
 
-A new researcher entering a field needs more than a paper list. They need:
-- what is foundational
-- what builds on what
-- where the literature disagrees or is sparse
-- what to read first
-- whether their proposed combination has direct prior work
+The project solves the problem of **research paper onboarding**.
 
-Existing tools mostly retrieve papers. ResearchMap models the research landscape as typed entities and relationships, then uses that model to answer those questions.
+A researcher entering a narrow area usually has to manually answer:
+- What is foundational?
+- Which papers propose which methods?
+- Which concepts are covered in which papers?
+- Where is prior work closest to a proposed idea?
+- Where is the literature underrepresented or unknown?
+- What should I read next?
+
+A flat paper list cannot answer these questions because it stores papers, not the typed relationships between papers, methods, concepts, benchmark results, limitations, and research directions.
+
+ResearchMap therefore models the **research landscape**, not just papers.
 
 ## 2. Why simple retrieval is not enough
 
-BM25 or embedding retrieval can find related papers, but it cannot explain:
-- which *method* a paper proposes
-- which *concept* a paper addresses
-- which *benchmark* a paper evaluates
-- whether a paper reports a limitation
-- whether two papers support or challenge the same claim
-- whether a new proposal combines concepts that are separately represented but under-connected
+BM25, embeddings, citation recommendation, or generic RAG can retrieve related papers. They do not explain:
+- the specific method a paper proposes
+- which controlled concepts are connected to that method
+- which benchmarks the paper evaluates
+- which limitation it reports
+- which claims are supported or challenged
+- whether two papers directly cover the same novel combination
 
-A flat paper store is not a knowledge base.
+The system is intentionally deterministic and typed. A flat or opaque ranking would not satisfy the engineering judgment and inspectability requirements.
 
-## 3. Corpus scope and selection
+## 3. Scope of the selected corpus
 
-Corpus topic:
+Narrow topic:
 
 > Persistent / long-term memory for LLM agents.
 
-Subtopics:
+Seed concepts include:
 - persistent memory
+- long-term agent memory
 - episodic memory
 - semantic memory
 - memory consolidation
 - selective forgetting
 - memory retrieval
-- long-horizon agent evaluation
+- long-horizon interaction
 
-Committed corpus:
-- **70 papers**
-- candidate pool: 924 normalized groups
-- raw records: 1051
-- sources: arXiv and OpenAlex; Semantic Scholar client ready but skipped until an API key is available
-- raw caches committed under `data/raw/`
-- selection procedure: `scripts/build_corpus.py normalize` → `scripts/build_corpus.py select --target-size 70`
+Candidate sources:
+- arXiv
+- OpenAlex
+- Semantic Scholar code path exists, but no API key was available at this stage
 
-Temporal distribution currently:
-- ≤2021: 11
-- 2022–2023: 20
-- ≥2024: 40
+Why this topic?
+- It is bounded enough for about 70 papers.
+- It has clear methods and concepts.
+- It has useful evaluation/benchmark papers.
+- It still has sparse gaps, making underrepresented positioning meaningful.
 
-The corpus is not perfect: many OpenAlex search hits are recent, citation edge count is 29 inside the selected set, and 41 papers have no in-corpus citation links. This is documented rather than hidden.
+Committed M2 corpus:
+- 70 papers selected by deterministic rules
+- 924 normalized candidate groups from 1051 raw records
+- 29 in-corpus CITES edges
+- 41 papers with zero in-corpus citation degree
 
-## 4. Entities and relationships
+The sparse citation connectivity is a reported limitation, not hidden.
 
-Entity types:
-- `Paper`
-- `ResearchProblem`
-- `Method`
-- `Technique`
-- `Concept`
-- `Benchmark`
-- `Claim`
-- `Limitation`
-- `ResearchDirection`
+## 4. Milestone progression
 
-Relations retained from the M1 frozen ontology:
-- `CITES`
-- `PROPOSES`
-- `USES`
-- `EVALUATES_ON`
-- `COMPARES_WITH`
-- `EXTENDS`
-- `BUILDS_ON`
-- `ADDRESSES`
-- `DEPENDS_ON`
-- `PREREQUISITE_FOR`
-- `ALTERNATIVE_TO`
-- `GENERALIZES`
-- `SPECIALIZES`
-- `COMBINES_WITH`
-- `SUPPORTS`
-- `CHALLENGES`
-- `REPORTS_LIMITATION`
-- `MOTIVATES`
-- `MEASURES_WITH` (deferred)
-- `CITED_BY` (derived inverse, not stored)
+### M1 — Specification, ontology, provenance, contract v0.1
 
-Runtime `CONFLICTING` and `INSUFFICIENT_EVIDENCE` are labels, not ontology relations.
+M1 froze the research contract and kept implementation minimal:
+- closed vocabulary of 9 entities and 20 relations
+- provenance models with explicit `EXPLICIT_METADATA`, `RULE_DERIVED`, and `MANUALLY_CURATED`
+- JSON Schemas for inspectable serialization
+- adversarial M1 validation tests
+- research contract with hypotheses, baselines, T0–T5, primary metric, freeze points, and parameters fixed at M1 approval
 
-## 5. Knowledge construction
+### M2 — Corpus acquisition, raw cache, identity normalization, selection, manifest
 
-Construction happens in two deterministic passes.
+M2 built the reproducible corpus:
+- deterministic seed queries from `config/corpus.yaml`
+- raw arXiv/OpenAlex responses committed under `data/raw/`
+- normalized PaperRecord cache under `data/cache/records/`
+- identity resolution merged by DOI → arXiv ID → S2 ID → normalized title/year/first-author
+- ambiguous candidates flagged rather than silently merged
+- greedy deterministic paper selection with temporal quotas and citation-aware scores
+- frozen `data/corpus_manifest.json`
+- Section 11 corpus statistics and M5-ready relation-source audit
 
-### Pass A — identity and corpus selection (M2)
+### M3 — Deterministic knowledge construction
 
-`src/corpus/pool.py` canonicalizes papers using:
-1. DOI
-2. arXiv ID
-3. Semantic Scholar paper ID
-4. normalized title + first-author + year fallback
+M3 built the inspectable graph:
+- paper and curated vocabulary entities
+- deterministic alias/title/abstract rules
+- canonical edges with provenance
+- no extraction libraries
+- `knowledge/knowledge_state.json` validated and integrity-hashed
 
-Ambiguous records with conflicting primary IDs are flagged and not silently merged.
-The frozen selection is written to:
-- `data/corpus/candidate_pool.json`
-- `data/corpus/selected_pool.json`
-- `data/corpus_manifest.json`
-
-### Pass B — deterministic rule-based graph build (M3)
-
-`src/knowledge/builder.py` uses only the approved vocabulary in `data/curation/vocabulary.yaml` and explicit phrase/contribution-pattern rules.
-
-Current rule-derived edges:
-- `ADDRESSES`: alias in title or contribution sentence
-- `PROPOSES`: method alias in title or proposal-language sentence
-- `USES`: method/technique alias in a usage sentence
-- `EVALUATES_ON`: benchmark alias in title or evaluation-language sentence
-- `COMPARES_WITH`: method alias in comparison-language sentence
-- `REPORTS_LIMITATION`: method + limitation alias in a limitation sentence, with provenance attribution
-
-Explicit citation edges come from source metadata reference lists (`CITES`).
-
-Every rule-derived edge carries:
-- `rule_id`
-- `source_field`
-- evidence span
-- mapping decision
-- confidence
-- ontology/build version
-- source paper id when required
-
-No LLM is used to build the graph.
-
-### Current M3 state
+Current build:
 - 114 entities
 - 85 relationships
-- 0 validation errors
-- integrity-verified `knowledge/knowledge_state.json`
+- distribution: 29 CITES, 45 PROPOSES, 7 EVALUATES_ON, 3 ADDRESSES, 1 COMPARES_WITH
+- validation errors: 0
 
-## 6. Runtime reasoning over a new proposal (M4)
+### M4 — New-input reasoning and CLI
 
-Input is a new proposal that is never added to the corpus.
+M4 handles a new proposal:
+1. normalize proposal text
+2. ground against the controlled vocabulary
+3. mark ambiguous terms
+4. retrieve candidate papers using typed paper→entity edges
+5. aggregate explicit evidence
+6. score prior work with the M1 formula
+7. generate reading path
+8. emit tension/absence status and positioning
+9. never claim novelty
+
+CLI: `python -m src.interface.cli`
+
+### M5 — Evaluation and adversarial testing (planned)
+
+The formal M5 protocol is fixed in the frozen contract, but its gold sets are not authored by the agent.
+
+Formal protocol:
+- dev set: 8–10 proposals
+- frozen test set: 24 proposals (20 in-scope + 4 out-of-scope)
+- 3–5 gold facets per proposal, target 4, at least 1 combination facet
+- minimum ≥8 gold facets per class
+- T2 primary metric: proposal-weighted facet macro-F1
+- T1 guard: nDCG@5 with fixed tolerance δ=0.10 and non-inferiority criterion
+- T3 human rubric for prerequisite-aware reading path
+- T4 tension precision/recall against human gold tensions; insufficient-evidence correctness
+- T5 abstention risk-coverage/AURC
+- baselines A–E
+- ablation ladder L0–L5
+- leakage audit before frozen test execution
+- bootstrap CIs from proposal-level resamples
+
+Current M5 reality:
+- blank gold templates only
+- deterministic CLI integration smoke test passes
+- full M5 workflow cannot run until the human authors and seals gold data
+
+## 5. Entities and reasoning behind them
+
+| Entity | Why it exists |
+|---|---|
+| Paper | Evidence anchor; every semantic edge traces back to a corpus paper. |
+| ResearchProblem | Lets facets map to named gaps/problems instead of only methods. |
+| Method | The concrete approach a paper proposes. |
+| Technique | Reusable mechanism used by a method. |
+| Concept | Controlled vocabulary bridge between proposal facets and papers. |
+| Benchmark | Captures evaluation context for prior work. |
+| Claim | Shared assertion that makes tension analysis possible. |
+| Limitation | Negative knowledge; what failed or remains weak. |
+| ResearchDirection | Actionable future direction rather than a vague free-form next move. |
+
+## 6. Relationships and reasoning behind them
+
+Bibliographic:
+- `CITES`: explicit source metadata only; no inferred intent is trusted.
+- `CITED_BY`: derived view only, never stored.
+
+Research structure:
+- `ADDRESSES`: paper substantively addresses a problem/concept.
+- `PROPOSES`: paper introduces its own method.
+- `USES`: paper uses a method/technique.
+- `DEPENDS_ON`: method cannot function without another technique/concept.
+- `EVALUATES_ON`: paper reports results on a benchmark.
+- `MEASURES_WITH`: deferred because Metric is not instantiable in v0.1.
+- `BUILDS_ON`, `EXTENDS`, `COMPARES_WITH`: shown only when metadata/rules provide clear evidence.
+
+Evidence:
+- `SUPPORTS`, `CHALLENGES`: human-curated only in v0.1 because abstract-only extraction would be noisy.
+- `REPORTS_LIMITATION`: method→limitation attributed to a paper, with `SELF_REPORTED` vs `THIRD_PARTY`.
+
+Research direction:
+- `MOTIVATES`, `PREREQUISITE_FOR`, `ALTERNATIVE_TO`, `GENERALIZES`, `SPECIALIZES`, `COMBINES_WITH`: entity-level human curation, sparse by design.
+
+Every stored relation is in the closed vocabulary. No free-form edge types are accepted.
+
+## 7. How the knowledge representation is built
+
+Construction is deterministic:
+
+```text
+api client → raw JSON/XML cache → normalized PaperRecord →
+identity normalization → candidate pool → deterministic selection →
+corpus manifest → vocabulary matching + rule-derived edges →
+validation → knowledge_state.json
+```
+
+Mapping rules are explicit and versioned. Examples:
+- exact alias in title → ADDRESSES/PROPOSES/EVALUATES_ON candidate
+- contribution phrase + concept alias → ADDRESSES
+- method alias + proposal language → PROPOSES
+- benchmark alias + evaluation language → EVALUATES_ON
+- method alias + limitation language → REPORTS_LIMITATION
+
+No spaCy, GLiNER, REBEL, OpenIE, LLM triplet prompts, or automatic KG libraries are used.
+
+## 8. Tradeoffs
+
+- **Small corpus over breadth:** 70 papers with connectivity is more defensible than shallow coverage.
+- **Deterministic rules over recall:** fewer edges, but every edge is explainable.
+- **Frozen contract over ad hoc convenience:** M2 statistics inform feasibility review, but do not silently rewrite M1 parameters.
+- **JSON knowledge state over graph DB:** inspectable and reproducible without services.
+- **Sparse relations over fabricated dense relations:** missing claims are documented as unknown rather than invented.
+- **Exact terms over loose matching:** prevents unrelated mentions from becoming edges.
+
+## 9. How a new input is processed
+
+The proposal is never added to the frozen corpus.
 
 Pipeline:
-1. deterministic grounding against `data/curation/vocabulary.yaml`
-2. ambiguity marking for shared aliases
-3. candidate paper retrieval via typed edges
-4. bounded local graph traversal (in-progress implementation is neighbor/coverage-based; the explicit bounded BFS is intentionally simple and documented)
-5. evidence aggregation from source edges
-6. explicit prior-work scoring
-7. facet-level positioning
-8. absence or evidence-sufficiency warnings
-9. deterministic structured output
+1. ground against approved vocabulary
+2. mark ambiguous terms and unknown terms
+3. retrieve papers adjacent to matched entities
+4. score each paper with fixed M1 weights
+5. select a bounded reading path
+6. derive positioning from found counts, score confidence, and attributed support
+7. report tensions only when evidence exists
+8. emit warnings for insufficient evidence
 
-The scoring function follows Section 21:
+Scoring formula:
 
 ```text
 PriorWorkScore =
@@ -167,119 +234,44 @@ PriorWorkScore =
 0.05 * TemporalRelevance
 ```
 
-Current scoring is deterministic and explainable; papers are ranked by direct typed overlap and direct citation connectivity only where source metadata exists.
+## 10. Knowledge state inspectability
 
-## 7. Constraint compliance
+`knowledge/knowledge_state.json` is mandatory and self-contained.
 
-The system does **not** use:
-- spaCy NER
-- GLiNER
-- REBEL
-- OpenIE
-- LLM relation extraction
-- automatic knowledge-graph builders
-- Semantic Scholar citation intent/influence labels as semantic relations
+It includes:
+- schema/ontology/corpus/build versions
+- entities with IDs and attributes
+- relationships with source/relation/target
+- provenance for each edge
+- ambiguities
+- integrity hash
+- confidence
 
-Allowed sources of graph facts:
-- explicit source metadata (`CITES`)
-- human-authored vocabulary + explicit rules
-- future approved human curation
+It can be reviewed directly without executing code.
 
-No automatic NER/extraction library constructs the graph.
+## 11. Failure handling
 
-## 8. Provenance and auditability
+- raw API failure: bounded retry and raw cache preservation
+- corrupt cache: fail fast
+- corrupt knowledge state: fail validation
+- ambiguous records: flagged, never silently merged
+- missing metadata: marked partial, not fabricated
+- no matched concept: `UNKNOWN` positioning, no forced answer
+- no sufficient evidence: abstention warning
+- LLM failure: not applicable to current deterministic path
 
-Every edge has a typed provenance record:
-- `EXPLICIT_METADATA` for citation edges
-- `RULE_DERIVED` for title/abstract phrase rules
-- `MANUALLY_CURATED` for human curated future edges
+## 12. Limitations
 
-`REPORTS_LIMITATION` requires:
-- reporting paper id
-- evidence span
-- attribution: `SELF_REPORTED` or `THIRD_PARTY`
+- no complete formal M5 gold evaluation yet
+- Semantic Scholar key unavailable; committed corpus uses OpenAlex/arXiv
+- sparse citation connectivity and many recent papers
+- limitation/tension edges are currently sparse because they require human-level evidence
+- corpus selection is deterministic but not perfect for every domain shift
 
-The knowledge state is inspectable without code via `knowledge/manifest.json` and the raw JSON.
+## 13. What I would build next
 
-## 9. Abstention and uncertainty
-
-If a facet has no sufficient support, the system returns:
-
-> Insufficient evidence in the indexed corpus.
-
-It never says the proposal is novel.
-It never converts `UNKNOWN` into `novel`.
-
-## 10. Tensions and negative knowledge
-
-Tensions/limitations require explicit edges:
-- `SUPPORTS`
-- `CHALLENGES`
-- `REPORTS_LIMITATION` → `MOTIVATES`
-
-Because the current committed corpus has sparse abstract evidence for claims, the CLI emits:
-- `INSUFFICIENT_EVIDENCE` for tensions
-- no fabricated reports_limitation edges unless the metadata/rule conditions are met
-
-This is intentional: sparse honest evidence is preferred over dense invented edges.
-
-## 11. Baselines and evaluation status
-
-Mandatory evaluation would use:
-- Baseline A: BM25-style retrieval
-- Baseline B: embedding similarity
-- Baseline C: citation graph retrieval
-- Baseline D: abstract RAG
-- Baseline E: typed concept overlap
-- System: typed graph + provenance reasoning
-
-These are not fully executable in this committed state because:
-- no Semantic Scholar key exists yet
-- no human-authored frozen gold set exists yet
-- embeddings/networkx dependencies are not enabled in the minimal committed environment
-- M1 prohibits the agent from authoring gold labels/facet text
-
-A deterministic CLI smoke test is present and passes:
-
-```bash
-.venv/bin/python -m pytest tests/integration/test_m4_cli.py -q
-```
-
-## 12. Failure handling
-
-- corrupt knowledge state: `KnowledgeStateCorruptError` in M1 validation
-- corrupt raw cache: ingestion fails with API/cache error
-- missing metadata: marked `PARTIAL_METADATA`
-- ambiguous identity: flagged and not merged
-- API timeout/retries: bounded exponential backoff in clients
-- unknown proposal terms: reported as unknown concepts, not forced into the ontology
-- no matched concepts: warnings and `UNKNOWN` positioning
-- no tools: deterministic output still returned
-
-## 13. What is built today
-
-Mandatory deliverables:
-- `README.md`
-- `approach.md`
-- `knowledge/knowledge_state.json`
-- `data/corpus_manifest.json`
-- CLI: `python -m src.interface.cli`
-- knowledge inspector: `scripts/inspect_knowledge.py`
-- reproducible build/validation tests
-
-## 14. Limitations and next steps
-
-- Add S2 cache once a key is available.
-- Build a human-authored dev/test gold set for M5.
-- Add deterministic baselines A–E and run the ablation ladder.
-- Improve ADDRESSES/REPORTS_LIMITATION precision.
-- Collect more citation contexts before using T4.
-- Add a richer but still deterministic bounded traversal with explicit depth cap and node cap.
-
-## 15. Design tradeoffs
-
-- Small curated corpus over broad shallow coverage: committed to 70 selected papers.
-- Exact alias rules over fuzzy matching: precision first.
-- No automatic extraction: preserves assignment constraint.
-- Flat JSON over Neo4j: independently inspectable and no services.
-- Sparse edge coverage over inferred fabrication: sparse is preferable to fake knowledge.
+- add human-authored `data/curation/curation.yaml` edges for methodology, limitations, directions
+- add human gold sets for T0–T5
+- implement formal baselines A–E and L0–L5
+- add citation-context pulls from Semantic Scholar once a key exists
+- expand inspector and leakage audit for gold evaluation

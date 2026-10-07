@@ -1,107 +1,125 @@
 # ResearchMap
 
-A provenance-backed research-decision engine for **persistent / long-term memory for LLM agents**.
+ResearchMap is a provenance-backed **research-decision engine** for the topic:
 
-It transforms a collected paper corpus into an explicit knowledge model of papers, methods,
-concepts, problems, benchmarks, limitations, and research directions. It then accepts a new
-proposal that was not in the corpus and produces a structured, evidence-backed analysis:
-- closest prior work
-- prerequisite-aware reading path
-- literature tensions
-- explicit limitations
-- positioning across well-explored / partially-explored / underrepresented / unknown
-- abstention and uncertainty warnings
+> **Persistent / Long-Term Memory for LLM Agents**
 
-**Milestone status:** M1 approved and frozen; M2 corpus built; M3/M4 implementation present.
-Semantic Scholar is the primary M1 source; because no S2 API key is available yet, the committed
-corpus uses arXiv and OpenAlex metadata, with S2 code ready once a key is provided.
+It collects a focused corpus of papers, turns that corpus into an explicit,
+independently inspectable knowledge state, and then analyzes a new proposal that
+was **not** in the corpus. The output is structured guidance a researcher can act
+on: closest prior work, typed overlap, citation connectivity, reading path,
+limitations/tensions, positioning, and uncertainty.
+
+It is not a paper search engine, generic RAG wrapper, analytics dashboard, or
+autonomous agent.
 
 ---
 
-## What the project does
+## What problem does it solve?
 
-You give it:
+A new researcher entering a field needs more than paper links. They need to know:
 
-> I want to build an LLM agent with episodic memory, semantic memory, memory consolidation, and selective forgetting.
+- what is foundational
+- what builds on what
+- what concepts and methods a paper uses
+- where work is dense, sparse, or contradictory
+- whether a proposed idea has direct coverage in the corpus
+- what to read first
 
-It responds with a structured output grounded in the frozen `knowledge_state.json`.
-
-It is **not**:
-- a paper search engine
-- a vector-only RAG wrapper
-- an LLM that extracts a knowledge graph
-- an analytics dashboard
+ResearchMap models the research landscape rather than only storing papers.
 
 ---
 
-## Architecture
+## Corpus / dataset
+
+Topic: persistent and long-term memory for LLM agents.
+
+Frozen corpus:
+- 70 papers selected from 924 normalized candidate groups
+- 1051 raw source records
+- current relation-source audit in `docs/m2_relation_source_audit.md`
+- Section 11 corpus statistics in `docs/m2_corpus_quality_stats.md`
+
+Source status:
+- OpenAlex and arXiv raw caches are committed.
+- Semantic Scholar is the M1 primary source, but no API key is available; the
+  client is implemented under `src/ingestion/semantic_scholar.py`.
+
+Important corpus limitations:
+- 29 in-corpus CITES edges
+- 41 isolated papers
+- many M2 queries return recent 2024–2026 work
+- `REPORTS_LIMITATION`, `SUPPORTS`, `CHALLENGES`, `MOTIVATES`,
+  `PREREQUISITE_FOR`, etc. require human curation and are currently sparse/zero.
+
+---
+
+## Project structure
 
 ```text
-Raw papers (arXiv/OpenAlex/S2 cache, committed)
-    ↓
-identity normalization / duplicate grouping / ambiguous marking
-    ↓
-candidate pool + deterministic corpus selection
-    ↓
-corpus_manifest.json + Section 11 stats + relation-source audit
-    ↓
-approved vocabulary + explicit deterministic rules
-    ↓
-knowledge_state.json (entities, edges, provenance, ambiguities)
-    ↓
-new proposal
-    ↓
-proposal grounding → candidate retrieval → bounded traversal → evidence
-    ↓
-prior work / tensions / reading path / positioning / abstention
-```
-
-Human-authored inputs:
-- `data/curation/vocabulary.yaml`
-- `data/curation/curation.yaml`
-- M1 `docs/research_contract.md`
-
-Machine-generated/independently inspectable:
-- `data/corpus_manifest.json`
-- `data/corpus/selected_pool.json`
-- `knowledge/knowledge_state.json`
-- `knowledge/manifest.json`
-- `docs/m2_corpus_quality_stats.{json,md}`
-- `docs/m2_relation_source_audit.{json,md}`
-- `docs/m3_knowledge_build_report.json`
-
----
-
-## Repository layout
-
-```text
-config/         frozen M1 and M2 configuration
+config/
+  default.yaml         frozen M1 scoring/reading-path/gold parameters
+  corpus.yaml          deterministic M2 seed queries, quotas, selection weights
 data/
-  raw/          committed raw API responses
-  cache/        normalized source records
-  corpus/       normalized candidate pool, selected pool, normalization report
-  curation/     human-authored vocabulary and empty/curated edge templates
-  evaluation/   blank gold templates only; no agent-authored gold
-docs/           M1 contract, M2 reports, ontology, ADRs
-knowledge/      serialized knowledge_state.json + manifest
-scripts/        acquisition, build, validate, inspect, sealing scripts
+  raw/                 committed raw API responses
+  cache/records/       normalized PaperRecord JSON grouped by provider/query
+  corpus/              candidate pool, ambiguous identities, normalized report
+  curation/            human vocabulary + blank/approved curation files
+  evaluation/          blank gold templates only
+knowledge/
+  knowledge_state.json inspectable M3 knowledge state
+  manifest.json        knowledge-state manifest
+docs/
+  research_contract.md frozen M1 contract v0.1
+  m2_corpus_quality_stats.md
+  m2_relation_source_audit.md
+  m3_knowledge_build_report.json
 src/
-  ingestion/    S2, arXiv, OpenAlex clients, raw caches, retry logic
-  corpus/       identity resolution, deterministic selection, stats, relation audit
-  ontology/     closed vocabulary and loader
-  knowledge/    provenance, validation, canonical I/O, vocab/curated entrypoint
-  reasoning/    proposal grounding, candidate retrieval, bounded graph traversal
-  interface/    CLI entry point
-  evaluation/   gold structures and sealing
-  output/       runtime output models
-tests/          unit, integration, adversarial M1 tests
+  ingestion/           arXiv, OpenAlex, Semantic Scholar clients and raw caches
+  corpus/              identity resolution, selection, statistics, audit, manifest
+  ontology/            closed M1 vocabulary and loader
+  knowledge/           models, validators, canonical I/O, curation, builder
+  reasoning/           deterministic proposal grounding, scoring, output builder
+  interface/           CLI entry point
+  output/              runtime output models
+  evaluation/          gold-set models/sealing only
+scripts/
+  build_corpus.py
+  build_knowledge_state.py
+  validate_knowledge_state.py
+  inspect_knowledge.py
+  export_schemas.py
+  render_docs.py
+  seal_gold.py
+tests/
+  unit/
+  integration/
+  adversarial/
 ```
 
 ---
 
-## Installation
+## How it works
 
-Python 3.10+ recommended. This repo was developed on Python 3.14.
+```text
+M1: Contract, ontology, schemas, provenance, validators
+    ↓
+M2: arXiv/OpenAlex/S2 acquisition → raw cache → identity normalization →
+    candidate pool → deterministic selection → corpus manifest → quality stats
+    ↓
+M3: approved vocabulary + deterministic rules → provenance-rich edges →
+    validated knowledge_state.json
+    ↓
+M4: new proposal → deterministic grounding → candidate retrieval →
+    bounded reasoning path → prior-work score → positioning/tensions/reading path
+    ↓
+M5: frozen gold evaluation, baselines, ablations, adversarial testing
+    (M5 formal gold annotation remains future work; no agent-authored gold)
+```
+
+---
+
+## Install
 
 ```bash
 python3 -m venv .venv
@@ -109,199 +127,161 @@ python3 -m venv .venv
 pip install -r requirements-dev.txt
 ```
 
----
-
-## Environment variables
-
-Optional, only needed for live Semantic Scholar acquisition:
-
-```bash
-export SEMANTIC_SCHOLAR_API_KEY="..."
-```
-
-**Do not commit this key.**
+Python 3.10+ is required. This repository was verified on Python 3.14 in the
+local sandbox.
 
 ---
 
-## Data acquisition
+## Environment variables / configuration
 
-Corpus acquisition code lives in `scripts/build_corpus.py`.
-
-The deterministic seed queries are fixed in `config/corpus.yaml`. The committed acquisition used:
-- arXiv API (`src/ingestion/arxiv.py`)
-- OpenAlex Works API (`src/ingestion/openalex.py`)
-- Semantic Scholar client ready but skipped (`src/ingestion/semantic_scholar.py`) due to no key.
-
-Raw caches are preserved byte-for-byte under `data/raw/`.
-
-To re-run an arXiv/OpenAlex acquisition:
+Required for live Semantic Scholar acquisition only:
 
 ```bash
-.venv/bin/python scripts/build_corpus.py acquire --provider openalex --limit 50 --expand-references-limit 2
-.venv/bin/python scripts/build_corpus.py acquire --provider arxiv --limit 50
+export SEMANTIC_SCHOLAR_API_KEY="your-key"
 ```
 
-To rebuild the candidate pool, selected corpus, Section 11 stats, relation audit, and manifest:
+Do **not** commit the key.
+
+Other configuration:
+- `config/default.yaml` — M1 frozen parameters: traversal, reading-path size,
+  scoring weights, gold structure.
+- `config/corpus.yaml` — M2 frozen acquisition/selection parameters: topic,
+  seed queries, temporal quotas, scoring weights.
+
+---
+
+## Load or regenerate the corpus (M2)
+
+The committed corpus is already frozen. To regenerate from caches:
 
 ```bash
 .venv/bin/python scripts/build_corpus.py normalize
 .venv/bin/python scripts/build_corpus.py select --target-size 70
 ```
 
-Current committed corpus:
-- 70 selected papers
-- 924 normalized candidate groups from 1051 raw records
-- 29 CITES edges inside the selected corpus
-- 41 isolated papers (sparse citation connectivity is documented, not hidden)
+These commands read committed provider records under `data/cache/records/` and
+write:
+- `data/corpus/candidate_pool.json`
+- `data/corpus/selected_pool.json`
+- `data/corpus_manifest.json`
+- `docs/m2_corpus_quality_stats.{md,json}`
+- `docs/m2_relation_source_audit.{md,json}`
 
-Current Section 11 statistics and L4/T4 relation-source audit are in:
-- `docs/m2_corpus_quality_stats.md`
-- `docs/m2_relation_source_audit.md`
+To re-run live acquisition instead:
+
+```bash
+.venv/bin/python scripts/build_corpus.py acquire --provider openalex --limit 50 --expand-references-limit 2
+.venv/bin/python scripts/build_corpus.py acquire --provider arxiv --limit 50
+# .venv/bin/python scripts/build_corpus.py acquire --provider semantic_scholar --limit 50 --require-s2-key
+```
 
 ---
 
-## Knowledge-state generation
-
-Prerequisite: `data/corpus/selected_pool.json` and `data/curation/vocabulary.yaml`.
+## Regenerate the knowledge state (M3)
 
 ```bash
 .venv/bin/python scripts/build_knowledge_state.py
+.venv/bin/python scripts/validate_knowledge_state.py
 ```
 
-What it produces:
+Outputs:
 - `knowledge/knowledge_state.json`
 - `knowledge/manifest.json`
 - `docs/m3_knowledge_build_report.json`
 
-Current M3 validation result:
-- 114 entities
-- 85 relationships
-- relation distribution in `docs/m3_knowledge_build_report.json`
-- validation errors: 0
+The state contains:
+- `schema_version`
+- `ontology_version`
+- `corpus_version`
+- `knowledge_build_version`
+- `entities`
+- `relationships`
+- `ambiguities`
+- `build_metadata`
+- `integrity` hash
 
-Validate independently:
-
-```bash
-.venv/bin/python scripts/validate_knowledge_state.py
-```
-
----
-
-## Human-owned vocabulary and curation
-
-`data/curation/vocabulary.yaml` defines the approved Concept/Method/Technique/Problem/Benchmark/Limitation/ResearchDirection entries used by the builder.
-
-`data/curation/curation.yaml` is empty in the committed build; it exists so human curated
-edges can be added without weakening provenance.
-
-No curated edges, gold facets, or automatic extracted triplets are fabricated by the agent.
+A reviewer can open this JSON without running code and see exactly which papers,
+concepts, methods, limitations, benchmarks, and relations exist and why.
 
 ---
 
-## Running the CLI on a new proposal
+## Run the testable interface / give it a new input
 
 ```bash
 .venv/bin/python -m src.interface.cli \
   --proposal "I want to build an LLM agent with episodic memory, semantic memory, memory consolidation, and selective forgetting."
 ```
 
-Add `--json` for machine-readable output, and `--verbose` for extra provenance hints.
+Machine-readable JSON:
 
-The output reports:
+```bash
+.venv/bin/python -m src.interface.cli --json \
+  --proposal "I want to build an LLM agent with episodic memory, semantic memory, memory consolidation, and selective forgetting."
+```
+
+The CLI prints:
 - proposal grounding
 - closest prior work
 - recommended reading order
 - literature tensions
-- positioning
+- facet positioning
 - limitations
 - uncertainty/warnings
 
-The system never claims a proposal is “novel”; it says what the indexedcorpus does or does not contain.
-
----
-
-## Inspecting the knowledge state
-
+Example supported checks:
 ```bash
 .venv/bin/python scripts/inspect_knowledge.py --stats
 .venv/bin/python scripts/inspect_knowledge.py --relation PROPOSES
 .venv/bin/python scripts/inspect_knowledge.py --entity paper:doi_10_48550_arxiv_2310_08560
-.venv/bin/python scripts/inspect_knowledge.py --neighbors concept:episodic_memory
 ```
 
-You can open `knowledge/knowledge_state.json` directly and inspect:
-- schema and ontology versions
-- entities
-- relationships
-- provenance per edge
-- provenance type, rule id, source field, evidence span, confidence
-- ambiguity records
-- integrity hash
+---
+
+## Evaluation / adversarial status (M5)
+
+The M1 contract defines the formal M5 evaluation: frozen human-authored gold,
+proposal-weighted facet macro-F1, T1 nDCG@5 guard, baselines A–E, ablations
+L0–L5, leakage audit, bootstrap CIs, T3 rubric scoring, and T4 tension
+precision/recall.
+
+Current repository status:
+- `data/evaluation/gold_dev.template.yaml` and `gold_test.template.yaml` are blank.
+- No agent-authored gold labels, facet text, tensions, or limitation labels exist.
+- `src/evaluation/gold.py` validates/seal structure but has no content to freeze.
+- `tests/integration/test_m4_cli.py` is a deterministic smoke test, not a formal
+  T2 benchmark.
+
+This remaining M5 work is explicitly documented in `approach.md`.
 
 ---
 
 ## Testing
 
+Full sandbox test command:
+
+```bash
+.venv/bin/python -m pytest -q
+```
+
+Useful targeted commands:
+
 ```bash
 .venv/bin/python -m pytest tests/unit/test_corpus_m2.py -q
 .venv/bin/python -m pytest tests/unit/test_reasoning_m4.py -q
 .venv/bin/python -m pytest tests/integration/test_m4_cli.py -q
-.venv/bin/python -m pytest tests/unit/test_contract_traceability.py -q
+.venv/bin/python scripts/export_schemas.py --check
+.venv/bin/python scripts/render_docs.py --check
 ```
 
-The M1 placeholder gate was updated when M2/M3/M4 code landed; the current contract test expects the M2/M4 entry points to exist.
-
----
-
-## Evaluation status
-
-Formal M5 evaluation, baselines, adversarial gold sets, and frozen test proposals are not yet available because:
-- `data/evaluation/gold_*.yaml` are blank by M1 contract
-- the agent must not author or revise gold labels/facet text
-- Semantic Scholar citation intents/influence labels are intentionally unused
-
-A functional deterministic CLI smoke test exists:
-
-```bash
-.venv/bin/python -m pytest tests/integration/test_m4_cli.py -q
-```
-
-Human-authored M5 gold annotation and sealed test sets remain future work.
-
----
-
-## Reproducibility
-
-To regenerate the committed M2/M3 state from the committed cache:
-
-```bash
-.venv/bin/python scripts/build_corpus.py normalize
-.venv/bin/python scripts/build_corpus.py select --target-size 70
-.venv/bin/python scripts/build_knowledge_state.py
-.venv/bin/python scripts/validate_knowledge_state.py
-```
-
-The corpus manifest is content-hashed in `data/corpus_manifest.sha256.json`.
-The knowledge state integrity hash is stored inside `knowledge/knowledge_state.json`.
+All M1-M4 construction and validation checks passed in the local sandbox test run.
 
 ---
 
 ## Limitations
 
-- Semantic Scholar acquisition is blocked until an API key is provided.
-- Most selected corpus papers are recent; some queries return no exact arXiv hits.
-- OpenAlex citation edges are sparse in the frozen selected corpus.
-- Abstracts contain no strong tension/support claims, so T4 has insufficient evidence by design.
-- `REPORTS_LIMITATION`, `MOTIVATES`, `SUPPORTS`, and `CHALLENGES` currently have zero edges because they require human-curated claim/limitation evidence.
-- No embedding models are installed/used; baselines requiring embeddings must run on a machine with network access.
-- This is an engineering prototype, not a bibliographic analyzer.
-
----
-
-## What would I build next?
-
-1. Add Semantic Scholar cache when a key is available.
-2. Add human-curated limitation/claim edges to strengthen L4/T4.
-3. Add a frozen human-authored dev/test proposal set for M5 metrics.
-4. Run the baseline comparison and ablation ladder.
-5. Add a local UI only if the deterministic CLI needs it for demo.
+- Semantic Scholar is not part of the committed corpus because no API key is available.
+- The corpus is sparse in citation connectivity, honestly reflected in the statistics.
+- There are no fabricated `SUPPORTS`, `CHALLENGES`, `MOTIVATES`, or dense
+  `REPORTS_LIMITATION` claims without human/curated evidence.
+- Formal M5 metrics cannot be produced until human-authored gold sets are created.
+- The runtime system does not claim novelty; it reports only evidence found in the indexed corpus.
