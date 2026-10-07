@@ -231,8 +231,8 @@ Computation:
   proposal p). Build a weighted confusion matrix, compute per-class F1 from weighted
   counts, then macro-average over classes.
 * **Test-set construction rule:** 3–5 gold facets per proposal, and a minimum gold
-  support per class (proposed: >= 8 facets per class; confirm BEFORE freezing). Classes
-  with zero gold support are excluded from the average, and the exclusion is reported.
+  support per class fixed at M1 approval: ≥ 8. Classes with zero gold support are
+  excluded from the average, and the exclusion is reported.
 * **All facets are scored.** Abstained facets are never dropped (see 49.5c).
 * **CI:** paired bootstrap, 10,000 resamples, fixed seed, resampling proposals
   (facets within a proposal are correlated).
@@ -453,7 +453,7 @@ No parameter in either list may change after the frozen test set is first run.
 | T1 population | In-scope test proposals only | Out-of-scope proposals have no relevant papers, so nDCG is undefined. |
 | Set sizes | Test 24 (20 in-scope + 4 out-of-scope); dev 8 | Meets 20–30 and 8–10. |
 | Gold facets per proposal | Target 4; 3–5 allowed; at least 1 combination facet for in-scope proposals | Combination facets are the natural source of UNDERREPRESENTED facets. Enforced by `validate_gold_set`, values in `config/default.yaml`. |
-| Min gold facets per class (test) | ≥ 8 each, **provisional** | UNKNOWN is covered by the out-of-scope block (about 16 facets). UNDERREPRESENTED depends on the corpus: re-check with the Section 11 statistics after M2 and before annotation; amend by ADR if unrealistic. |
+| Min gold facets per class (test) | Minimum **≥ 8 gold facets per class — fixed at M1 approval.** | UNKNOWN is covered by the out-of-scope block (about 16 facets). UNDERREPRESENTED depends on the corpus: inspect the Section 11 statistics at M2 before corpus submission and before annotation; treat any genuinely unforeseen problem through the ADR/amendment process rather than revising the corpus selection to accommodate annotation convenience. |
 | Bootstrap | 10,000 resamples, seed 42, resampling proposals | Facets within a proposal are correlated. |
 | Risk–coverage | Coverage grid 1.0, 0.9, 0.8, 0.7, 0.6, 0.5, plus AURC. **Lower AURC is better.** | Selective risk = 0/1 label error among retained facets. Facets are ranked by a continuous confidence score; ties are broken by facet_id. |
 | ABSTAIN rule | ABSTAIN iff `evidence_sufficiency == INSUFFICIENT` | Evidence-level thresholds are dev-tuned label parameters, not contract parameters. ABSTAIN is a system decision; UNKNOWN is a positioning class. |
