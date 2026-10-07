@@ -1,0 +1,99 @@
+{
+  "L4_T4_viability_review": {
+    "PREREQUISITE_FOR": "requires_human_curation",
+    "REPORTS_LIMITATION": "insufficient_at_M2",
+    "SUPPORTS_CHALLENGES": "insufficient_at_M2",
+    "recommendation": "Do not author gold facets until L4/T4 support is judged against M3 curated evidence. If markers/contexts remain scarce, scope L4/T4 down rather than weakening provenance."
+  },
+  "abstract_coverage": {
+    "count": 64,
+    "of": 70
+  },
+  "citation_contexts_collected": 0,
+  "identifier_coverage": {
+    "arxiv": 22,
+    "doi": 70,
+    "s2_paper_id": 0,
+    "selected_papers": 70
+  },
+  "limitation_marked_abstracts": 7,
+  "relation_source_availability": [
+    {
+      "construction_path": "EXPLICIT_METADATA",
+      "measured_m2_edges": 29,
+      "raw_source_availability": "29 normalized in-corpus citation edges; 0 papers have S2 IDs",
+      "relation": "CITES",
+      "viability": "available_for_M3_validation"
+    },
+    {
+      "construction_path": "RULE_DERIVED + MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "7/70 selected paper abstracts contain explicit limitation markers; rule derivation is not attempted at M2",
+      "relation": "REPORTS_LIMITATION",
+      "viability": "under_supported_do_not_treat_L4_as_supported"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "0 citation-context strings collected; no claims/support edges are inferred at M2",
+      "relation": "SUPPORTS/CHALLENGES",
+      "viability": "under_supported_manual_curation_required"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "DEPENDS_ON",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "PREREQUISITE_FOR",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "MOTIVATES",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "ALTERNATIVE_TO",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "GENERALIZES",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "SPECIALIZES",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "No raw metadata field carries this relation; it requires human-approved curated edges",
+      "relation": "COMBINES_WITH",
+      "viability": "requires_human_curation_before_L4_T4_viability"
+    },
+    {
+      "construction_path": "RULE_DERIVED + MANUALLY_CURATED",
+      "measured_m2_edges": 0,
+      "raw_source_availability": "S2 metadata present on 0/70 papers; citation edges exist but phrase/alias evidence must be audited at M3",
+      "relation": "BUILDS_ON/EXTENDS/COMPARES_WITH",
+      "viability": "rule_derivation_not_attempted_at_M2"
+    }
+  ]
+}

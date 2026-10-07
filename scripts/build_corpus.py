@@ -17,6 +17,7 @@ import yaml
 
 from src.config import REPO_ROOT
 from src.ingestion.models import PaperRecord, ReferenceRecord
+from src.ingestion.openalex import fetch_work_records, search_papers as openalex_search
 from src.ingestion.arxiv import search_papers as arxiv_search
 from src.ingestion.semantic_scholar import (
     SemanticScholarError,
@@ -70,7 +71,7 @@ def acquire(args: argparse.Namespace) -> int:
     failed = 0
     for query in queries:
         manifest["queries"].setdefault(query, {})
-        providers = ["semantic_scholar", "arxiv"] if args.provider == "both" else [args.provider]
+        providers = ["semantic_scholar", "arxiv"] if args.provider == "both" else (["semantic_scholar", "arxiv", "openalex"] if args.provider == "all" else [args.provider])
         for provider in providers:
             try:
                 if provider == "semantic_scholar":
@@ -108,6 +109,30 @@ def acquire(args: argparse.Namespace) -> int:
                             manifest["queries"][query]["semantic_scholar"]["record_count"] = len(rows)
                             manifest["queries"][query]["semantic_scholar"]["records_path"] = str(rows_path.relative_to(ROOT))
                             manifest["queries"][query]["semantic_scholar"]["expanded_reference_records"] = len(expanded_rows)
+                elif provider == "openalex":
+                    rows, raw_path = openalex_search(query, limit=limit)
+                    rows_path = save_records("openalex", query, rows)
+                    manifest["queries"][query]["openalex"] = {
+                        "status": "ok", "record_count": len(rows), "raw_path": str(raw_path.relative_to(ROOT)), "records_path": str(rows_path.relative_to(ROOT)),
+                    }
+                    # Deterministic one-hop reference expansion for OpenAlex citation metadata.
+                    expanded_rows: List[PaperRecord] = []
+                    if args.expand_references_limit > 0 and config.get("one_hop_reference_expansion", False):
+                        for row in rows[: args.expand_references_limit]:
+                            for ref in row.references[:20]:
+                                if not ref.source_paper_id:
+                                    continue
+                                target, _ = fetch_work_records(ref.source_paper_id)
+                                if target is not None:
+                                    expanded_rows.append(target)
+                            if len(expanded_rows) >= args.expand_references_limit * 20:
+                                break
+                        if expanded_rows:
+                            rows.extend(expanded_rows)
+                            rows_path = save_records("openalex", query, rows)
+                            manifest["queries"][query]["openalex"]["record_count"] = len(rows)
+                            manifest["queries"][query]["openalex"]["records_path"] = str(rows_path.relative_to(ROOT))
+                            manifest["queries"][query]["openalex"]["expanded_reference_records"] = len(expanded_rows)
                 else:
                     rows, raw_path = arxiv_search(query, limit=limit)
                     rows_path = save_records("arxiv", query, rows)
@@ -189,7 +214,7 @@ def main() -> int:
     def add_common(p: argparse.ArgumentParser) -> None:
         p.add_argument("--query", action="append", help="override a seed query; may repeat")
         p.add_argument("--limit", type=int, default=None)
-        p.add_argument("--provider", choices=["semantic_scholar", "arxiv", "both"], default="both")
+        p.add_argument("--provider", choices=["semantic_scholar", "arxiv", "openalex", "both", "all"], default="both")
         p.add_argument("--api-key-env", default="SEMANTIC_SCHOLAR_API_KEY")
         p.add_argument("--require-s2-key", action="store_true")
         p.add_argument("--expand-references-limit", type=int, default=10)

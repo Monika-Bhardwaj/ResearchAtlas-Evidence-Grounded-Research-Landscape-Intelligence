@@ -1,0 +1,2377 @@
+{
+  "corpus_version": "0.1.0",
+  "created_utc": "2026-10-07T12:43:20+00:00",
+  "paper_count": 70,
+  "papers": [
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2502.12110",
+      "authors": [
+        "Wujiang Xu",
+        "Zujie Liang",
+        "Kai Mei",
+        "Hang Gao",
+        "Juntao Tan",
+        "Yongfeng Zhang"
+      ],
+      "canonical_id": "arxiv:2502.12110",
+      "citation_count": 28,
+      "doi": "10.52202/085713-0593",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "agentic memory systems",
+        "memory retrieval LLM agents"
+      ],
+      "selection_reason": "seed:agentic memory systems,memory retrieval LLM agents",
+      "source_ids": [
+        "arxiv:2502.12110",
+        "openalex:W4407759090"
+      ],
+      "sources": [
+        "arxiv",
+        "openalex"
+      ],
+      "title": "A-Mem: Agentic Memory for LLM Agents",
+      "url": "http://arxiv.org/abs/2502.12110v11",
+      "venue": "cs.CL",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2507.07957",
+      "authors": [
+        "Yu Wang",
+        "Xi Chen"
+      ],
+      "canonical_id": "arxiv:2507.07957",
+      "citation_count": 2,
+      "doi": "10.48550/arxiv.2507.07957",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "agentic memory systems",
+        "episodic memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:agentic memory systems,episodic memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "arxiv:2507.07957",
+        "openalex:W4416106017"
+      ],
+      "sources": [
+        "arxiv",
+        "openalex"
+      ],
+      "title": "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
+      "url": "http://arxiv.org/abs/2507.07957v1",
+      "venue": "cs.CL",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2603.11768",
+      "authors": [
+        "Chingkwun Lam",
+        "Jiaxin Li",
+        "Lingfei Zhang",
+        "Kuo Zhao"
+      ],
+      "canonical_id": "arxiv:2603.11768",
+      "citation_count": 7,
+      "doi": "10.48550/arxiv.2603.11768",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "agentic memory systems",
+        "memory consolidation LLM agents"
+      ],
+      "selection_reason": "seed:agentic memory systems,memory consolidation LLM agents",
+      "source_ids": [
+        "arxiv:2603.11768",
+        "openalex:W7135244490"
+      ],
+      "sources": [
+        "arxiv",
+        "openalex"
+      ],
+      "title": "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework",
+      "url": "http://arxiv.org/abs/2603.11768v2",
+      "venue": "cs.AI",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2605.12978",
+      "authors": [
+        "Dylan Zhang",
+        "Yanshan Lin",
+        "Zhengkun Wu",
+        "Yihang Sun",
+        "Bingxuan Li",
+        "Dianqi Li",
+        "Hao Peng"
+      ],
+      "canonical_id": "arxiv:2605.12978",
+      "citation_count": 0,
+      "doi": "10.48550/arxiv.2605.12978",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "agentic memory systems",
+        "episodic memory LLM agents",
+        "memory consolidation LLM agents"
+      ],
+      "selection_reason": "seed:agentic memory systems,episodic memory LLM agents,memory consolidation LLM agents",
+      "source_ids": [
+        "arxiv:2605.12978",
+        "openalex:W7161135864"
+      ],
+      "sources": [
+        "arxiv",
+        "openalex"
+      ],
+      "title": "Useful Memories Become Faulty When Continuously Updated by LLMs",
+      "url": "http://arxiv.org/abs/2605.12978v2",
+      "venue": "cs.AI",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Luiz Renato Lima",
+        "Lucas Lúcio Godeiro"
+      ],
+      "canonical_id": "doi:10.1002/jae.2939",
+      "citation_count": 19,
+      "doi": "10.1002/jae.2939",
+      "reference_count": 41,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Attention Is All You Need"
+      ],
+      "selection_reason": "seed:Attention Is All You Need",
+      "source_ids": [
+        "openalex:W4295763107"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Equity‐premium prediction: Attention is all you need",
+      "url": "https://openalex.org/W4295763107",
+      "venue": "Journal of Applied Econometrics",
+      "year": 2022
+    },
+    {
+      "abstract_available": false,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Frances Albert Santos",
+        "Leandro  Aparecido Villas",
+        "Julio Cesar dos Reis"
+      ],
+      "canonical_id": "doi:10.1007/978-3-032-15632-7_19",
+      "citation_count": 0,
+      "doi": "10.1007/978-3-032-15632-7_19",
+      "reference_count": 4,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory architectures LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory architectures LLM agents",
+      "source_ids": [
+        "openalex:W7125785182"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Memory Approaches for LLM-Based Agents: A Comparative Study of in-Context and Episodic Architectures",
+      "url": "https://openalex.org/W7125785182",
+      "venue": "Communications in computer and information science",
+      "year": 2026
+    },
+    {
+      "abstract_available": false,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Jingsong Shawn Yu",
+        "Yazhi Yao"
+      ],
+      "canonical_id": "doi:10.1007/978-981-95-4632-9_4",
+      "citation_count": 0,
+      "doi": "10.1007/978-981-95-4632-9_4",
+      "reference_count": 36,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W7131127377"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Retrieval-Augmented Generation",
+      "url": "https://openalex.org/W7131127377",
+      "venue": "Springer eBooks",
+      "year": 2026
+    },
+    {
+      "abstract_available": false,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Hao Yu",
+        "Aoran Gan",
+        "Kai Zhang",
+        "Shiwei Tong",
+        "Qi Liu",
+        "Zhaofeng Liu"
+      ],
+      "canonical_id": "doi:10.1007/978-981-96-1024-2_8",
+      "citation_count": 173,
+      "doi": "10.1007/978-981-96-1024-2_8",
+      "reference_count": 62,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4406771321"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Evaluation of Retrieval-Augmented Generation: A Survey",
+      "url": "https://openalex.org/W4406771321",
+      "venue": "Communications in computer and information science",
+      "year": 2025
+    },
+    {
+      "abstract_available": false,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Simon Goldstein",
+        "Cameron Domenico Kirk‐Giannini"
+      ],
+      "canonical_id": "doi:10.1007/s00146-023-01748-4",
+      "citation_count": 18,
+      "doi": "10.1007/s00146-023-01748-4",
+      "reference_count": 12,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "ReAct language agents"
+      ],
+      "selection_reason": "seed:ReAct language agents",
+      "source_ids": [
+        "openalex:W4386001197"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Language agents reduce the risk of existential catastrophe",
+      "url": "https://openalex.org/W4386001197",
+      "venue": "AI & Society",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Lei Wang",
+        "Chen Ma",
+        "Xueyang Feng",
+        "Zeyu Zhang",
+        "Hao Yang",
+        "Jingsen Zhang",
+        "Zhiyuan Chen",
+        "Jiakai Tang",
+        "Xu Chen",
+        "Yankai Lin",
+        "Wayne Xin Zhao",
+        "Zhewei Wei",
+        "Ji-Rong Wen"
+      ],
+      "canonical_id": "doi:10.1007/s11704-024-40231-1",
+      "citation_count": 1695,
+      "doi": "10.1007/s11704-024-40231-1",
+      "reference_count": 61,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "ReAct language agents"
+      ],
+      "selection_reason": "seed:ReAct language agents",
+      "source_ids": [
+        "openalex:W4393065402"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "A survey on large language model based autonomous agents",
+      "url": "https://openalex.org/W4393065402",
+      "venue": "Frontiers of Computer Science",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Penghao Zhao",
+        "Hailin Zhang",
+        "Qinhan Yu",
+        "Zhengren Wang",
+        "Yunteng Geng",
+        "Fangcheng Fu",
+        "Ling Yang",
+        "Wentao Zhang",
+        "Jie Jiang",
+        "Bin Cui"
+      ],
+      "canonical_id": "doi:10.1007/s41019-025-00335-5",
+      "citation_count": 116,
+      "doi": "10.1007/s41019-025-00335-5",
+      "reference_count": 207,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W7118085507"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Retrieval-Augmented Generation for AI-Generated Content: A Survey",
+      "url": "https://openalex.org/W7118085507",
+      "venue": "Data Science and Engineering",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Zongxi Li",
+        "Zijian Wang",
+        "Weiming Wang",
+        "Kevin Hung",
+        "Haoran Xie",
+        "Fu Lee Wang"
+      ],
+      "canonical_id": "doi:10.1016/j.caeai.2025.100417",
+      "citation_count": 125,
+      "doi": "10.1016/j.caeai.2025.100417",
+      "reference_count": 136,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4410362031"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Retrieval-augmented generation for educational application: A systematic survey",
+      "url": "https://openalex.org/W4410362031",
+      "venue": "Computers and Education Artificial Intelligence",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Anne Simonsen",
+        "Thomas Wollert"
+      ],
+      "canonical_id": "doi:10.1016/j.ceb.2022.01.009",
+      "citation_count": 21,
+      "doi": "10.1016/j.ceb.2022.01.009",
+      "reference_count": 68,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "selective forgetting agents"
+      ],
+      "selection_reason": "seed:selective forgetting agents",
+      "source_ids": [
+        "openalex:W4214755545"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Don't forget to be picky – selective autophagy of protein aggregates in neurodegenerative diseases",
+      "url": "https://openalex.org/W4214755545",
+      "venue": "Current Opinion in Cell Biology",
+      "year": 2022
+    },
+    {
+      "abstract_available": false,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Tian Ma",
+        "Wanwan Wang",
+        "Yu Chen"
+      ],
+      "canonical_id": "doi:10.1016/j.irfa.2023.102876",
+      "citation_count": 42,
+      "doi": "10.1016/j.irfa.2023.102876",
+      "reference_count": 30,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Attention Is All You Need"
+      ],
+      "selection_reason": "seed:Attention Is All You Need",
+      "source_ids": [
+        "openalex:W4385478480"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Attention is all you need: An interpretable transformer-based asset allocation approach",
+      "url": "https://openalex.org/W4385478480",
+      "venue": "International Review of Financial Analysis",
+      "year": 2023
+    },
+    {
+      "abstract_available": false,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Kevin J. Tracey"
+      ],
+      "canonical_id": "doi:10.1038/nature01321",
+      "citation_count": 3752,
+      "doi": "10.1038/nature01321",
+      "reference_count": 79,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Reflexion"
+      ],
+      "selection_reason": "seed:Reflexion",
+      "source_ids": [
+        "openalex:W1995525413"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "The inflammatory reflex",
+      "url": "https://openalex.org/W1995525413",
+      "venue": "Nature",
+      "year": 2002
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Yang Zhang",
+        "Caiqi Liu",
+        "Mujiexin Liu",
+        "Tianyuan Liu",
+        "Hao Lin",
+        "Huang Cheng-bing",
+        "Ning Lin"
+      ],
+      "canonical_id": "doi:10.1093/bib/bbad467",
+      "citation_count": 378,
+      "doi": "10.1093/bib/bbad467",
+      "reference_count": 237,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Attention Is All You Need"
+      ],
+      "selection_reason": "seed:Attention Is All You Need",
+      "source_ids": [
+        "openalex:W4390678101"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Attention is all you need: utilizing attention in AI-enabled drug discovery",
+      "url": "https://openalex.org/W4390678101",
+      "venue": "Briefings in Bioinformatics",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Zhipeng Liao",
+        "Kunming Shao",
+        "Jiangnan Yu",
+        "Liang Zhao",
+        "Tim Kwang-Ting Cheng",
+        "Chi-Ying Tsui",
+        "Jie Yang",
+        "Mohamad Sawan"
+      ],
+      "canonical_id": "doi:10.1109/biocas67066.2025.00025",
+      "citation_count": 1,
+      "doi": "10.1109/biocas67066.2025.00025",
+      "reference_count": 27,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "memory architectures LLM agents",
+        "memory retrieval LLM agents"
+      ],
+      "selection_reason": "seed:memory architectures LLM agents,memory retrieval LLM agents",
+      "source_ids": [
+        "openalex:W7124177984"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "A Memory-Efficient Retrieval Architecture for RAG-Enabled Wearable Medical LLMs-Agents",
+      "url": "https://openalex.org/W7124177984",
+      "venue": "IEEE Biomedical Circuits and Systems Conference (BioCAS)",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Seoung Wug Oh",
+        "Joon‐Young Lee",
+        "Ning Xu",
+        "Seon Joo Kim"
+      ],
+      "canonical_id": "doi:10.1109/iccv.2019.00932",
+      "citation_count": 768,
+      "doi": "10.1109/iccv.2019.00932",
+      "reference_count": 71,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2933875464"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Video Object Segmentation Using Space-Time Memory Networks",
+      "url": "https://openalex.org/W2933875464",
+      "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
+      "year": 2019
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Markus Eisenbach",
+        "Jannik Lübberstedt",
+        "Dustin Aganian",
+        "Horst–Michael Groß"
+      ],
+      "canonical_id": "doi:10.1109/icra48891.2023.10160304",
+      "citation_count": 7,
+      "doi": "10.1109/icra48891.2023.10160304",
+      "reference_count": 82,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Attention Is All You Need"
+      ],
+      "selection_reason": "seed:Attention Is All You Need",
+      "source_ids": [
+        "openalex:W4383097505"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "A Little Bit Attention Is All You Need for Person Re-Identification",
+      "url": "https://openalex.org/W4383097505",
+      "venue": "Proceedings - IEEE International Conference on Robotics and Automation/Proceedings",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Jiani Zhang",
+        "Xingjian Shi",
+        "Irwin King",
+        "Dit‐Yan Yeung"
+      ],
+      "canonical_id": "doi:10.1145/3038912.3052580",
+      "citation_count": 878,
+      "doi": "10.1145/3038912.3052580",
+      "reference_count": 43,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2559094423"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Dynamic Key-Value Memory Networks for Knowledge Tracing",
+      "url": "https://openalex.org/W2559094423",
+      "venue": "International World Wide Web Conference (WWW)",
+      "year": 2017
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Xu Chen",
+        "Hongteng Xu",
+        "Yongfeng Zhang",
+        "Jiaxi Tang",
+        "Yixin Cao",
+        "Zheng Qin",
+        "Hongyuan Zha"
+      ],
+      "canonical_id": "doi:10.1145/3159652.3159668",
+      "citation_count": 518,
+      "doi": "10.1145/3159652.3159668",
+      "reference_count": 42,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2783944588"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Sequential Recommendation with User Memory Networks",
+      "url": "https://openalex.org/W2783944588",
+      "venue": "ACM International Conference on Web Search and Data Mining (WSDM)",
+      "year": 2018
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Jin Huang",
+        "Wayne Xin Zhao",
+        "Hongjian Dou",
+        "Ji-Rong Wen",
+        "Edward Y. Chang"
+      ],
+      "canonical_id": "doi:10.1145/3209978.3210017",
+      "citation_count": 484,
+      "doi": "10.1145/3209978.3210017",
+      "reference_count": 44,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2798385737"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Improving Sequential Recommendation with Knowledge-Enhanced Memory Networks",
+      "url": "https://openalex.org/W2798385737",
+      "venue": null,
+      "year": 2018
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Federico Becattini",
+        "Tiberio Uricchio"
+      ],
+      "canonical_id": "doi:10.1145/3503161.3546972",
+      "citation_count": 4,
+      "doi": "10.1145/3503161.3546972",
+      "reference_count": 12,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W4304080818"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Memory Networks",
+      "url": "https://openalex.org/W4304080818",
+      "venue": "ACM International Conference on Multimedia (ACM MM)",
+      "year": 2022
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Joon Sung Park",
+        "Joseph O'Brien",
+        "Carrie Jun Cai",
+        "Meredith Ringel Morris",
+        "Percy Liang",
+        "Michael S. Bernstein"
+      ],
+      "canonical_id": "doi:10.1145/3586183.3606763",
+      "citation_count": 1894,
+      "doi": "10.1145/3586183.3606763",
+      "reference_count": 70,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Generative Agents"
+      ],
+      "selection_reason": "seed:Generative Agents",
+      "source_ids": [
+        "openalex:W4387835442"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "url": "https://openalex.org/W4387835442",
+      "venue": "ACM Symposium on User Interface Software and Technology (UIST)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Derrick Quinn",
+        "Mohammad Nouri",
+        "Neel Patel",
+        "John Salihu",
+        "Alireza Salemi",
+        "Sukhan Lee",
+        "Hamed Zamani",
+        "Mohammad Alian"
+      ],
+      "canonical_id": "doi:10.1145/3669940.3707264",
+      "citation_count": 37,
+      "doi": "10.1145/3669940.3707264",
+      "reference_count": 66,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4407197060"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Accelerating Retrieval-Augmented Generation",
+      "url": "https://openalex.org/W4407197060",
+      "venue": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Lameck Mbangula Amugongo",
+        "Pietro Mascheroni",
+        "Steven Brooks",
+        "Stefan Doering",
+        "Jan Seidel"
+      ],
+      "canonical_id": "doi:10.1371/journal.pdig.0000877",
+      "citation_count": 246,
+      "doi": "10.1371/journal.pdig.0000877",
+      "reference_count": 135,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4411203672"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Retrieval augmented generation for large language models in healthcare: A systematic review",
+      "url": "https://openalex.org/W4411203672",
+      "venue": "PLOS Digital Health",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Jiawei Chen",
+        "Hongyu Lin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "canonical_id": "doi:10.1609/aaai.v38i16.29728",
+      "citation_count": 389,
+      "doi": "10.1609/aaai.v38i16.29728",
+      "reference_count": 47,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4393147129"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+      "url": "https://openalex.org/W4393147129",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Wanjun Zhong",
+        "Lianghong Guo",
+        "Qiqi Gao",
+        "He Ye",
+        "Yanlin Wang"
+      ],
+      "canonical_id": "doi:10.1609/aaai.v38i17.29946",
+      "citation_count": 207,
+      "doi": "10.1609/aaai.v38i17.29946",
+      "reference_count": 16,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "MemoryBank"
+      ],
+      "selection_reason": "seed:MemoryBank",
+      "source_ids": [
+        "openalex:W4393147158"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+      "url": "https://openalex.org/W4393147158",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Kostas Hatalis",
+        "Despina Christou",
+        "Joshua Myers",
+        "Steve R. Jones",
+        "Keith Lambert",
+        "Adam Amos‐Binks",
+        "Zohreh A. Dannenhauer",
+        "Dustin Dannenhauer"
+      ],
+      "canonical_id": "doi:10.1609/aaaiss.v2i1.27688",
+      "citation_count": 38,
+      "doi": "10.1609/aaaiss.v2i1.27688",
+      "reference_count": 11,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "long-term memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:long-term memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W4391116828"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Memory Matters: The Need to Improve Long-Term Memory in LLM-Agents",
+      "url": "https://openalex.org/W4391116828",
+      "venue": "Proceedings of the AAAI Symposium Series",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Wenhao Yu"
+      ],
+      "canonical_id": "doi:10.18653/v1/2022.naacl-srw.7",
+      "citation_count": 48,
+      "doi": "10.18653/v1/2022.naacl-srw.7",
+      "reference_count": 35,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4287891177"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Retrieval-augmented Generation across Heterogeneous Knowledge",
+      "url": "https://openalex.org/W4287891177",
+      "venue": null,
+      "year": 2022
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Zhilin Wang",
+        "Yu Ying Chiu",
+        "Yu Cheung Chiu"
+      ],
+      "canonical_id": "doi:10.18653/v1/2023.emnlp-demo.15",
+      "citation_count": 21,
+      "doi": "10.18653/v1/2023.emnlp-demo.15",
+      "reference_count": 24,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Generative Agents"
+      ],
+      "selection_reason": "seed:Generative Agents",
+      "source_ids": [
+        "openalex:W4389519442"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Humanoid Agents: Platform for Simulating Human-like Generative Agents",
+      "url": "https://openalex.org/W4389519442",
+      "venue": "Conference on Empirical Methods in Natural Language Processing: System Demonstrations (EMNLP)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Zhengbao Jiang",
+        "Frank F. Xu",
+        "Luyu Gao",
+        "Zhiqing Sun",
+        "Qian Liu",
+        "Jane Dwivedi-Yu",
+        "Yiming Yang",
+        "Jamie Callan",
+        "Graham Neubig"
+      ],
+      "canonical_id": "doi:10.18653/v1/2023.emnlp-main.495",
+      "citation_count": 457,
+      "doi": "10.18653/v1/2023.emnlp-main.495",
+      "reference_count": 62,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4389519118"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Active Retrieval Augmented Generation",
+      "url": "https://openalex.org/W4389519118",
+      "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Adyasha Maharana",
+        "Dong-Ho Lee",
+        "Sergey Tulyakov",
+        "Mohit Bansal",
+        "Francesco Barbieri",
+        "Yuwei Fang"
+      ],
+      "canonical_id": "doi:10.18653/v1/2024.acl-long.747",
+      "citation_count": 81,
+      "doi": "10.18653/v1/2024.acl-long.747",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "long-term memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:long-term memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W4402684150"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "url": "https://openalex.org/W4402684150",
+      "venue": "Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Jiazheng Kang",
+        "Mingming Ji",
+        "Zhe Zhao",
+        "Ting Bai"
+      ],
+      "canonical_id": "doi:10.18653/v1/2025.emnlp-main.1318",
+      "citation_count": 19,
+      "doi": "10.18653/v1/2025.emnlp-main.1318",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "MemoryBank"
+      ],
+      "selection_reason": "seed:MemoryBank",
+      "source_ids": [
+        "openalex:W4416035609"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Memory OS of AI Agent",
+      "url": "https://openalex.org/W4416035609",
+      "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Jinchang Zhu",
+        "Jindong Li",
+        "Cheng Zhang",
+        "J C Liu",
+        "Menglin Yang"
+      ],
+      "canonical_id": "doi:10.18653/v1/2026.acl-long.625",
+      "citation_count": 1,
+      "doi": "10.18653/v1/2026.acl-long.625",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7166881373"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "HeLa-Mem: Hebbian Learning and Associative Memory for LLM Agents",
+      "url": "https://openalex.org/W7166881373",
+      "venue": "Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Zijie Dai",
+        "Shiyuan Deng",
+        "Sheng Guan",
+        "Yizhou Tian",
+        "Xin Yao",
+        "Xiao Yan",
+        "James Cheng"
+      ],
+      "canonical_id": "doi:10.18653/v1/2026.findings-acl.1619",
+      "citation_count": 0,
+      "doi": "10.18653/v1/2026.findings-acl.1619",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7166837919"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+      "url": "https://openalex.org/W7166837919",
+      "venue": null,
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Duyu Tang",
+        "Bing Qin",
+        "Ting Liu"
+      ],
+      "canonical_id": "doi:10.18653/v1/d16-1021",
+      "citation_count": 1048,
+      "doi": "10.18653/v1/d16-1021",
+      "reference_count": 48,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2963168371"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Aspect Level Sentiment Classification with Deep Memory Network",
+      "url": "https://openalex.org/W2963168371",
+      "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": 2016
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Alexander Miller",
+        "Adam Fisch",
+        "Jesse Dodge",
+        "Amir-Hossein Karimi",
+        "Antoine Bordes",
+        "Jason Weston"
+      ],
+      "canonical_id": "doi:10.18653/v1/d16-1147",
+      "citation_count": 1072,
+      "doi": "10.18653/v1/d16-1147",
+      "reference_count": 39,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2409591106"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Key-Value Memory Networks for Directly Reading Documents",
+      "url": "https://openalex.org/W2409591106",
+      "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      "year": 2016
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Fei Liu",
+        "Julien Pérez"
+      ],
+      "canonical_id": "doi:10.18653/v1/e17-1001",
+      "citation_count": 99,
+      "doi": "10.18653/v1/e17-1001",
+      "reference_count": 31,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2534274346"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Gated End-to-End Memory Networks",
+      "url": "https://openalex.org/W2534274346",
+      "venue": null,
+      "year": 2017
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Petr Anokhin",
+        "Nikita Semenov",
+        "Artyom Sorokin",
+        "Dmitry Evseev",
+        "Andrey Kravchenko",
+        "Mikhail Burtsev",
+        "Evgeny Vladimirovich Burnaev"
+      ],
+      "canonical_id": "doi:10.24963/ijcai.2025/2",
+      "citation_count": 4,
+      "doi": "10.24963/ijcai.2025/2",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W4414360988"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+      "url": "https://openalex.org/W4414360988",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Chuanyang Hong",
+        "Qi He"
+      ],
+      "canonical_id": "doi:10.3389/fpsyg.2025.1591618",
+      "citation_count": 7,
+      "doi": "10.3389/fpsyg.2025.1591618",
+      "reference_count": 61,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "memory retrieval LLM agents"
+      ],
+      "selection_reason": "seed:memory retrieval LLM agents",
+      "source_ids": [
+        "openalex:W4410182127"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks",
+      "url": "https://openalex.org/W4410182127",
+      "venue": "Frontiers in Psychology",
+      "year": 2025
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Association for Computational Linguistics 2026",
+        "James Cheng",
+        "Zijie Dai",
+        "Shiyuan Deng",
+        "Sheng Guan",
+        "Yizhou Tian",
+        "Xiao Yan",
+        "Xin Yao"
+      ],
+      "canonical_id": "doi:10.48448/gce2-rc10",
+      "citation_count": 0,
+      "doi": "10.48448/gce2-rc10",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7168616902"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+      "url": "https://openalex.org/W7168616902",
+      "venue": "Underline Science Inc.",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "1503.08895",
+      "authors": [
+        "Sainbayar Sukhbaatar",
+        "Arthur D. Szlam",
+        "Jason Weston",
+        "Rob Fergus"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.1503.08895",
+      "citation_count": 665,
+      "doi": "10.48550/arxiv.1503.08895",
+      "reference_count": 25,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W1793121960"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "End-To-End Memory Networks",
+      "url": "https://openalex.org/W1793121960",
+      "venue": "arXiv (Cornell University)",
+      "year": 2015
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "1603.01417",
+      "authors": [
+        "Caiming Xiong",
+        "Stephen Merity",
+        "Richard Socher"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.1603.01417",
+      "citation_count": 674,
+      "doi": "10.48550/arxiv.1603.01417",
+      "reference_count": 3,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Memory Networks"
+      ],
+      "selection_reason": "seed:Memory Networks",
+      "source_ids": [
+        "openalex:W2293453011"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Dynamic Memory Networks for Visual and Textual Question Answering",
+      "url": "https://openalex.org/W2293453011",
+      "venue": "arXiv (Cornell University)",
+      "year": 2016
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2303.11366",
+      "authors": [
+        "Noah Shinn",
+        "Cassano, Federico",
+        "Berman, Edward",
+        "Gopinath, Ashwin",
+        "Narasimhan, Karthik",
+        "Yao, Shunyu"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2303.11366",
+      "citation_count": 282,
+      "doi": "10.48550/arxiv.2303.11366",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "ReAct language agents"
+      ],
+      "selection_reason": "seed:ReAct language agents",
+      "source_ids": [
+        "openalex:W4353112996"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "url": "https://openalex.org/W4353112996",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": "2304.03442",
+      "authors": [
+        "Joon-Sung Park",
+        "Joseph C. O'Brien",
+        "Carrie Jun Cai",
+        "Meredith Ringel Morris",
+        "Percy Liang",
+        "Michael S. Bernstein"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2304.03442",
+      "citation_count": 184,
+      "doi": "10.48550/arxiv.2304.03442",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Generative Agents"
+      ],
+      "selection_reason": "seed:Generative Agents",
+      "source_ids": [
+        "openalex:W4363671832"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "url": "https://openalex.org/W4363671832",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": "2305.06983",
+      "authors": [
+        "Zhengbao Jiang",
+        "Frank F. Xu",
+        "Luyu Gao",
+        "Zhiqing Sun",
+        "Qian Liu",
+        "Jane Dwivedi-Yu",
+        "Yiming Yang",
+        "Jamie Callan",
+        "Graham Neubig"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2305.06983",
+      "citation_count": 18,
+      "doi": "10.48550/arxiv.2305.06983",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4376312546"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Active Retrieval Augmented Generation",
+      "url": "https://openalex.org/W4376312546",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2305.10250",
+      "authors": [
+        "Wanjun Zhong",
+        "Lianghong Guo",
+        "Qiqi Gao",
+        "Ye, He",
+        "Wang, Yanlin"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2305.10250",
+      "citation_count": 16,
+      "doi": "10.48550/arxiv.2305.10250",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "MemoryBank"
+      ],
+      "selection_reason": "seed:MemoryBank",
+      "source_ids": [
+        "openalex:W4377163995"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+      "url": "https://openalex.org/W4377163995",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2309.01431",
+      "authors": [
+        "Jiawei Chen",
+        "Hongyu Lin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2309.01431",
+      "citation_count": 52,
+      "doi": "10.48550/arxiv.2309.01431",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4386556635"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+      "url": "https://openalex.org/W4386556635",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2309.02427",
+      "authors": [
+        "Theodore R. Sumers",
+        "Shunyu Yao",
+        "Karthik Narasimhan",
+        "Thomas L. Griffiths"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2309.02427",
+      "citation_count": 67,
+      "doi": "10.48550/arxiv.2309.02427",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "ReAct language agents"
+      ],
+      "selection_reason": "seed:ReAct language agents",
+      "source_ids": [
+        "openalex:W4386528753"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Cognitive Architectures for Language Agents",
+      "url": "https://openalex.org/W4386528753",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2310.08560",
+      "authors": [
+        "Charles Packer",
+        "Sarah Wooders",
+        "Kevin Lin",
+        "Vivian Fang",
+        "Shishir G. Patil",
+        "Stoica, Ion",
+        "Joseph E. Gonzalez"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2310.08560",
+      "citation_count": 58,
+      "doi": "10.48550/arxiv.2310.08560",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "MemGPT"
+      ],
+      "selection_reason": "seed:MemGPT",
+      "source_ids": [
+        "openalex:W4387636003"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "url": "https://openalex.org/W4387636003",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2312.10997",
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan",
+        "Yuxi Bi",
+        "Yi Qi Dai",
+        "Jiawei Sun",
+        "Wang, Meng",
+        "Wang, Haofen"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2312.10997",
+      "citation_count": 749,
+      "doi": "10.48550/arxiv.2312.10997",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Retrieval-Augmented Generation"
+      ],
+      "selection_reason": "seed:Retrieval-Augmented Generation",
+      "source_ids": [
+        "openalex:W4389984066"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "url": "https://openalex.org/W4389984066",
+      "venue": "arXiv (Cornell University)",
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2401.02777",
+      "authors": [
+        "Na Liu",
+        "Liangyu Chen",
+        "Xiaoyu Tian",
+        "Wei Zou",
+        "Kaijiang Chen",
+        "Ming Xian Cui"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2401.02777",
+      "citation_count": 6,
+      "doi": "10.48550/arxiv.2401.02777",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "ReAct language agents",
+        "memory architectures LLM agents"
+      ],
+      "selection_reason": "seed:ReAct language agents,memory architectures LLM agents",
+      "source_ids": [
+        "openalex:W4390721568"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "From LLM to Conversational Agent: A Memory Enhanced Architecture with Fine-Tuning of Large Language Models",
+      "url": "https://openalex.org/W4390721568",
+      "venue": "arXiv (Cornell University)",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2407.04363",
+      "authors": [
+        "Petr Anokhin",
+        "Semenov, Nikita",
+        "Artyom Sorokin",
+        "Dmitry Evseev",
+        "Kravchenko, Andrey",
+        "Mikhail Burtsev",
+        "Evgeny Vladimirovich Burnaev"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2407.04363",
+      "citation_count": 4,
+      "doi": "10.48550/arxiv.2407.04363",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W4400434708"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+      "url": "https://openalex.org/W4400434708",
+      "venue": "arXiv (Cornell University)",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2412.15266",
+      "authors": [
+        "Ruihong Zeng",
+        "Jinyuan Fang",
+        "Siwei Liu",
+        "Zaiqiao Meng"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2412.15266",
+      "citation_count": 2,
+      "doi": "10.48550/arxiv.2412.15266",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory retrieval LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory retrieval LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W4405713878"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "On the Structural Memory of LLM Agents",
+      "url": "https://openalex.org/W4405713878",
+      "venue": "arXiv (Cornell University)",
+      "year": 2024
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2601.09913",
+      "authors": [
+        "Joe Logan"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2601.09913",
+      "citation_count": 0,
+      "doi": "10.48550/arxiv.2601.09913",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "long-horizon memory agents",
+        "memory architectures LLM agents",
+        "memory consolidation LLM agents"
+      ],
+      "selection_reason": "seed:long-horizon memory agents,memory architectures LLM agents,memory consolidation LLM agents",
+      "source_ids": [
+        "openalex:W7124464014"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Continuum Memory Architectures for Long-Horizon LLM Agents",
+      "url": "https://openalex.org/W7124464014",
+      "venue": "arXiv (Cornell University)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": "2605.16045",
+      "authors": [
+        "Zijie Dai",
+        "Shiyuan Deng",
+        "Sheng Guan",
+        "Yizhou Tian",
+        "Xin Yao",
+        "Xiao Yan",
+        "James Cheng"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2605.16045",
+      "citation_count": 0,
+      "doi": "10.48550/arxiv.2605.16045",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7161593180"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+      "url": "https://openalex.org/W7161593180",
+      "venue": "arXiv (Cornell University)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2606.06036",
+      "authors": [
+        "Shuo Ji",
+        "Yibo Li",
+        "Bryan Hooi"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2606.06036",
+      "citation_count": 0,
+      "doi": "10.48550/arxiv.2606.06036",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "memory consolidation LLM agents",
+        "memory retrieval LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:memory consolidation LLM agents,memory retrieval LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7163709788"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+      "url": "https://openalex.org/W7163709788",
+      "venue": "arXiv (Cornell University)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2608.12990",
+      "authors": [
+        "Dongfang Li",
+        "Zixuan Liu",
+        "Junmai Wang",
+        "Jiahe Huang",
+        "Fuhao Li",
+        "Bonian Jia",
+        "Baotian Hu",
+        "Min Zhang"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2608.12990",
+      "citation_count": 0,
+      "doi": "10.48550/arxiv.2608.12990",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "long-term memory LLM agents",
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:long-term memory LLM agents,memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7203440641"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation",
+      "url": "https://openalex.org/W7203440641",
+      "venue": "arXiv (Cornell University)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": "2608.29606",
+      "authors": [
+        "Ming Wu",
+        "Pengyuan Zhu"
+      ],
+      "canonical_id": "doi:10.48550/arxiv.2608.29606",
+      "citation_count": 0,
+      "doi": "10.48550/arxiv.2608.29606",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "long-term memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,long-term memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7204896465"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents",
+      "url": "https://openalex.org/W7204896465",
+      "venue": "arXiv (Cornell University)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Sigurd Schacht",
+        "Sudarshan Kamath Barkur",
+        "Carsten Lanquillon"
+      ],
+      "canonical_id": "doi:10.4995/bmt2023.2023.16750",
+      "citation_count": 3,
+      "doi": "10.4995/bmt2023.2023.16750",
+      "reference_count": 33,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Generative Agents"
+      ],
+      "selection_reason": "seed:Generative Agents",
+      "source_ids": [
+        "openalex:W4393043802"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Generative Agents to support students learning progress",
+      "url": "https://openalex.org/W4393043802",
+      "venue": null,
+      "year": 2023
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Daniel Kirste"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.20010219",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.20010219",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory architectures LLM agents",
+        "memory consolidation LLM agents",
+        "persistent memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory architectures LLM agents,memory consolidation LLM agents,persistent memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7159952072"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+      "url": "https://openalex.org/W7159952072",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Daniel Kirste"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.20010220",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.20010220",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory architectures LLM agents",
+        "memory consolidation LLM agents",
+        "persistent memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory architectures LLM agents,memory consolidation LLM agents,persistent memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7159949584"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+      "url": "https://openalex.org/W7159949584",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Ho Yiing Chen"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.20554486",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.20554486",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "HippoRAG",
+        "long-term memory LLM agents",
+        "persistent memory LLM agents"
+      ],
+      "selection_reason": "seed:HippoRAG,long-term memory LLM agents,persistent memory LLM agents",
+      "source_ids": [
+        "openalex:W7163668211"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+      "url": "https://openalex.org/W7163668211",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Ho Yiing Chen"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.20554487",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.20554487",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "HippoRAG",
+        "long-term memory LLM agents",
+        "persistent memory LLM agents"
+      ],
+      "selection_reason": "seed:HippoRAG,long-term memory LLM agents,persistent memory LLM agents",
+      "source_ids": [
+        "openalex:W7163708523"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+      "url": "https://openalex.org/W7163708523",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Hayula Sovereign AI Lab"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.21783559",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.21783559",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "long-term memory LLM agents",
+        "persistent memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:long-term memory LLM agents,persistent memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7172401890"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "TensorStore Memory: Persistent Long-Term Memory for LLM Agents",
+      "url": "https://openalex.org/W7172401890",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Hayula Sovereign AI Lab"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.21783560",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.21783560",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "long-term memory LLM agents",
+        "persistent memory LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:long-term memory LLM agents,persistent memory LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7172421820"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "TensorStore Memory: Persistent Long-Term Memory for LLM Agents",
+      "url": "https://openalex.org/W7172421820",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Alexander Bering"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.22260018",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.22260018",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7206151206"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "ZenBrain: Neuroscience-Inspired Agent Memory Library for LLM Agents",
+      "url": "https://openalex.org/W7206151206",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [
+        "matched fallback but not merged due to contradictory identifiers"
+      ],
+      "ambiguous": true,
+      "arxiv_id": null,
+      "authors": [
+        "Alexander Bering"
+      ],
+      "canonical_id": "doi:10.5281/zenodo.22260019",
+      "citation_count": 0,
+      "doi": "10.5281/zenodo.22260019",
+      "reference_count": 0,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "episodic memory LLM agents",
+        "memory consolidation LLM agents",
+        "semantic memory LLM agents"
+      ],
+      "selection_reason": "seed:episodic memory LLM agents,memory consolidation LLM agents,semantic memory LLM agents",
+      "source_ids": [
+        "openalex:W7206189875"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "ZenBrain: Neuroscience-Inspired Agent Memory Library for LLM Agents",
+      "url": "https://openalex.org/W7206189875",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026
+    },
+    {
+      "abstract_available": true,
+      "ambiguity_notes": [],
+      "ambiguous": false,
+      "arxiv_id": null,
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Jitendra Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Łukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "canonical_id": "doi:10.65215/2q58a426",
+      "citation_count": 26828,
+      "doi": "10.65215/2q58a426",
+      "reference_count": 28,
+      "s2_paper_id": null,
+      "seed_queries": [
+        "Attention Is All You Need"
+      ],
+      "selection_reason": "seed:Attention Is All You Need",
+      "source_ids": [
+        "openalex:W2626778328"
+      ],
+      "sources": [
+        "openalex"
+      ],
+      "title": "Attention Is All You Need",
+      "url": "https://openalex.org/W2626778328",
+      "venue": null,
+      "year": 2025
+    }
+  ],
+  "schema_version": "0.1.0",
+  "scope": "persistent memory, episodic/semantic memory, memory consolidation, retrieval, selective forgetting, and long-horizon memory for LLM/agent systems",
+  "selection_config": {
+    "acceptable_size_max": 100,
+    "acceptable_size_min": 50,
+    "scope": "persistent memory, episodic/semantic memory, memory consolidation, retrieval, selective forgetting, and long-horizon memory for LLM/agent systems",
+    "seed_queries": [
+      "persistent memory LLM agents",
+      "long-term memory LLM agents",
+      "episodic memory LLM agents",
+      "semantic memory LLM agents",
+      "memory consolidation LLM agents",
+      "selective forgetting agents",
+      "memory retrieval LLM agents",
+      "long-horizon memory agents",
+      "memory architectures LLM agents",
+      "agentic memory systems",
+      "MemGPT",
+      "MemoryBank",
+      "Generative Agents",
+      "Reflexion",
+      "Memory Networks",
+      "Retrieval-Augmented Generation",
+      "LongMemEval",
+      "HippoRAG",
+      "ReAct language agents",
+      "Attention Is All You Need"
+    ],
+    "selection": {
+      "max_candidates_per_query": 100,
+      "one_hop_reference_expansion": true,
+      "provider_priority": [
+        "semantic_scholar",
+        "arxiv"
+      ],
+      "score": {
+        "citation_count_log_weight": 1.0,
+        "in_pool_citation_weight": 2.0,
+        "recency_bonus_2024_plus": 1.0,
+        "reference_count_log_weight": 0.5,
+        "seed_hit_weight": 10.0
+      },
+      "tie_break": "canonical_id"
+    },
+    "target_size": 70,
+    "temporal_quotas": {
+      "le_2021": {
+        "max": 10,
+        "min": 8
+      },
+      "y2022_2023": {
+        "max": 25,
+        "min": 20
+      },
+      "y2024_plus": {
+        "max": 40,
+        "min": 35
+      }
+    },
+    "topic": "Persistent / Long-Term Memory for LLM Agents",
+    "version": "0.1.0"
+  },
+  "target_size": 70,
+  "topic": "Persistent / Long-Term Memory for LLM Agents"
+}

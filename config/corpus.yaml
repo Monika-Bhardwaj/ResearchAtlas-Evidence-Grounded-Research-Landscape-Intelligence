@@ -21,6 +21,16 @@ corpus:
     - "long-horizon memory agents"
     - "memory architectures LLM agents"
     - "agentic memory systems"
+    - "MemGPT"
+    - "MemoryBank"
+    - "Generative Agents"
+    - "Reflexion"
+    - "Memory Networks"
+    - "Retrieval-Augmented Generation"
+    - "LongMemEval"
+    - "HippoRAG"
+    - "ReAct language agents"
+    - "Attention Is All You Need"
 
   temporal_quotas:
     le_2021: {min: 8, max: 10}

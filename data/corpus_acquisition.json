@@ -1,10 +1,96 @@
 {
   "queries": {
+    "Attention Is All You Need": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_attention_is_all_you_need.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_attention_is_all_you_need.json",
+        "status": "ok"
+      }
+    },
+    "Generative Agents": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_generative_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_generative_agents.json",
+        "status": "ok"
+      }
+    },
+    "HippoRAG": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_hipporag.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_hipporag.json",
+        "status": "ok"
+      }
+    },
+    "LongMemEval": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_longmemeval.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_longmemeval.json",
+        "status": "ok"
+      }
+    },
+    "MemGPT": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_memgpt.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_memgpt.json",
+        "status": "ok"
+      }
+    },
+    "Memory Networks": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_memory_networks.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_memory_networks.json",
+        "status": "ok"
+      }
+    },
+    "MemoryBank": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_memorybank.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_memorybank.json",
+        "status": "ok"
+      }
+    },
+    "ReAct language agents": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_react_language_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_react_language_agents.json",
+        "status": "ok"
+      }
+    },
+    "Reflexion": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_reflexion.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_reflexion.json",
+        "status": "ok"
+      }
+    },
+    "Retrieval-Augmented Generation": {
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_retrieval-augmented_generation.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_retrieval-augmented_generation.json",
+        "status": "ok"
+      }
+    },
     "agentic memory systems": {
       "arxiv": {
         "raw_path": "data/raw/arxiv/api_query_agentic_memory_systems.atom",
         "record_count": 50,
         "records_path": "data/cache/records/arxiv_agentic_memory_systems.json",
+        "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_agentic_memory_systems.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_agentic_memory_systems.json",
         "status": "ok"
       }
     },
@@ -14,6 +100,12 @@
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_episodic_memory_llm_agents.json",
         "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_episodic_memory_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_episodic_memory_llm_agents.json",
+        "status": "ok"
       }
     },
     "long-horizon memory agents": {
@@ -21,6 +113,12 @@
         "raw_path": "data/raw/arxiv/api_query_long-horizon_memory_agents.atom",
         "record_count": 1,
         "records_path": "data/cache/records/arxiv_long-horizon_memory_agents.json",
+        "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_long-horizon_memory_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_long-horizon_memory_agents.json",
         "status": "ok"
       }
     },
@@ -30,6 +128,12 @@
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_long-term_memory_llm_agents.json",
         "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_long-term_memory_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_long-term_memory_llm_agents.json",
+        "status": "ok"
       }
     },
     "memory architectures LLM agents": {
@@ -37,6 +141,12 @@
         "raw_path": "data/raw/arxiv/api_query_memory_architectures_llm_agents.atom",
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_memory_architectures_llm_agents.json",
+        "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_memory_architectures_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_memory_architectures_llm_agents.json",
         "status": "ok"
       }
     },
@@ -46,6 +156,12 @@
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_memory_consolidation_llm_agents.json",
         "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_memory_consolidation_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_memory_consolidation_llm_agents.json",
+        "status": "ok"
       }
     },
     "memory retrieval LLM agents": {
@@ -53,6 +169,12 @@
         "raw_path": "data/raw/arxiv/api_query_memory_retrieval_llm_agents.atom",
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_memory_retrieval_llm_agents.json",
+        "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_memory_retrieval_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_memory_retrieval_llm_agents.json",
         "status": "ok"
       }
     },
@@ -62,6 +184,12 @@
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_persistent_memory_llm_agents.json",
         "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_persistent_memory_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_persistent_memory_llm_agents.json",
+        "status": "ok"
       }
     },
     "selective forgetting agents": {
@@ -70,6 +198,12 @@
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_selective_forgetting_agents.json",
         "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_selective_forgetting_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_selective_forgetting_agents.json",
+        "status": "ok"
       }
     },
     "semantic memory LLM agents": {
@@ -77,6 +211,12 @@
         "raw_path": "data/raw/arxiv/api_query_semantic_memory_llm_agents.atom",
         "record_count": 0,
         "records_path": "data/cache/records/arxiv_semantic_memory_llm_agents.json",
+        "status": "ok"
+      },
+      "openalex": {
+        "raw_path": "data/raw/openalex/works_search_semantic_memory_llm_agents.json",
+        "record_count": 50,
+        "records_path": "data/cache/records/openalex_semantic_memory_llm_agents.json",
         "status": "ok"
       }
     }
