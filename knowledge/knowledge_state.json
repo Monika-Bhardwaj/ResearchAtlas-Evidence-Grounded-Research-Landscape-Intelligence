@@ -52,7 +52,7 @@
   "build_metadata": {
     "config_hash": "301b13e7923a98783d35d7a72a08e903a7113b8b48d3f4200893105d3fd9726c",
     "generator": "ResearchMap build_knowledge_state.py",
-    "git_sha": "138ca080ea07b2c6b7cc511aae77753fcadef36f",
+    "git_sha": "c66a2ed6e1ce118a7b8d5216eba38b718ca18ef3",
     "notes": "M3 rule-based human-ontology build"
   },
   "corpus_version": "0.1.0",
