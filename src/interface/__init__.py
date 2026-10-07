@@ -1,1 +1,1 @@
-"""Placeholder package. Implemented in a later milestone (see README status table)."""
+"""Proposal reasoning and CLI entry points for M4."""

@@ -1,0 +1,555 @@
+vocabulary_version: 0.1.0
+entries:
+- id: problem:agent_memory
+  type: ResearchProblem
+  label: Agent memory
+  aliases:
+  - agent memory
+  - long-term agent memory
+  - persistent memory for agents
+  definition: Named problem of giving LLM agents durable and reusable memory.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: problem:memory_scalability
+  type: ResearchProblem
+  label: Memory scalability
+  aliases:
+  - memory scalability
+  - scalability of memory
+  - scalable memory
+  definition: Named problem of keeping memory useful as experience grows.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: problem:context_limitation
+  type: ResearchProblem
+  label: Context limitation
+  aliases:
+  - context window limit
+  - context window limitations
+  - limited context window
+  definition: Named problem of fitting experience into finite model context.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: problem:catastrophic_forgetting
+  type: ResearchProblem
+  label: Catastrophic forgetting
+  aliases:
+  - catastrophic forgetting
+  definition: Named problem of retaining earlier capabilities while learning.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: problem:memory_evaluation
+  type: ResearchProblem
+  label: Agent-memory evaluation
+  aliases:
+  - memory evaluation
+  - evaluation of agent memory
+  - long-term memory benchmark
+  definition: Named problem of measuring agent memory quality.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:episodic_memory
+  type: Method
+  label: Episodic memory
+  aliases:
+  - episodic memory
+  - event memory
+  - experience memory
+  definition: A named citable approach that stores recurring experiences as episodic
+    traces.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:semantic_memory
+  type: Method
+  label: Semantic memory
+  aliases:
+  - semantic memory
+  - semantic memories
+  - semantic representation
+  definition: A named citable approach that stores durable semantic facts or abstractions.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:working_memory
+  type: Method
+  label: Working memory
+  aliases:
+  - working memory
+  - scratchpad memory
+  definition: A named citable approach using short-term task state.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:retrieval_augmented_memory
+  type: Method
+  label: Retrieval-augmented memory
+  aliases:
+  - retrieval-augmented memory
+  - external memory
+  - memory retrieval
+  definition: A named citable approach retrieving relevant memories for the agent.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:memory_consolidation
+  type: Method
+  label: Memory consolidation
+  aliases:
+  - memory consolidation
+  - consolidates episodic experiences into semantic
+  - episodic to semantic memory
+  definition: A named citable approach consolidating experiences into durable representations.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:selective_forgetting
+  type: Method
+  label: Selective forgetting
+  aliases:
+  - selective forgetting
+  - forgets low-value memories
+  - memory pruning
+  definition: A named citable approach discarding low-value memory.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:memory_compression
+  type: Method
+  label: Memory compression
+  aliases:
+  - memory compression
+  - memory summarization
+  - experience compression
+  definition: A named citable approach compressing memory traces.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:memgpt
+  type: Method
+  label: MemGPT
+  aliases:
+  - MemGPT
+  definition: LLM operating-system style agent memory architecture.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:reflexion
+  type: Method
+  label: Reflexion
+  aliases:
+  - Reflexion
+  definition: Language-agent feedback and reflection method.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:memorybank
+  type: Method
+  label: MemoryBank
+  aliases:
+  - MemoryBank
+  definition: Long-term memory system for language agents.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:generative_agents
+  type: Method
+  label: Generative Agents
+  aliases:
+  - Generative Agents
+  definition: Architecture for believable agents using memory and reflection.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:memory_networks
+  type: Method
+  label: Memory Networks
+  aliases:
+  - Memory Networks
+  definition: Early neural memory architecture.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:retrieval_augmented_generation
+  type: Method
+  label: Retrieval-augmented generation
+  aliases:
+  - Retrieval-augmented generation
+  - RAG
+  definition: Generation approach grounded by retrieved external content.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:react
+  type: Method
+  label: ReAct
+  aliases:
+  - ReAct
+  - Reason and Act
+  definition: Language agents that interleave reasoning and acting.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: method:hipporag
+  type: Method
+  label: HippoRAG
+  aliases:
+  - HippoRAG
+  definition: Memory retrieval architecture inspired by the hippocampus.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:vector_retrieval
+  type: Technique
+  label: Vector retrieval
+  aliases:
+  - vector retrieval
+  - embedding retrieval
+  - semantic search
+  definition: Retrieving stored memories using vector similarity.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:summarization
+  type: Technique
+  label: Summarization
+  aliases:
+  - summarization
+  - compression via summary
+  definition: Lossy integration of experiences into shorter durable forms.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:clustering
+  type: Technique
+  label: Clustering
+  aliases:
+  - clustering
+  - cluster experiences
+  definition: Grouping experiences before memory storage or retrieval.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:experience_replay
+  type: Technique
+  label: Experience replay
+  aliases:
+  - experience replay
+  - replaying experiences
+  definition: Reusing stored experiences during future updates.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:hierarchical_memory
+  type: Technique
+  label: Hierarchical memory
+  aliases:
+  - hierarchical memory
+  - hierarchical memories
+  definition: Organizing memories at multiple abstraction levels.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:reranking
+  type: Technique
+  label: Reranking
+  aliases:
+  - reranking
+  - reranker
+  definition: Reranking retrieved memories before use.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:attention
+  type: Technique
+  label: Attention
+  aliases:
+  - attention
+  - attention mechanism
+  definition: Neural selection over stored representations.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: technique:knowledge_graph
+  type: Technique
+  label: Knowledge graph
+  aliases:
+  - knowledge graph
+  - graph-based memory
+  definition: Structuring entities and relationships as a graph.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:agent_memory
+  type: Concept
+  label: Agent memory
+  aliases:
+  - agent memory
+  - agentic memory
+  definition: The controlled notion of memory held by an autonomous agent.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:persistent_memory
+  type: Concept
+  label: Persistent memory
+  aliases:
+  - persistent memory
+  - durable memory
+  definition: Memory retained across sessions or tasks.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:long_horizon_memory
+  type: Concept
+  label: Long-horizon memory
+  aliases:
+  - long-horizon memory
+  - long-horizon interactions
+  definition: Memory retained and used over long interaction histories.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:memory_consolidation
+  type: Concept
+  label: Memory consolidation
+  aliases:
+  - memory consolidation
+  definition: Integration of short-term traces into durable memory.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:selective_forgetting
+  type: Concept
+  label: Selective forgetting
+  aliases:
+  - selective forgetting
+  definition: Intentional removal of lower-value or obsolete memory.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:memory_retrieval
+  type: Concept
+  label: Memory retrieval
+  aliases:
+  - memory retrieval
+  - retrieval of memories
+  definition: Accessing stored memory in response to a task.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: concept:memory_compression
+  type: Concept
+  label: Memory compression
+  aliases:
+  - memory compression
+  definition: Reducing the footprint of stored experiences.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: benchmark:longmemeval
+  type: Benchmark
+  label: LongMemEval
+  aliases:
+  - LongMemEval
+  definition: Benchmark for LLM long-term memory.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: benchmark:locomo
+  type: Benchmark
+  label: LoCoMo
+  aliases:
+  - LoCoMo
+  definition: Long-context conversation memory benchmark.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: benchmark:memoryagentbench
+  type: Benchmark
+  label: MemoryAgentBench
+  aliases:
+  - MemoryAgentBench
+  definition: Benchmark for evaluating memory agents.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: limitation:context_window_limit
+  type: Limitation
+  label: Context window limit
+  aliases:
+  - context window limit
+  - finite context window
+  definition: The model cannot retain all raw experience in context.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: limitation:retrieval_quality_degradation
+  type: Limitation
+  label: Retrieval quality degradation
+  aliases:
+  - retrieval quality degrades
+  - retrieval drift
+  definition: Memory retrieval quality may degrade as memory grows.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: limitation:manual_annotation_cost
+  type: Limitation
+  label: Manual annotation cost
+  aliases:
+  - manual annotation
+  - manual labeling
+  definition: High cost of manually labeling memory behavior.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: limitation:memory_overhead
+  type: Limitation
+  label: Memory overhead
+  aliases:
+  - memory overhead
+  - storage overhead
+  definition: Persistent memory adds storage and retrieval overhead.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: direction:joint_consolidation_and_forgetting
+  type: ResearchDirection
+  label: Joint consolidation and forgetting
+  aliases:
+  - consolidation and forgetting
+  - memory consolidation and selective forgetting
+  definition: A research direction combining durable consolidation with controlled
+    forgetting.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+- id: direction:long_horizon_benchmarking
+  type: ResearchDirection
+  label: Long-horizon benchmarking
+  aliases:
+  - long-horizon benchmarking
+  - long-horizon memory benchmark
+  definition: A research direction for evaluating memory over long interaction histories.
+  drafted_with_ai: true
+  approval:
+    status: APPROVED
+    approved_by: Monika Bhardwaj
+    approved_on: '2026-10-07'
+ambiguous_terms:
+- input: memory consolidation
+  candidates:
+  - method:memory_consolidation
+  - concept:memory_consolidation
+- input: selective forgetting
+  candidates:
+  - method:selective_forgetting
+  - concept:selective_forgetting
+- input: memory compression
+  candidates:
+  - method:memory_compression
+  - concept:memory_compression
+- input: memory retrieval
+  candidates:
+  - method:retrieval_augmented_memory
+  - concept:memory_retrieval
+- input: agent memory
+  candidates:
+  - problem:agent_memory
+  - concept:agent_memory
+- input: context window limit
+  candidates:
+  - problem:context_limitation
+  - limitation:context_window_limit

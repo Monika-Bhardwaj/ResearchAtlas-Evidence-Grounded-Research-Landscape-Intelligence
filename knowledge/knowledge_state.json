@@ -1,0 +1,4710 @@
+{
+  "ambiguities": [
+    {
+      "candidates": [
+        "problem:agent_memory",
+        "concept:agent_memory"
+      ],
+      "input": "agent memory",
+      "status": "AMBIGUOUS"
+    },
+    {
+      "candidates": [
+        "problem:context_limitation",
+        "limitation:context_window_limit"
+      ],
+      "input": "context window limit",
+      "status": "AMBIGUOUS"
+    },
+    {
+      "candidates": [
+        "method:memory_compression",
+        "concept:memory_compression"
+      ],
+      "input": "memory compression",
+      "status": "AMBIGUOUS"
+    },
+    {
+      "candidates": [
+        "method:memory_consolidation",
+        "concept:memory_consolidation"
+      ],
+      "input": "memory consolidation",
+      "status": "AMBIGUOUS"
+    },
+    {
+      "candidates": [
+        "method:retrieval_augmented_memory",
+        "concept:memory_retrieval"
+      ],
+      "input": "memory retrieval",
+      "status": "AMBIGUOUS"
+    },
+    {
+      "candidates": [
+        "method:selective_forgetting",
+        "concept:selective_forgetting"
+      ],
+      "input": "selective forgetting",
+      "status": "AMBIGUOUS"
+    }
+  ],
+  "build_metadata": {
+    "config_hash": "301b13e7923a98783d35d7a72a08e903a7113b8b48d3f4200893105d3fd9726c",
+    "generator": "ResearchMap build_knowledge_state.py",
+    "git_sha": "138ca080ea07b2c6b7cc511aae77753fcadef36f",
+    "notes": "M3 rule-based human-ontology build"
+  },
+  "corpus_version": "0.1.0",
+  "entities": [
+    {
+      "aliases": [
+        "LoCoMo"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Long-context conversation memory benchmark.",
+      "id": "benchmark:locomo",
+      "label": "LoCoMo",
+      "type": "Benchmark"
+    },
+    {
+      "aliases": [
+        "LongMemEval"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Benchmark for LLM long-term memory.",
+      "id": "benchmark:longmemeval",
+      "label": "LongMemEval",
+      "type": "Benchmark"
+    },
+    {
+      "aliases": [
+        "MemoryAgentBench"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Benchmark for evaluating memory agents.",
+      "id": "benchmark:memoryagentbench",
+      "label": "MemoryAgentBench",
+      "type": "Benchmark"
+    },
+    {
+      "aliases": [
+        "agent memory",
+        "agentic memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "The controlled notion of memory held by an autonomous agent.",
+      "id": "concept:agent_memory",
+      "label": "Agent memory",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "long-horizon memory",
+        "long-horizon interactions"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Memory retained and used over long interaction histories.",
+      "id": "concept:long_horizon_memory",
+      "label": "Long-horizon memory",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "memory compression"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Reducing the footprint of stored experiences.",
+      "id": "concept:memory_compression",
+      "label": "Memory compression",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "memory consolidation"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Integration of short-term traces into durable memory.",
+      "id": "concept:memory_consolidation",
+      "label": "Memory consolidation",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "memory retrieval",
+        "retrieval of memories"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Accessing stored memory in response to a task.",
+      "id": "concept:memory_retrieval",
+      "label": "Memory retrieval",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "persistent memory",
+        "durable memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Memory retained across sessions or tasks.",
+      "id": "concept:persistent_memory",
+      "label": "Persistent memory",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "selective forgetting"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Intentional removal of lower-value or obsolete memory.",
+      "id": "concept:selective_forgetting",
+      "label": "Selective forgetting",
+      "type": "Concept"
+    },
+    {
+      "aliases": [
+        "consolidation and forgetting",
+        "memory consolidation and selective forgetting"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A research direction combining durable consolidation with controlled forgetting.",
+      "id": "direction:joint_consolidation_and_forgetting",
+      "label": "Joint consolidation and forgetting",
+      "type": "ResearchDirection"
+    },
+    {
+      "aliases": [
+        "long-horizon benchmarking",
+        "long-horizon memory benchmark"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A research direction for evaluating memory over long interaction histories.",
+      "id": "direction:long_horizon_benchmarking",
+      "label": "Long-horizon benchmarking",
+      "type": "ResearchDirection"
+    },
+    {
+      "aliases": [
+        "context window limit",
+        "finite context window"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "The model cannot retain all raw experience in context.",
+      "id": "limitation:context_window_limit",
+      "label": "Context window limit",
+      "type": "Limitation"
+    },
+    {
+      "aliases": [
+        "manual annotation",
+        "manual labeling"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "High cost of manually labeling memory behavior.",
+      "id": "limitation:manual_annotation_cost",
+      "label": "Manual annotation cost",
+      "type": "Limitation"
+    },
+    {
+      "aliases": [
+        "memory overhead",
+        "storage overhead"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Persistent memory adds storage and retrieval overhead.",
+      "id": "limitation:memory_overhead",
+      "label": "Memory overhead",
+      "type": "Limitation"
+    },
+    {
+      "aliases": [
+        "retrieval quality degrades",
+        "retrieval drift"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Memory retrieval quality may degrade as memory grows.",
+      "id": "limitation:retrieval_quality_degradation",
+      "label": "Retrieval quality degradation",
+      "type": "Limitation"
+    },
+    {
+      "aliases": [
+        "episodic memory",
+        "event memory",
+        "experience memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach that stores recurring experiences as episodic traces.",
+      "id": "method:episodic_memory",
+      "label": "Episodic memory",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "Generative Agents"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Architecture for believable agents using memory and reflection.",
+      "id": "method:generative_agents",
+      "label": "Generative Agents",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "HippoRAG"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Memory retrieval architecture inspired by the hippocampus.",
+      "id": "method:hipporag",
+      "label": "HippoRAG",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "MemGPT"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "LLM operating-system style agent memory architecture.",
+      "id": "method:memgpt",
+      "label": "MemGPT",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "memory compression",
+        "memory summarization",
+        "experience compression"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach compressing memory traces.",
+      "id": "method:memory_compression",
+      "label": "Memory compression",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "memory consolidation",
+        "consolidates episodic experiences into semantic",
+        "episodic to semantic memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach consolidating experiences into durable representations.",
+      "id": "method:memory_consolidation",
+      "label": "Memory consolidation",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "Memory Networks"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Early neural memory architecture.",
+      "id": "method:memory_networks",
+      "label": "Memory Networks",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "MemoryBank"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Long-term memory system for language agents.",
+      "id": "method:memorybank",
+      "label": "MemoryBank",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "ReAct",
+        "Reason and Act"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Language agents that interleave reasoning and acting.",
+      "id": "method:react",
+      "label": "ReAct",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "Reflexion"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Language-agent feedback and reflection method.",
+      "id": "method:reflexion",
+      "label": "Reflexion",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "Retrieval-augmented generation",
+        "RAG"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Generation approach grounded by retrieved external content.",
+      "id": "method:retrieval_augmented_generation",
+      "label": "Retrieval-augmented generation",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "retrieval-augmented memory",
+        "external memory",
+        "memory retrieval"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach retrieving relevant memories for the agent.",
+      "id": "method:retrieval_augmented_memory",
+      "label": "Retrieval-augmented memory",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "selective forgetting",
+        "forgets low-value memories",
+        "memory pruning"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach discarding low-value memory.",
+      "id": "method:selective_forgetting",
+      "label": "Selective forgetting",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "semantic memory",
+        "semantic memories",
+        "semantic representation"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach that stores durable semantic facts or abstractions.",
+      "id": "method:semantic_memory",
+      "label": "Semantic memory",
+      "type": "Method"
+    },
+    {
+      "aliases": [
+        "working memory",
+        "scratchpad memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "A named citable approach using short-term task state.",
+      "id": "method:working_memory",
+      "label": "Working memory",
+      "type": "Method"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2502.12110",
+        "authors": [
+          "Wujiang Xu",
+          "Zujie Liang",
+          "Kai Mei",
+          "Hang Gao",
+          "Juntao Tan",
+          "Yongfeng Zhang"
+        ],
+        "canonical_id": "arxiv:2502.12110",
+        "doi": "10.52202/085713-0593",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "agentic memory systems",
+          "memory retrieval LLM agents"
+        ],
+        "sources": [
+          "arxiv",
+          "openalex"
+        ],
+        "title": "A-Mem: Agentic Memory for LLM Agents",
+        "venue": "cs.CL",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:arxiv_2502_12110",
+      "label": "A-Mem: Agentic Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2507.07957",
+        "authors": [
+          "Yu Wang",
+          "Xi Chen"
+        ],
+        "canonical_id": "arxiv:2507.07957",
+        "doi": "10.48550/arxiv.2507.07957",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "agentic memory systems",
+          "episodic memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "arxiv",
+          "openalex"
+        ],
+        "title": "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
+        "venue": "cs.CL",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:arxiv_2507_07957",
+      "label": "MIRIX: Multi-Agent Memory System for LLM-Based Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2603.11768",
+        "authors": [
+          "Chingkwun Lam",
+          "Jiaxin Li",
+          "Lingfei Zhang",
+          "Kuo Zhao"
+        ],
+        "canonical_id": "arxiv:2603.11768",
+        "doi": "10.48550/arxiv.2603.11768",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "agentic memory systems",
+          "memory consolidation LLM agents"
+        ],
+        "sources": [
+          "arxiv",
+          "openalex"
+        ],
+        "title": "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework",
+        "venue": "cs.AI",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:arxiv_2603_11768",
+      "label": "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2605.12978",
+        "authors": [
+          "Dylan Zhang",
+          "Yanshan Lin",
+          "Zhengkun Wu",
+          "Yihang Sun",
+          "Bingxuan Li",
+          "Dianqi Li",
+          "Hao Peng"
+        ],
+        "canonical_id": "arxiv:2605.12978",
+        "doi": "10.48550/arxiv.2605.12978",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "agentic memory systems",
+          "episodic memory LLM agents",
+          "memory consolidation LLM agents"
+        ],
+        "sources": [
+          "arxiv",
+          "openalex"
+        ],
+        "title": "Useful Memories Become Faulty When Continuously Updated by LLMs",
+        "venue": "cs.AI",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:arxiv_2605_12978",
+      "label": "Useful Memories Become Faulty When Continuously Updated by LLMs",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Luiz Renato Lima",
+          "Lucas Lúcio Godeiro"
+        ],
+        "canonical_id": "doi:10.1002/jae.2939",
+        "doi": "10.1002/jae.2939",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Attention Is All You Need"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Equity‐premium prediction: Attention is all you need",
+        "venue": "Journal of Applied Econometrics",
+        "year": 2022
+      },
+      "definition": null,
+      "id": "paper:doi_10_1002_jae_2939",
+      "label": "Equity‐premium prediction: Attention is all you need",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Frances Albert Santos",
+          "Leandro  Aparecido Villas",
+          "Julio Cesar dos Reis"
+        ],
+        "canonical_id": "doi:10.1007/978-3-032-15632-7_19",
+        "doi": "10.1007/978-3-032-15632-7_19",
+        "identity_status": "RESOLVED",
+        "metadata_status": "PARTIAL_METADATA",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory architectures LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Memory Approaches for LLM-Based Agents: A Comparative Study of in-Context and Episodic Architectures",
+        "venue": "Communications in computer and information science",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_1007_978_3_032_15632_7_19",
+      "label": "Memory Approaches for LLM-Based Agents: A Comparative Study of in-Context and Episodic Architectures",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Jingsong Shawn Yu",
+          "Yazhi Yao"
+        ],
+        "canonical_id": "doi:10.1007/978-981-95-4632-9_4",
+        "doi": "10.1007/978-981-95-4632-9_4",
+        "identity_status": "RESOLVED",
+        "metadata_status": "PARTIAL_METADATA",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Retrieval-Augmented Generation",
+        "venue": "Springer eBooks",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_1007_978_981_95_4632_9_4",
+      "label": "Retrieval-Augmented Generation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Hao Yu",
+          "Aoran Gan",
+          "Kai Zhang",
+          "Shiwei Tong",
+          "Qi Liu",
+          "Zhaofeng Liu"
+        ],
+        "canonical_id": "doi:10.1007/978-981-96-1024-2_8",
+        "doi": "10.1007/978-981-96-1024-2_8",
+        "identity_status": "RESOLVED",
+        "metadata_status": "PARTIAL_METADATA",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Evaluation of Retrieval-Augmented Generation: A Survey",
+        "venue": "Communications in computer and information science",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_1007_978_981_96_1024_2_8",
+      "label": "Evaluation of Retrieval-Augmented Generation: A Survey",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Simon Goldstein",
+          "Cameron Domenico Kirk‐Giannini"
+        ],
+        "canonical_id": "doi:10.1007/s00146-023-01748-4",
+        "doi": "10.1007/s00146-023-01748-4",
+        "identity_status": "RESOLVED",
+        "metadata_status": "PARTIAL_METADATA",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "ReAct language agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Language agents reduce the risk of existential catastrophe",
+        "venue": "AI & Society",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_1007_s00146_023_01748_4",
+      "label": "Language agents reduce the risk of existential catastrophe",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Lei Wang",
+          "Chen Ma",
+          "Xueyang Feng",
+          "Zeyu Zhang",
+          "Hao Yang",
+          "Jingsen Zhang",
+          "Zhiyuan Chen",
+          "Jiakai Tang",
+          "Xu Chen",
+          "Yankai Lin",
+          "Wayne Xin Zhao",
+          "Zhewei Wei",
+          "Ji-Rong Wen"
+        ],
+        "canonical_id": "doi:10.1007/s11704-024-40231-1",
+        "doi": "10.1007/s11704-024-40231-1",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "ReAct language agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "A survey on large language model based autonomous agents",
+        "venue": "Frontiers of Computer Science",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_1007_s11704_024_40231_1",
+      "label": "A survey on large language model based autonomous agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Penghao Zhao",
+          "Hailin Zhang",
+          "Qinhan Yu",
+          "Zhengren Wang",
+          "Yunteng Geng",
+          "Fangcheng Fu",
+          "Ling Yang",
+          "Wentao Zhang",
+          "Jie Jiang",
+          "Bin Cui"
+        ],
+        "canonical_id": "doi:10.1007/s41019-025-00335-5",
+        "doi": "10.1007/s41019-025-00335-5",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Retrieval-Augmented Generation for AI-Generated Content: A Survey",
+        "venue": "Data Science and Engineering",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_1007_s41019_025_00335_5",
+      "label": "Retrieval-Augmented Generation for AI-Generated Content: A Survey",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Zongxi Li",
+          "Zijian Wang",
+          "Weiming Wang",
+          "Kevin Hung",
+          "Haoran Xie",
+          "Fu Lee Wang"
+        ],
+        "canonical_id": "doi:10.1016/j.caeai.2025.100417",
+        "doi": "10.1016/j.caeai.2025.100417",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Retrieval-augmented generation for educational application: A systematic survey",
+        "venue": "Computers and Education Artificial Intelligence",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_1016_j_caeai_2025_100417",
+      "label": "Retrieval-augmented generation for educational application: A systematic survey",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Anne Simonsen",
+          "Thomas Wollert"
+        ],
+        "canonical_id": "doi:10.1016/j.ceb.2022.01.009",
+        "doi": "10.1016/j.ceb.2022.01.009",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "selective forgetting agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Don't forget to be picky – selective autophagy of protein aggregates in neurodegenerative diseases",
+        "venue": "Current Opinion in Cell Biology",
+        "year": 2022
+      },
+      "definition": null,
+      "id": "paper:doi_10_1016_j_ceb_2022_01_009",
+      "label": "Don't forget to be picky – selective autophagy of protein aggregates in neurodegenerative diseases",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Tian Ma",
+          "Wanwan Wang",
+          "Yu Chen"
+        ],
+        "canonical_id": "doi:10.1016/j.irfa.2023.102876",
+        "doi": "10.1016/j.irfa.2023.102876",
+        "identity_status": "RESOLVED",
+        "metadata_status": "PARTIAL_METADATA",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Attention Is All You Need"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Attention is all you need: An interpretable transformer-based asset allocation approach",
+        "venue": "International Review of Financial Analysis",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_1016_j_irfa_2023_102876",
+      "label": "Attention is all you need: An interpretable transformer-based asset allocation approach",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Kevin J. Tracey"
+        ],
+        "canonical_id": "doi:10.1038/nature01321",
+        "doi": "10.1038/nature01321",
+        "identity_status": "RESOLVED",
+        "metadata_status": "PARTIAL_METADATA",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Reflexion"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "The inflammatory reflex",
+        "venue": "Nature",
+        "year": 2002
+      },
+      "definition": null,
+      "id": "paper:doi_10_1038_nature01321",
+      "label": "The inflammatory reflex",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Yang Zhang",
+          "Caiqi Liu",
+          "Mujiexin Liu",
+          "Tianyuan Liu",
+          "Hao Lin",
+          "Huang Cheng-bing",
+          "Ning Lin"
+        ],
+        "canonical_id": "doi:10.1093/bib/bbad467",
+        "doi": "10.1093/bib/bbad467",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Attention Is All You Need"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Attention is all you need: utilizing attention in AI-enabled drug discovery",
+        "venue": "Briefings in Bioinformatics",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_1093_bib_bbad467",
+      "label": "Attention is all you need: utilizing attention in AI-enabled drug discovery",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Zhipeng Liao",
+          "Kunming Shao",
+          "Jiangnan Yu",
+          "Liang Zhao",
+          "Tim Kwang-Ting Cheng",
+          "Chi-Ying Tsui",
+          "Jie Yang",
+          "Mohamad Sawan"
+        ],
+        "canonical_id": "doi:10.1109/biocas67066.2025.00025",
+        "doi": "10.1109/biocas67066.2025.00025",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "memory architectures LLM agents",
+          "memory retrieval LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "A Memory-Efficient Retrieval Architecture for RAG-Enabled Wearable Medical LLMs-Agents",
+        "venue": "IEEE Biomedical Circuits and Systems Conference (BioCAS)",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_1109_biocas67066_2025_00025",
+      "label": "A Memory-Efficient Retrieval Architecture for RAG-Enabled Wearable Medical LLMs-Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Seoung Wug Oh",
+          "Joon‐Young Lee",
+          "Ning Xu",
+          "Seon Joo Kim"
+        ],
+        "canonical_id": "doi:10.1109/iccv.2019.00932",
+        "doi": "10.1109/iccv.2019.00932",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Video Object Segmentation Using Space-Time Memory Networks",
+        "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
+        "year": 2019
+      },
+      "definition": null,
+      "id": "paper:doi_10_1109_iccv_2019_00932",
+      "label": "Video Object Segmentation Using Space-Time Memory Networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Markus Eisenbach",
+          "Jannik Lübberstedt",
+          "Dustin Aganian",
+          "Horst–Michael Groß"
+        ],
+        "canonical_id": "doi:10.1109/icra48891.2023.10160304",
+        "doi": "10.1109/icra48891.2023.10160304",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Attention Is All You Need"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "A Little Bit Attention Is All You Need for Person Re-Identification",
+        "venue": "Proceedings - IEEE International Conference on Robotics and Automation/Proceedings",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_1109_icra48891_2023_10160304",
+      "label": "A Little Bit Attention Is All You Need for Person Re-Identification",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Jiani Zhang",
+          "Xingjian Shi",
+          "Irwin King",
+          "Dit‐Yan Yeung"
+        ],
+        "canonical_id": "doi:10.1145/3038912.3052580",
+        "doi": "10.1145/3038912.3052580",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Dynamic Key-Value Memory Networks for Knowledge Tracing",
+        "venue": "International World Wide Web Conference (WWW)",
+        "year": 2017
+      },
+      "definition": null,
+      "id": "paper:doi_10_1145_3038912_3052580",
+      "label": "Dynamic Key-Value Memory Networks for Knowledge Tracing",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Xu Chen",
+          "Hongteng Xu",
+          "Yongfeng Zhang",
+          "Jiaxi Tang",
+          "Yixin Cao",
+          "Zheng Qin",
+          "Hongyuan Zha"
+        ],
+        "canonical_id": "doi:10.1145/3159652.3159668",
+        "doi": "10.1145/3159652.3159668",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Sequential Recommendation with User Memory Networks",
+        "venue": "ACM International Conference on Web Search and Data Mining (WSDM)",
+        "year": 2018
+      },
+      "definition": null,
+      "id": "paper:doi_10_1145_3159652_3159668",
+      "label": "Sequential Recommendation with User Memory Networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Jin Huang",
+          "Wayne Xin Zhao",
+          "Hongjian Dou",
+          "Ji-Rong Wen",
+          "Edward Y. Chang"
+        ],
+        "canonical_id": "doi:10.1145/3209978.3210017",
+        "doi": "10.1145/3209978.3210017",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Improving Sequential Recommendation with Knowledge-Enhanced Memory Networks",
+        "venue": null,
+        "year": 2018
+      },
+      "definition": null,
+      "id": "paper:doi_10_1145_3209978_3210017",
+      "label": "Improving Sequential Recommendation with Knowledge-Enhanced Memory Networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Federico Becattini",
+          "Tiberio Uricchio"
+        ],
+        "canonical_id": "doi:10.1145/3503161.3546972",
+        "doi": "10.1145/3503161.3546972",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Memory Networks",
+        "venue": "ACM International Conference on Multimedia (ACM MM)",
+        "year": 2022
+      },
+      "definition": null,
+      "id": "paper:doi_10_1145_3503161_3546972",
+      "label": "Memory Networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Joon Sung Park",
+          "Joseph O'Brien",
+          "Carrie Jun Cai",
+          "Meredith Ringel Morris",
+          "Percy Liang",
+          "Michael S. Bernstein"
+        ],
+        "canonical_id": "doi:10.1145/3586183.3606763",
+        "doi": "10.1145/3586183.3606763",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Generative Agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "venue": "ACM Symposium on User Interface Software and Technology (UIST)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_1145_3586183_3606763",
+      "label": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Derrick Quinn",
+          "Mohammad Nouri",
+          "Neel Patel",
+          "John Salihu",
+          "Alireza Salemi",
+          "Sukhan Lee",
+          "Hamed Zamani",
+          "Mohammad Alian"
+        ],
+        "canonical_id": "doi:10.1145/3669940.3707264",
+        "doi": "10.1145/3669940.3707264",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Accelerating Retrieval-Augmented Generation",
+        "venue": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_1145_3669940_3707264",
+      "label": "Accelerating Retrieval-Augmented Generation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Lameck Mbangula Amugongo",
+          "Pietro Mascheroni",
+          "Steven Brooks",
+          "Stefan Doering",
+          "Jan Seidel"
+        ],
+        "canonical_id": "doi:10.1371/journal.pdig.0000877",
+        "doi": "10.1371/journal.pdig.0000877",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Retrieval augmented generation for large language models in healthcare: A systematic review",
+        "venue": "PLOS Digital Health",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_1371_journal_pdig_0000877",
+      "label": "Retrieval augmented generation for large language models in healthcare: A systematic review",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Jiawei Chen",
+          "Hongyu Lin",
+          "Xianpei Han",
+          "Le Sun"
+        ],
+        "canonical_id": "doi:10.1609/aaai.v38i16.29728",
+        "doi": "10.1609/aaai.v38i16.29728",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_1609_aaai_v38i16_29728",
+      "label": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Wanjun Zhong",
+          "Lianghong Guo",
+          "Qiqi Gao",
+          "He Ye",
+          "Yanlin Wang"
+        ],
+        "canonical_id": "doi:10.1609/aaai.v38i17.29946",
+        "doi": "10.1609/aaai.v38i17.29946",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "MemoryBank"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_1609_aaai_v38i17_29946",
+      "label": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Kostas Hatalis",
+          "Despina Christou",
+          "Joshua Myers",
+          "Steve R. Jones",
+          "Keith Lambert",
+          "Adam Amos‐Binks",
+          "Zohreh A. Dannenhauer",
+          "Dustin Dannenhauer"
+        ],
+        "canonical_id": "doi:10.1609/aaaiss.v2i1.27688",
+        "doi": "10.1609/aaaiss.v2i1.27688",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "long-term memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Memory Matters: The Need to Improve Long-Term Memory in LLM-Agents",
+        "venue": "Proceedings of the AAAI Symposium Series",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_1609_aaaiss_v2i1_27688",
+      "label": "Memory Matters: The Need to Improve Long-Term Memory in LLM-Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Wenhao Yu"
+        ],
+        "canonical_id": "doi:10.18653/v1/2022.naacl-srw.7",
+        "doi": "10.18653/v1/2022.naacl-srw.7",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Retrieval-augmented Generation across Heterogeneous Knowledge",
+        "venue": null,
+        "year": 2022
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2022_naacl_srw_7",
+      "label": "Retrieval-augmented Generation across Heterogeneous Knowledge",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Zhilin Wang",
+          "Yu Ying Chiu",
+          "Yu Cheung Chiu"
+        ],
+        "canonical_id": "doi:10.18653/v1/2023.emnlp-demo.15",
+        "doi": "10.18653/v1/2023.emnlp-demo.15",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Generative Agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Humanoid Agents: Platform for Simulating Human-like Generative Agents",
+        "venue": "Conference on Empirical Methods in Natural Language Processing: System Demonstrations (EMNLP)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2023_emnlp_demo_15",
+      "label": "Humanoid Agents: Platform for Simulating Human-like Generative Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Zhengbao Jiang",
+          "Frank F. Xu",
+          "Luyu Gao",
+          "Zhiqing Sun",
+          "Qian Liu",
+          "Jane Dwivedi-Yu",
+          "Yiming Yang",
+          "Jamie Callan",
+          "Graham Neubig"
+        ],
+        "canonical_id": "doi:10.18653/v1/2023.emnlp-main.495",
+        "doi": "10.18653/v1/2023.emnlp-main.495",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Active Retrieval Augmented Generation",
+        "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2023_emnlp_main_495",
+      "label": "Active Retrieval Augmented Generation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Adyasha Maharana",
+          "Dong-Ho Lee",
+          "Sergey Tulyakov",
+          "Mohit Bansal",
+          "Francesco Barbieri",
+          "Yuwei Fang"
+        ],
+        "canonical_id": "doi:10.18653/v1/2024.acl-long.747",
+        "doi": "10.18653/v1/2024.acl-long.747",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "long-term memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+        "venue": "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2024_acl_long_747",
+      "label": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Jiazheng Kang",
+          "Mingming Ji",
+          "Zhe Zhao",
+          "Ting Bai"
+        ],
+        "canonical_id": "doi:10.18653/v1/2025.emnlp-main.1318",
+        "doi": "10.18653/v1/2025.emnlp-main.1318",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "MemoryBank"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Memory OS of AI Agent",
+        "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2025_emnlp_main_1318",
+      "label": "Memory OS of AI Agent",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Jinchang Zhu",
+          "Jindong Li",
+          "Cheng Zhang",
+          "J C Liu",
+          "Menglin Yang"
+        ],
+        "canonical_id": "doi:10.18653/v1/2026.acl-long.625",
+        "doi": "10.18653/v1/2026.acl-long.625",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "HeLa-Mem: Hebbian Learning and Associative Memory for LLM Agents",
+        "venue": "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2026_acl_long_625",
+      "label": "HeLa-Mem: Hebbian Learning and Associative Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Zijie Dai",
+          "Shiyuan Deng",
+          "Sheng Guan",
+          "Yizhou Tian",
+          "Xin Yao",
+          "Xiao Yan",
+          "James Cheng"
+        ],
+        "canonical_id": "doi:10.18653/v1/2026.findings-acl.1619",
+        "doi": "10.18653/v1/2026.findings-acl.1619",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+        "venue": null,
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+      "label": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Duyu Tang",
+          "Bing Qin",
+          "Ting Liu"
+        ],
+        "canonical_id": "doi:10.18653/v1/d16-1021",
+        "doi": "10.18653/v1/d16-1021",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Aspect Level Sentiment Classification with Deep Memory Network",
+        "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "year": 2016
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_d16_1021",
+      "label": "Aspect Level Sentiment Classification with Deep Memory Network",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Alexander Miller",
+          "Adam Fisch",
+          "Jesse Dodge",
+          "Amir-Hossein Karimi",
+          "Antoine Bordes",
+          "Jason Weston"
+        ],
+        "canonical_id": "doi:10.18653/v1/d16-1147",
+        "doi": "10.18653/v1/d16-1147",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Key-Value Memory Networks for Directly Reading Documents",
+        "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "year": 2016
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_d16_1147",
+      "label": "Key-Value Memory Networks for Directly Reading Documents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Fei Liu",
+          "Julien Pérez"
+        ],
+        "canonical_id": "doi:10.18653/v1/e17-1001",
+        "doi": "10.18653/v1/e17-1001",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Gated End-to-End Memory Networks",
+        "venue": null,
+        "year": 2017
+      },
+      "definition": null,
+      "id": "paper:doi_10_18653_v1_e17_1001",
+      "label": "Gated End-to-End Memory Networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Petr Anokhin",
+          "Nikita Semenov",
+          "Artyom Sorokin",
+          "Dmitry Evseev",
+          "Andrey Kravchenko",
+          "Mikhail Burtsev",
+          "Evgeny Vladimirovich Burnaev"
+        ],
+        "canonical_id": "doi:10.24963/ijcai.2025/2",
+        "doi": "10.24963/ijcai.2025/2",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_24963_ijcai_2025_2",
+      "label": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Chuanyang Hong",
+          "Qi He"
+        ],
+        "canonical_id": "doi:10.3389/fpsyg.2025.1591618",
+        "doi": "10.3389/fpsyg.2025.1591618",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "memory retrieval LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks",
+        "venue": "Frontiers in Psychology",
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_3389_fpsyg_2025_1591618",
+      "label": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Association for Computational Linguistics 2026",
+          "James Cheng",
+          "Zijie Dai",
+          "Shiyuan Deng",
+          "Sheng Guan",
+          "Yizhou Tian",
+          "Xiao Yan",
+          "Xin Yao"
+        ],
+        "canonical_id": "doi:10.48448/gce2-rc10",
+        "doi": "10.48448/gce2-rc10",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+        "venue": "Underline Science Inc.",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_48448_gce2_rc10",
+      "label": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "1503.08895",
+        "authors": [
+          "Sainbayar Sukhbaatar",
+          "Arthur D. Szlam",
+          "Jason Weston",
+          "Rob Fergus"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.1503.08895",
+        "doi": "10.48550/arxiv.1503.08895",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "End-To-End Memory Networks",
+        "venue": "arXiv (Cornell University)",
+        "year": 2015
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_1503_08895",
+      "label": "End-To-End Memory Networks",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "1603.01417",
+        "authors": [
+          "Caiming Xiong",
+          "Stephen Merity",
+          "Richard Socher"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.1603.01417",
+        "doi": "10.48550/arxiv.1603.01417",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Memory Networks"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Dynamic Memory Networks for Visual and Textual Question Answering",
+        "venue": "arXiv (Cornell University)",
+        "year": 2016
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_1603_01417",
+      "label": "Dynamic Memory Networks for Visual and Textual Question Answering",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2303.11366",
+        "authors": [
+          "Noah Shinn",
+          "Cassano, Federico",
+          "Berman, Edward",
+          "Gopinath, Ashwin",
+          "Narasimhan, Karthik",
+          "Yao, Shunyu"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2303.11366",
+        "doi": "10.48550/arxiv.2303.11366",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "ReAct language agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2303_11366",
+      "label": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2304.03442",
+        "authors": [
+          "Joon-Sung Park",
+          "Joseph C. O'Brien",
+          "Carrie Jun Cai",
+          "Meredith Ringel Morris",
+          "Percy Liang",
+          "Michael S. Bernstein"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2304.03442",
+        "doi": "10.48550/arxiv.2304.03442",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Generative Agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2304_03442",
+      "label": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2305.06983",
+        "authors": [
+          "Zhengbao Jiang",
+          "Frank F. Xu",
+          "Luyu Gao",
+          "Zhiqing Sun",
+          "Qian Liu",
+          "Jane Dwivedi-Yu",
+          "Yiming Yang",
+          "Jamie Callan",
+          "Graham Neubig"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2305.06983",
+        "doi": "10.48550/arxiv.2305.06983",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Active Retrieval Augmented Generation",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2305_06983",
+      "label": "Active Retrieval Augmented Generation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2305.10250",
+        "authors": [
+          "Wanjun Zhong",
+          "Lianghong Guo",
+          "Qiqi Gao",
+          "Ye, He",
+          "Wang, Yanlin"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2305.10250",
+        "doi": "10.48550/arxiv.2305.10250",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "MemoryBank"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2305_10250",
+      "label": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2309.01431",
+        "authors": [
+          "Jiawei Chen",
+          "Hongyu Lin",
+          "Xianpei Han",
+          "Le Sun"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2309.01431",
+        "doi": "10.48550/arxiv.2309.01431",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2309_01431",
+      "label": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2309.02427",
+        "authors": [
+          "Theodore R. Sumers",
+          "Shunyu Yao",
+          "Karthik Narasimhan",
+          "Thomas L. Griffiths"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2309.02427",
+        "doi": "10.48550/arxiv.2309.02427",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "ReAct language agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Cognitive Architectures for Language Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2309_02427",
+      "label": "Cognitive Architectures for Language Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2310.08560",
+        "authors": [
+          "Charles Packer",
+          "Sarah Wooders",
+          "Kevin Lin",
+          "Vivian Fang",
+          "Shishir G. Patil",
+          "Stoica, Ion",
+          "Joseph E. Gonzalez"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2310.08560",
+        "doi": "10.48550/arxiv.2310.08560",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "MemGPT"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "MemGPT: Towards LLMs as Operating Systems",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2310_08560",
+      "label": "MemGPT: Towards LLMs as Operating Systems",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2312.10997",
+        "authors": [
+          "Yunfan Gao",
+          "Yun Xiong",
+          "Xinyu Gao",
+          "Kangxiang Jia",
+          "Jinliu Pan",
+          "Yuxi Bi",
+          "Yi Qi Dai",
+          "Jiawei Sun",
+          "Wang, Meng",
+          "Wang, Haofen"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2312.10997",
+        "doi": "10.48550/arxiv.2312.10997",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Retrieval-Augmented Generation"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "venue": "arXiv (Cornell University)",
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2312_10997",
+      "label": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2401.02777",
+        "authors": [
+          "Na Liu",
+          "Liangyu Chen",
+          "Xiaoyu Tian",
+          "Wei Zou",
+          "Kaijiang Chen",
+          "Ming Xian Cui"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2401.02777",
+        "doi": "10.48550/arxiv.2401.02777",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "ReAct language agents",
+          "memory architectures LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "From LLM to Conversational Agent: A Memory Enhanced Architecture with Fine-Tuning of Large Language Models",
+        "venue": "arXiv (Cornell University)",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2401_02777",
+      "label": "From LLM to Conversational Agent: A Memory Enhanced Architecture with Fine-Tuning of Large Language Models",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2407.04363",
+        "authors": [
+          "Petr Anokhin",
+          "Semenov, Nikita",
+          "Artyom Sorokin",
+          "Dmitry Evseev",
+          "Kravchenko, Andrey",
+          "Mikhail Burtsev",
+          "Evgeny Vladimirovich Burnaev"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2407.04363",
+        "doi": "10.48550/arxiv.2407.04363",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2407_04363",
+      "label": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2412.15266",
+        "authors": [
+          "Ruihong Zeng",
+          "Jinyuan Fang",
+          "Siwei Liu",
+          "Zaiqiao Meng"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2412.15266",
+        "doi": "10.48550/arxiv.2412.15266",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory retrieval LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "On the Structural Memory of LLM Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2024
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2412_15266",
+      "label": "On the Structural Memory of LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2601.09913",
+        "authors": [
+          "Joe Logan"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2601.09913",
+        "doi": "10.48550/arxiv.2601.09913",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "long-horizon memory agents",
+          "memory architectures LLM agents",
+          "memory consolidation LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Continuum Memory Architectures for Long-Horizon LLM Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2601_09913",
+      "label": "Continuum Memory Architectures for Long-Horizon LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2605.16045",
+        "authors": [
+          "Zijie Dai",
+          "Shiyuan Deng",
+          "Sheng Guan",
+          "Yizhou Tian",
+          "Xin Yao",
+          "Xiao Yan",
+          "James Cheng"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2605.16045",
+        "doi": "10.48550/arxiv.2605.16045",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2605_16045",
+      "label": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2606.06036",
+        "authors": [
+          "Shuo Ji",
+          "Yibo Li",
+          "Bryan Hooi"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2606.06036",
+        "doi": "10.48550/arxiv.2606.06036",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "memory consolidation LLM agents",
+          "memory retrieval LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2606_06036",
+      "label": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2608.12990",
+        "authors": [
+          "Dongfang Li",
+          "Zixuan Liu",
+          "Junmai Wang",
+          "Jiahe Huang",
+          "Fuhao Li",
+          "Bonian Jia",
+          "Baotian Hu",
+          "Min Zhang"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2608.12990",
+        "doi": "10.48550/arxiv.2608.12990",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "long-term memory LLM agents",
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation",
+        "venue": "arXiv (Cornell University)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2608_12990",
+      "label": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": "2608.29606",
+        "authors": [
+          "Ming Wu",
+          "Pengyuan Zhu"
+        ],
+        "canonical_id": "doi:10.48550/arxiv.2608.29606",
+        "doi": "10.48550/arxiv.2608.29606",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "long-term memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents",
+        "venue": "arXiv (Cornell University)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_48550_arxiv_2608_29606",
+      "label": "Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Sigurd Schacht",
+          "Sudarshan Kamath Barkur",
+          "Carsten Lanquillon"
+        ],
+        "canonical_id": "doi:10.4995/bmt2023.2023.16750",
+        "doi": "10.4995/bmt2023.2023.16750",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Generative Agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Generative Agents to support students learning progress",
+        "venue": null,
+        "year": 2023
+      },
+      "definition": null,
+      "id": "paper:doi_10_4995_bmt2023_2023_16750",
+      "label": "Generative Agents to support students learning progress",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Daniel Kirste"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.20010219",
+        "doi": "10.5281/zenodo.20010219",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory architectures LLM agents",
+          "memory consolidation LLM agents",
+          "persistent memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_20010219",
+      "label": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Daniel Kirste"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.20010220",
+        "doi": "10.5281/zenodo.20010220",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory architectures LLM agents",
+          "memory consolidation LLM agents",
+          "persistent memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_20010220",
+      "label": "MNEMA: A Memory-Native Episodic-Semantic Architecture for Persistent LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Ho Yiing Chen"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.20554486",
+        "doi": "10.5281/zenodo.20554486",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "HippoRAG",
+          "long-term memory LLM agents",
+          "persistent memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_20554486",
+      "label": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Ho Yiing Chen"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.20554487",
+        "doi": "10.5281/zenodo.20554487",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "HippoRAG",
+          "long-term memory LLM agents",
+          "persistent memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_20554487",
+      "label": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Hayula Sovereign AI Lab"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.21783559",
+        "doi": "10.5281/zenodo.21783559",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "long-term memory LLM agents",
+          "persistent memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "TensorStore Memory: Persistent Long-Term Memory for LLM Agents",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_21783559",
+      "label": "TensorStore Memory: Persistent Long-Term Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Hayula Sovereign AI Lab"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.21783560",
+        "doi": "10.5281/zenodo.21783560",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "long-term memory LLM agents",
+          "persistent memory LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "TensorStore Memory: Persistent Long-Term Memory for LLM Agents",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_21783560",
+      "label": "TensorStore Memory: Persistent Long-Term Memory for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Alexander Bering"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.22260018",
+        "doi": "10.5281/zenodo.22260018",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "ZenBrain: Neuroscience-Inspired Agent Memory Library for LLM Agents",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_22260018",
+      "label": "ZenBrain: Neuroscience-Inspired Agent Memory Library for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Alexander Bering"
+        ],
+        "canonical_id": "doi:10.5281/zenodo.22260019",
+        "doi": "10.5281/zenodo.22260019",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "episodic memory LLM agents",
+          "memory consolidation LLM agents",
+          "semantic memory LLM agents"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "ZenBrain: Neuroscience-Inspired Agent Memory Library for LLM Agents",
+        "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+        "year": 2026
+      },
+      "definition": null,
+      "id": "paper:doi_10_5281_zenodo_22260019",
+      "label": "ZenBrain: Neuroscience-Inspired Agent Memory Library for LLM Agents",
+      "type": "Paper"
+    },
+    {
+      "aliases": [],
+      "attributes": {
+        "arxiv_id": null,
+        "authors": [
+          "Ashish Vaswani",
+          "Noam Shazeer",
+          "Niki Jitendra Parmar",
+          "Jakob Uszkoreit",
+          "Llion Jones",
+          "Aidan N. Gomez",
+          "Łukasz Kaiser",
+          "Illia Polosukhin"
+        ],
+        "canonical_id": "doi:10.65215/2q58a426",
+        "doi": "10.65215/2q58a426",
+        "identity_status": "RESOLVED",
+        "metadata_status": "COMPLETE",
+        "s2_paper_id": null,
+        "seed_queries": [
+          "Attention Is All You Need"
+        ],
+        "sources": [
+          "openalex"
+        ],
+        "title": "Attention Is All You Need",
+        "venue": null,
+        "year": 2025
+      },
+      "definition": null,
+      "id": "paper:doi_10_65215_2q58a426",
+      "label": "Attention Is All You Need",
+      "type": "Paper"
+    },
+    {
+      "aliases": [
+        "agent memory",
+        "long-term agent memory",
+        "persistent memory for agents"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Named problem of giving LLM agents durable and reusable memory.",
+      "id": "problem:agent_memory",
+      "label": "Agent memory",
+      "type": "ResearchProblem"
+    },
+    {
+      "aliases": [
+        "catastrophic forgetting"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Named problem of retaining earlier capabilities while learning.",
+      "id": "problem:catastrophic_forgetting",
+      "label": "Catastrophic forgetting",
+      "type": "ResearchProblem"
+    },
+    {
+      "aliases": [
+        "context window limit",
+        "context window limitations",
+        "limited context window"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Named problem of fitting experience into finite model context.",
+      "id": "problem:context_limitation",
+      "label": "Context limitation",
+      "type": "ResearchProblem"
+    },
+    {
+      "aliases": [
+        "memory evaluation",
+        "evaluation of agent memory",
+        "long-term memory benchmark"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Named problem of measuring agent memory quality.",
+      "id": "problem:memory_evaluation",
+      "label": "Agent-memory evaluation",
+      "type": "ResearchProblem"
+    },
+    {
+      "aliases": [
+        "memory scalability",
+        "scalability of memory",
+        "scalable memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Named problem of keeping memory useful as experience grows.",
+      "id": "problem:memory_scalability",
+      "label": "Memory scalability",
+      "type": "ResearchProblem"
+    },
+    {
+      "aliases": [
+        "attention",
+        "attention mechanism"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Neural selection over stored representations.",
+      "id": "technique:attention",
+      "label": "Attention",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "clustering",
+        "cluster experiences"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Grouping experiences before memory storage or retrieval.",
+      "id": "technique:clustering",
+      "label": "Clustering",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "experience replay",
+        "replaying experiences"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Reusing stored experiences during future updates.",
+      "id": "technique:experience_replay",
+      "label": "Experience replay",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "hierarchical memory",
+        "hierarchical memories"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Organizing memories at multiple abstraction levels.",
+      "id": "technique:hierarchical_memory",
+      "label": "Hierarchical memory",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "knowledge graph",
+        "graph-based memory"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Structuring entities and relationships as a graph.",
+      "id": "technique:knowledge_graph",
+      "label": "Knowledge graph",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "reranking",
+        "reranker"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Reranking retrieved memories before use.",
+      "id": "technique:reranking",
+      "label": "Reranking",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "summarization",
+        "compression via summary"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Lossy integration of experiences into shorter durable forms.",
+      "id": "technique:summarization",
+      "label": "Summarization",
+      "type": "Technique"
+    },
+    {
+      "aliases": [
+        "vector retrieval",
+        "embedding retrieval",
+        "semantic search"
+      ],
+      "attributes": {
+        "approval_status": "APPROVED",
+        "drafted_with_ai": true,
+        "entity_source": "APPROVED_VOCABULARY"
+      },
+      "definition": "Retrieving stored memories using vector similarity.",
+      "id": "technique:vector_retrieval",
+      "label": "Vector retrieval",
+      "type": "Technique"
+    }
+  ],
+  "integrity": {
+    "content_sha256": "067001bd3dce2d4a779ed70f8034edba45f67d74f35f0dd29379d37680ef0ef3"
+  },
+  "knowledge_build_version": "0.1.0",
+  "ontology_version": "0.1.0",
+  "relationships": [
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0001",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4393065402",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_978_3_032_15632_7_19",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_978_3_032_15632_7_19",
+      "target": "paper:doi_10_1007_s11704_024_40231_1"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0002",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4386556635",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_978_981_95_4632_9_4",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_978_981_95_4632_9_4",
+      "target": "paper:doi_10_48550_arxiv_2309_01431"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0003",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4389984066",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_978_981_95_4632_9_4",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_978_981_95_4632_9_4",
+      "target": "paper:doi_10_48550_arxiv_2312_10997"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0004",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4411203672",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_978_981_95_4632_9_4",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_978_981_95_4632_9_4",
+      "target": "paper:doi_10_1371_journal_pdig_0000877"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0005",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4386556635",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_978_981_96_1024_2_8",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_978_981_96_1024_2_8",
+      "target": "paper:doi_10_48550_arxiv_2309_01431"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0006",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4387835442",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_s00146_023_01748_4",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_s00146_023_01748_4",
+      "target": "paper:doi_10_1145_3586183_3606763"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0007",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4387835442",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_s11704_024_40231_1",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_s11704_024_40231_1",
+      "target": "paper:doi_10_1145_3586183_3606763"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0008",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4389519118",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1007_s41019_025_00335_5",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1007_s41019_025_00335_5",
+      "target": "paper:doi_10_18653_v1_2023_emnlp_main_495"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0009",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4389519118",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1016_j_caeai_2025_100417",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1016_j_caeai_2025_100417",
+      "target": "paper:doi_10_18653_v1_2023_emnlp_main_495"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0010",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4407197060",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1109_biocas67066_2025_00025",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1109_biocas67066_2025_00025",
+      "target": "paper:doi_10_1145_3669940_3707264"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0011",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W7118085507",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1109_biocas67066_2025_00025",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1109_biocas67066_2025_00025",
+      "target": "paper:doi_10_1007_s41019_025_00335_5"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0012",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2409591106",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1109_iccv_2019_00932",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1109_iccv_2019_00932",
+      "target": "paper:doi_10_18653_v1_d16_1147"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0013",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2626778328",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1109_iccv_2019_00932",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1109_iccv_2019_00932",
+      "target": "paper:doi_10_65215_2q58a426"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0014",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2409591106",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1145_3038912_3052580",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1145_3038912_3052580",
+      "target": "paper:doi_10_18653_v1_d16_1147"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0015",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2409591106",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1145_3159652_3159668",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1145_3159652_3159668",
+      "target": "paper:doi_10_18653_v1_d16_1147"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0016",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2559094423",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1145_3159652_3159668",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1145_3159652_3159668",
+      "target": "paper:doi_10_1145_3038912_3052580"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0017",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2409591106",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1145_3209978_3210017",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1145_3209978_3210017",
+      "target": "paper:doi_10_18653_v1_d16_1147"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0018",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2534274346",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1145_3209978_3210017",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1145_3209978_3210017",
+      "target": "paper:doi_10_18653_v1_e17_1001"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0019",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2783944588",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1145_3209978_3210017",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1145_3209978_3210017",
+      "target": "paper:doi_10_1145_3159652_3159668"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0020",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4387835442",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_1609_aaaiss_v2i1_27688",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_1609_aaaiss_v2i1_27688",
+      "target": "paper:doi_10_1145_3586183_3606763"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0021",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4387835442",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_18653_v1_2023_emnlp_demo_15",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_18653_v1_2023_emnlp_demo_15",
+      "target": "paper:doi_10_1145_3586183_3606763"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0022",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W1793121960",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_18653_v1_d16_1021",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_18653_v1_d16_1021",
+      "target": "paper:doi_10_48550_arxiv_1503_08895"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0023",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W1793121960",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_18653_v1_e17_1001",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_18653_v1_e17_1001",
+      "target": "paper:doi_10_48550_arxiv_1503_08895"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0024",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2293453011",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_18653_v1_e17_1001",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_18653_v1_e17_1001",
+      "target": "paper:doi_10_48550_arxiv_1603_01417"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0025",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W2409591106",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_18653_v1_e17_1001",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_18653_v1_e17_1001",
+      "target": "paper:doi_10_18653_v1_d16_1147"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0026",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4387835442",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_3389_fpsyg_2025_1591618",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_3389_fpsyg_2025_1591618",
+      "target": "paper:doi_10_1145_3586183_3606763"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0027",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4393065402",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_3389_fpsyg_2025_1591618",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_3389_fpsyg_2025_1591618",
+      "target": "paper:doi_10_1007_s11704_024_40231_1"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0028",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4393147158",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_3389_fpsyg_2025_1591618",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_3389_fpsyg_2025_1591618",
+      "target": "paper:doi_10_1609_aaai_v38i17_29946"
+    },
+    {
+      "confidence": 0.95,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0029",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "openalex:W4387835442",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": null,
+        "ontology_version": "0.1.0",
+        "rule_id": null,
+        "source_field": "references",
+        "source_paper_id": "paper:doi_10_4995_bmt2023_2023_16750",
+        "type": "EXPLICIT_METADATA"
+      },
+      "relation": "CITES",
+      "source": "paper:doi_10_4995_bmt2023_2023_16750",
+      "target": "paper:doi_10_1145_3586183_3606763"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0030",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Second, on LOCOMO, a long-form conversation benchmark with single-modal textual input, MIRIX attains state-of-the-art performance of 85.4%, far surpassing existing baselines.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:arxiv_2507_07957",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:arxiv_2507_07957",
+      "target": "benchmark:locomo"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0031",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Retrieval-Augmented Generation",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1007_978_981_95_4632_9_4",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1007_978_981_95_4632_9_4",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0032",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Evaluation of Retrieval-Augmented Generation: A Survey",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1007_978_981_96_1024_2_8",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1007_978_981_96_1024_2_8",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0033",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Retrieval-Augmented Generation for AI-Generated Content: A Survey",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1007_s41019_025_00335_5",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1007_s41019_025_00335_5",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0034",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Retrieval-augmented generation for educational application: A systematic survey",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1016_j_caeai_2025_100417",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1016_j_caeai_2025_100417",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0035",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "A Memory-Efficient Retrieval Architecture for RAG-Enabled Wearable Medical LLMs-Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1109_biocas67066_2025_00025",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1109_biocas67066_2025_00025",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0036",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Video Object Segmentation Using Space-Time Memory Networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1109_iccv_2019_00932",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1109_iccv_2019_00932",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0037",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Dynamic Key-Value Memory Networks for Knowledge Tracing",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1145_3038912_3052580",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1145_3038912_3052580",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0038",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Sequential Recommendation with User Memory Networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1145_3159652_3159668",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1145_3159652_3159668",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0039",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Improving Sequential Recommendation with Knowledge-Enhanced Memory Networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1145_3209978_3210017",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1145_3209978_3210017",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0040",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Memory Networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1145_3503161_3546972",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1145_3503161_3546972",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0041",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1145_3586183_3606763",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1145_3586183_3606763",
+      "target": "method:generative_agents"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0042",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Accelerating Retrieval-Augmented Generation",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1145_3669940_3707264",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1145_3669940_3707264",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0043",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1609_aaai_v38i16_29728",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1609_aaai_v38i16_29728",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0044",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_1609_aaai_v38i17_29946",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1609_aaai_v38i17_29946",
+      "target": "method:memorybank"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0045",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Lastly, we propose several topics for future research to address these challenges and further enhance the capabilities of LLM agents, including the use of metadata in procedural and semantic memory and the integration of external knowledge sources with vector databases.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_1609_aaaiss_v2i1_27688",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_1609_aaaiss_v2i1_27688",
+      "target": "method:semantic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0046",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Retrieval-augmented Generation across Heterogeneous Knowledge",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_18653_v1_2022_naacl_srw_7",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2022_naacl_srw_7",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0047",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Humanoid Agents: Platform for Simulating Human-like Generative Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_18653_v1_2023_emnlp_demo_15",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2023_emnlp_demo_15",
+      "target": "method:generative_agents"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0048",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Large Language Models (LLMs) face a crucial challenge from fixed context windows and inadequate memory management, leading to a severe shortage of long-term memory capabilities and limited personalization in the interactive experience with AI agents.To overcome this challenge, we innovatively propose a Memory Operating System, i.e., Memo-ryOS, to achieve comprehensive and efficient memory management for AI agents.Inspired by the memory management principles in operating systems, MemoryOS designs a hierarchical storage architecture and consists of four key modules: Memory Storage, Updating, Retrieval, and Generation.Specifically, the architecture comprises three levels of storage units: short-term memory, mid-term memory, and long-term personal memory.Key operations within MemoryOS include dynamic updates between storage units: short-term to mid-term updates follow a dialogue-chain-based FIFO principle, while mid-term to long-term updates use a segmented page organization strategy.Extensive experiments on the LoCoMo benchmark show an average improvement of 49.11% on F1 and 46.18% on BLEU-1 over the baselines on GPT-4o-mini, showing contextual coherence and personalized memory retention in long conversations.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_2025_emnlp_main_1318",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:doi_10_18653_v1_2025_emnlp_main_1318",
+      "target": "benchmark:locomo"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0049",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Long-term memory is a critical challenge for Large Language Model agents, as fixed context windows cannot preserve coherence across extended interactions.Existing memory systems encode conversation history as embedding vectors and retrieve information through semantic similarity.This paradigm fails to capture the associative structure of human memory, wherein related experiences progressively strengthen interconnections through repeated co-activation.Inspired by cognitive neuroscience, we identify three mechanisms central to biological memory: association, consolidation, and spreading activation, which remain largely absent in current research.To bridge this gap, we propose HeLa-Mem, a bio-inspired memory architecture that models memory as a dynamic graph with Hebbian learning dynamics.HeLa-Mem employs a dual-level organization: (1) an episodic memory graph that evolves through co-activation patterns, and (2) a semantic memory store populated via Hebbian Distillation, wherein a Reflective Agent identifies densely connected memory hubs and distills them into structured, reusable semantic knowledge.This dual-path design leverages both semantic similarity and learned associations, mirroring the episodic-semantic distinction in human cognition.Experiments on LoCoMo demonstrate superior performance across four question categories while using significantly fewer context tokens.Code is available on GitHub.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_2026_acl_long_625",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2026_acl_long_625",
+      "target": "method:episodic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0050",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Long-term memory is a critical challenge for Large Language Model agents, as fixed context windows cannot preserve coherence across extended interactions.Existing memory systems encode conversation history as embedding vectors and retrieve information through semantic similarity.This paradigm fails to capture the associative structure of human memory, wherein related experiences progressively strengthen interconnections through repeated co-activation.Inspired by cognitive neuroscience, we identify three mechanisms central to biological memory: association, consolidation, and spreading activation, which remain largely absent in current research.To bridge this gap, we propose HeLa-Mem, a bio-inspired memory architecture that models memory as a dynamic graph with Hebbian learning dynamics.HeLa-Mem employs a dual-level organization: (1) an episodic memory graph that evolves through co-activation patterns, and (2) a semantic memory store populated via Hebbian Distillation, wherein a Reflective Agent identifies densely connected memory hubs and distills them into structured, reusable semantic knowledge.This dual-path design leverages both semantic similarity and learned associations, mirroring the episodic-semantic distinction in human cognition.Experiments on LoCoMo demonstrate superior performance across four question categories while using significantly fewer context tokens.Code is available on GitHub.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_2026_acl_long_625",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2026_acl_long_625",
+      "target": "method:semantic_memory"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0051",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Long-term memory is a critical challenge for Large Language Model agents, as fixed context windows cannot preserve coherence across extended interactions.Existing memory systems encode conversation history as embedding vectors and retrieve information through semantic similarity.This paradigm fails to capture the associative structure of human memory, wherein related experiences progressively strengthen interconnections through repeated co-activation.Inspired by cognitive neuroscience, we identify three mechanisms central to biological memory: association, consolidation, and spreading activation, which remain largely absent in current research.To bridge this gap, we propose HeLa-Mem, a bio-inspired memory architecture that models memory as a dynamic graph with Hebbian learning dynamics.HeLa-Mem employs a dual-level organization: (1) an episodic memory graph that evolves through co-activation patterns, and (2) a semantic memory store populated via Hebbian Distillation, wherein a Reflective Agent identifies densely connected memory hubs and distills them into structured, reusable semantic knowledge.This dual-path design leverages both semantic similarity and learned associations, mirroring the episodic-semantic distinction in human cognition.Experiments on LoCoMo demonstrate superior performance across four question categories while using significantly fewer context tokens.Code is available on GitHub.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_2026_acl_long_625",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:doi_10_18653_v1_2026_acl_long_625",
+      "target": "benchmark:locomo"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0052",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Memory systems often organize user-agent interactions as retrievable external memory and are crucial for long-running agents by overcoming the limited context windows of LLMs.However, existing memory systems invoke LLMs to process every incoming interaction for memory extraction, and such an eager memory consolidation scheme leads to substantial token consumption.To tackle this problem, we propose RecMem by rethinking when memory consolidation should be conducted.RecMem stores incoming interactions in a subconscious memory layer and encode them using lightweight embedding models for retrieval.LLMs are only invoked to extract episodic and semantic memory when sustained recurrence are observed for semantically similar interactions.Such recurrence-based consolidation works because these interactions correspond to a semantic cluster with rich information and thus are worth extraction and summarization.To improve accuracy, RecMem also incorporates a semantic refinement mechanism that recovers the fine-grained facts omitted by memory extraction.Experiments show that RecMem reduces the memory construction token cost of three SOTA memory systems by up to 87% while exceeding their accuracy.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+      "target": "method:semantic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0053",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Memory systems often organize user-agent interactions as retrievable external memory and are crucial for long-running agents by overcoming the limited context windows of LLMs.However, existing memory systems invoke LLMs to process every incoming interaction for memory extraction, and such an eager memory consolidation scheme leads to substantial token consumption.To tackle this problem, we propose RecMem by rethinking when memory consolidation should be conducted.RecMem stores incoming interactions in a subconscious memory layer and encode them using lightweight embedding models for retrieval.LLMs are only invoked to extract episodic and semantic memory when sustained recurrence are observed for semantically similar interactions.Such recurrence-based consolidation works because these interactions correspond to a semantic cluster with rich information and thus are worth extraction and summarization.To improve accuracy, RecMem also incorporates a semantic refinement mechanism that recovers the fine-grained facts omitted by memory extraction.Experiments show that RecMem reduces the memory construction token cost of three SOTA memory systems by up to 87% while exceeding their accuracy.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+      "target": "method:retrieval_augmented_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0054",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_2026_findings_acl_1619",
+      "target": "method:memory_consolidation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0055",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "We introduce a deep memory network for aspect level sentiment classification.Unlike feature-based SVM and sequential neural models such as LSTM, this approach explicitly captures the importance of each context word when inferring the sentiment polarity of an aspect.Such importance degree and text representation are calculated with multiple computational layers, each of which is a neural attention model over an external memory.Experiments on laptop and restaurant datasets demonstrate that our approach performs comparable to state-of-art feature based SVM system, and substantially better than LSTM and attention-based LSTM architectures.On both datasets we show that multiple computational layers could improve the performance.Moreover, our approach is also fast.The deep memory network with 9 layers is 15 times faster than LSTM with a CPU implementation.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_d16_1021",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_d16_1021",
+      "target": "method:retrieval_augmented_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0056",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Key-Value Memory Networks for Directly Reading Documents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_18653_v1_d16_1147",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_d16_1147",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.65,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0057",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Directly reading documents and being able to answer questions from them is an unsolved challenge.To avoid its inherent difficulty, question answering (QA) has been directed towards using Knowledge Bases (KBs) instead, which has proven effective.Unfortunately KBs often suffer from being too restrictive, as the schema cannot support certain types of answers, and too sparse, e.g.Wikipedia contains much more information than Freebase.In this work we introduce a new method, Key-Value Memory Networks, that makes reading documents more viable by utilizing different encodings in the addressing and output stages of the memory read operation.To compare using KBs, information extraction or Wikipedia documents directly in a single framework we construct an analysis tool, WIKIMOVIES, a QA dataset that contains raw text alongside a preprocessed KB, in the domain of movies.Our method reduces the gap between all three settings.It also achieves state-of-the-art results on the existing WIKIQA benchmark.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears beside comparison language",
+        "ontology_version": "0.1.0",
+        "rule_id": "compares_with.alias_in_comparison_sentence.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_18653_v1_d16_1147",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "COMPARES_WITH",
+      "source": "paper:doi_10_18653_v1_d16_1147",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0058",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Gated End-to-End Memory Networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_18653_v1_e17_1001",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_18653_v1_e17_1001",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0059",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_24963_ijcai_2025_2",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_24963_ijcai_2025_2",
+      "target": "method:episodic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0060",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_3389_fpsyg_2025_1591618",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_3389_fpsyg_2025_1591618",
+      "target": "method:retrieval_augmented_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0061",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_3389_fpsyg_2025_1591618",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_3389_fpsyg_2025_1591618",
+      "target": "method:generative_agents"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0062",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48448_gce2_rc10",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48448_gce2_rc10",
+      "target": "method:memory_consolidation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0063",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "We introduce a neural network with a recurrent attention model over a possibly large external memory.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_1503_08895",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_1503_08895",
+      "target": "method:retrieval_augmented_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0064",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "End-To-End Memory Networks",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_1503_08895",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_1503_08895",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0065",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Dynamic Memory Networks for Visual and Textual Question Answering",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_1603_01417",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_1603_01417",
+      "target": "method:memory_networks"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0066",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2303_11366",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2303_11366",
+      "target": "method:reflexion"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0067",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2304_03442",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2304_03442",
+      "target": "method:generative_agents"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0068",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "MemoryBank: Enhancing Large Language Models with Long-Term Memory",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2305_10250",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2305_10250",
+      "target": "method:memorybank"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0069",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2309_01431",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2309_01431",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.75,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0070",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Using this technique, we introduce MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in order to effectively provide extended context within the LLM's limited context window, and utilizes interrupts to manage control flow between itself and the user.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "alias in contribution sentence",
+        "ontology_version": "0.1.0",
+        "rule_id": "addresses.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2310_08560",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "ADDRESSES",
+      "source": "paper:doi_10_48550_arxiv_2310_08560",
+      "target": "problem:context_limitation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0071",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "MemGPT: Towards LLMs as Operating Systems",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2310_08560",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2310_08560",
+      "target": "method:memgpt"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0072",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2312_10997",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2312_10997",
+      "target": "method:retrieval_augmented_generation"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0073",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "AriGraph: Learning Knowledge Graph World Models with Episodic Memory for LLM Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2407_04363",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2407_04363",
+      "target": "method:episodic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0074",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "This paper investigates how memory structures and memory retrieval methods affect the performance of LLM-based agents.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2412_15266",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2412_15266",
+      "target": "method:retrieval_augmented_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0075",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2605_16045",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2605_16045",
+      "target": "method:memory_consolidation"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0076",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Experiments on the LoCoMo benchmark and LongMemEval benchmark demonstrate significant improvements over strong baselines (up to 23%), while substantially reducing token and runtime cost, highlighting the effectiveness of active and associative reconstruction for long-horizon memory reasoning.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2606_06036",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:doi_10_48550_arxiv_2606_06036",
+      "target": "benchmark:longmemeval"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0077",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Experiments on the LoCoMo benchmark and LongMemEval benchmark demonstrate significant improvements over strong baselines (up to 23%), while substantially reducing token and runtime cost, highlighting the effectiveness of active and associative reconstruction for long-horizon memory reasoning.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2606_06036",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:doi_10_48550_arxiv_2606_06036",
+      "target": "benchmark:locomo"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0078",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Experiments using GPT-4.1-Mini show that LycheeMemory achieves state-of-the-art performance, reaching 89.22% on LoCoMo and 92.20% on LongMemEval-S.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2608_12990",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:doi_10_48550_arxiv_2608_12990",
+      "target": "benchmark:longmemeval"
+    },
+    {
+      "confidence": 0.8,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0079",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Experiments using GPT-4.1-Mini show that LycheeMemory achieves state-of-the-art performance, reaching 89.22% on LoCoMo and 92.20% on LongMemEval-S.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "benchmark alias appears in title or evaluation language",
+        "ontology_version": "0.1.0",
+        "rule_id": "evaluates_on.exact_alias.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2608_12990",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "EVALUATES_ON",
+      "source": "paper:doi_10_48550_arxiv_2608_12990",
+      "target": "benchmark:locomo"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0080",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "We present Agent Zero Memory, a provenance-aware long-term memory system that distils a user's conversations, files, and connected sources into three parallel memory systems, each capturing a different facet of the same history: an episodic Memory Events timeline that makes when and what changed first-class, an associative entity-event knowledge graph that links people and projects across sessions, and a semantic, curated, citation-locked Hierarchical Documentary Memory (HDM) of durable facts.",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_48550_arxiv_2608_29606",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_48550_arxiv_2608_29606",
+      "target": "method:episodic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0081",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Generative Agents to support students learning progress",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_4995_bmt2023_2023_16750",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_4995_bmt2023_2023_16750",
+      "target": "method:generative_agents"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0082",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "We present MNEMA (Memory-Native Episodic-semantic Architecture for Agents), a three-tier cognitive architecture grounded in cognitive psychology and computational neuroscience: a generic reasoning substrate (a pretrained LLM, replaceable) and two identity-bearing personal tiers, a time-indexed episodic memory and a typed semantic knowledge graph, connected by two substrate-driven, inter-session dynamics: consolidation (episodic-to-semantic distillation) and self-inspection (intra-graph review plus structurally triggered external acquisition).",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_5281_zenodo_20010219",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_5281_zenodo_20010219",
+      "target": "method:episodic_memory"
+    },
+    {
+      "confidence": 0.85,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0083",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "We present MNEMA (Memory-Native Episodic-semantic Architecture for Agents), a three-tier cognitive architecture grounded in cognitive psychology and computational neuroscience: a generic reasoning substrate (a pretrained LLM, replaceable) and two identity-bearing personal tiers, a time-indexed episodic memory and a typed semantic knowledge graph, connected by two substrate-driven, inter-session dynamics: consolidation (episodic-to-semantic distillation) and self-inspection (intra-graph review plus structurally triggered external acquisition).",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "method alias appears in title or proposal language",
+        "ontology_version": "0.1.0",
+        "rule_id": "proposes.title_or_abstract_pattern.v1",
+        "source_field": "abstract",
+        "source_paper_id": "paper:doi_10_5281_zenodo_20010220",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "PROPOSES",
+      "source": "paper:doi_10_5281_zenodo_20010220",
+      "target": "method:episodic_memory"
+    },
+    {
+      "confidence": 0.75,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0084",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "alias in title",
+        "ontology_version": "0.1.0",
+        "rule_id": "addresses.exact_alias.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_5281_zenodo_20554486",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "ADDRESSES",
+      "source": "paper:doi_10_5281_zenodo_20554486",
+      "target": "concept:persistent_memory"
+    },
+    {
+      "confidence": 0.75,
+      "corroborating_provenance": [],
+      "edge_id": "edge_0085",
+      "provenance": {
+        "attribution": null,
+        "curated_by": null,
+        "curation_ref": null,
+        "evidence": "Trauma Stream: Event-Driven Persistent Memory for Long-Term LLM Agent Continuity",
+        "knowledge_build_version": "0.1.0",
+        "mapping_decision": "alias in title",
+        "ontology_version": "0.1.0",
+        "rule_id": "addresses.exact_alias.v1",
+        "source_field": "title",
+        "source_paper_id": "paper:doi_10_5281_zenodo_20554487",
+        "type": "RULE_DERIVED"
+      },
+      "relation": "ADDRESSES",
+      "source": "paper:doi_10_5281_zenodo_20554487",
+      "target": "concept:persistent_memory"
+    }
+  ],
+  "schema_version": "0.1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "build_report": "docs/m3_knowledge_build_report.json",
+  "corpus_version": "0.1.0",
+  "entity_count": 114,
+  "integrity": "067001bd3dce2d4a779ed70f8034edba45f67d74f35f0dd29379d37680ef0ef3",
+  "knowledge_build_version": "0.1.0",
+  "ontology_version": "0.1.0",
+  "relationship_count": 85,
+  "schema_version": "0.1.0"
+}

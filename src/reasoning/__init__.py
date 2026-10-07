@@ -1,1 +1,1 @@
-"""Placeholder package. Implemented in a later milestone (see README status table)."""
+"""Deterministic proposal reasoning over the frozen knowledge state."""

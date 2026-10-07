@@ -1,0 +1,14 @@
+{
+  "ambiguous": 6,
+  "edge_count": 85,
+  "entity_count": 114,
+  "paper_count": 70,
+  "relation_distribution": {
+    "ADDRESSES": 3,
+    "CITES": 29,
+    "COMPARES_WITH": 1,
+    "EVALUATES_ON": 7,
+    "PROPOSES": 45
+  },
+  "validation_errors": 0
+}
