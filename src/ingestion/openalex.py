@@ -71,7 +71,7 @@ def fetch_work_records(work_id: str, api_mailto: Optional[str] = None) -> Tuple[
     mailto = api_mailto or "moneca@example.com"
     clean = work_id.replace("https://openalex.org/", "").replace("openalex:", "")
     try:
-        resp = requests.get(f"{BASE_URL}/works/{clean}", params={"mailto": mailto, "select": SELECT_FIELDS}, timeout=30, headers={"User-Agent": f"ResearchMap/0.1 ({mailto})"})
+        resp = requests.get(f"{BASE_URL}/works/{clean}", params={"mailto": mailto, "select": SELECT_FIELDS}, timeout=30, headers={"User-Agent": f"ResearchAtlas/0.1 ({mailto})"})
         if resp.status_code >= 400:
             return None, None
         payload = resp.json()
@@ -90,7 +90,7 @@ def search_papers(query: str, limit: int = 100, api_mailto: Optional[str] = None
     last_error: Optional[Exception] = None
     for attempt in range(5):
         try:
-            resp = requests.get(f"{BASE_URL}/works", params=params, timeout=30, headers={"User-Agent": f"ResearchMap/0.1 ({mailto})"})
+            resp = requests.get(f"{BASE_URL}/works", params=params, timeout=30, headers={"User-Agent": f"ResearchAtlas/0.1 ({mailto})"})
             if resp.status_code >= 500 or resp.status_code == 429:
                 last_error = OpenAlexError(f"HTTP {resp.status_code}")
                 time.sleep(2 ** attempt)

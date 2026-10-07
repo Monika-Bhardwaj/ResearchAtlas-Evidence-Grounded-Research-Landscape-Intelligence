@@ -31,7 +31,7 @@ def _cache_name(text: str) -> str:
 
 def _request_json(path: str, params: Dict[str, Any], api_key: Optional[str] = None, max_retries: int = 5) -> Dict[str, Any]:
     url = BASE_URL + path
-    headers = {"User-Agent": "ResearchMap/0.1"}
+    headers = {"User-Agent": "ResearchAtlas/0.1"}
     if api_key:
         headers["x-api-key"] = api_key
     for attempt in range(max_retries):

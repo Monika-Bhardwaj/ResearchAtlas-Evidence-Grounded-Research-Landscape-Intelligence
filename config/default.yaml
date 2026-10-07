@@ -1,4 +1,4 @@
-# ResearchMap configuration (Milestone 1).
+# ResearchAtlas configuration (Milestone 1).
 # M1 values are frozen in Contract v0.1 (Section 49.10 / 49.12).
 schema_version: "0.1.0"
 ontology_version: "0.1.0"

@@ -79,7 +79,7 @@ def search_papers(query: str, limit: int = 100, cache_name: Optional[str] = None
     last_error: Optional[Exception] = None
     for attempt in range(5):
         try:
-            resp = requests.get(ARXIV_API, params=params, timeout=30, headers={"User-Agent": "ResearchMap/0.1"})
+            resp = requests.get(ARXIV_API, params=params, timeout=30, headers={"User-Agent": "ResearchAtlas/0.1"})
             if resp.status_code >= 500 or resp.status_code == 429:
                 last_error = ArxivError(f"HTTP {resp.status_code}")
                 time.sleep(2 ** attempt)

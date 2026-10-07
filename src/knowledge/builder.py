@@ -316,7 +316,7 @@ def build_knowledge_state() -> Tuple[KnowledgeState, Dict[str, Any]]:
         ontology_version="0.1.0",
         corpus_version=_config_version(),
         knowledge_build_version=BUILD_VERSION,
-        build_metadata=BuildMetadata(generator="ResearchMap build_knowledge_state.py", git_sha=_git_sha(), config_hash=_corpus_config_hash(), notes="M3 rule-based human-ontology build"),
+        build_metadata=BuildMetadata(generator="ResearchAtlas build_knowledge_state.py", git_sha=_git_sha(), config_hash=_corpus_config_hash(), notes="M3 rule-based human-ontology build"),
         integrity=__import__("src.knowledge.models", fromlist=["Integrity"]).Integrity(content_sha256="0"*64),
         entities=tuple(entities),
         relationships=tuple(edges.values()),

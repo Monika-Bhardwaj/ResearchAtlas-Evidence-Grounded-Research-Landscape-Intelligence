@@ -1,4 +1,4 @@
-# ResearchMap ontology v0.1.0 (Milestone 1).
+# ResearchAtlas ontology v0.1.0 (Milestone 1).
 # Human-reviewed specification. The vocabulary is CLOSED: exactly the 9 entity types and
 # 20 relation types of Sections 6-7. The loader fails on any extra or missing key.
 # Planning estimates below are ESTIMATES made before any corpus or rule exists. They are

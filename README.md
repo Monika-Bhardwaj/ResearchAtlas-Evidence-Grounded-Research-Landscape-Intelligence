@@ -1,6 +1,6 @@
-# ResearchMap
+# ResearchAtlas
 
-ResearchMap is a provenance-backed **research-decision engine** for the topic:
+ResearchAtlas is a provenance-backed **research-decision engine** for the topic:
 
 > **Persistent / Long-Term Memory for LLM Agents**
 
@@ -26,7 +26,7 @@ A new researcher entering a field needs more than paper links. They need to know
 - whether a proposed idea has direct coverage in the corpus
 - what to read first
 
-ResearchMap models the research landscape rather than only storing papers.
+ResearchAtlas models the research landscape rather than only storing papers.
 
 ---
 

@@ -14,7 +14,7 @@ A researcher entering a narrow area usually has to manually answer:
 
 A flat paper list cannot answer these questions because it stores papers, not the typed relationships between papers, methods, concepts, benchmark results, limitations, and research directions.
 
-ResearchMap therefore models the **research landscape**, not just papers.
+ResearchAtlas therefore models the **research landscape**, not just papers.
 
 ## 2. Why simple retrieval is not enough
 

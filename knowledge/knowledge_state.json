@@ -50,9 +50,9 @@
     }
   ],
   "build_metadata": {
-    "config_hash": "301b13e7923a98783d35d7a72a08e903a7113b8b48d3f4200893105d3fd9726c",
-    "generator": "ResearchMap build_knowledge_state.py",
-    "git_sha": "c66a2ed6e1ce118a7b8d5216eba38b718ca18ef3",
+    "config_hash": "a0657fb507e4e6bec7f7ca8306ac21e73b9f2552864011bc653f1be42f745406",
+    "generator": "ResearchAtlas build_knowledge_state.py",
+    "git_sha": "743e648a87a9d16d929472cc974426cedc74cffe",
     "notes": "M3 rule-based human-ontology build"
   },
   "corpus_version": "0.1.0",

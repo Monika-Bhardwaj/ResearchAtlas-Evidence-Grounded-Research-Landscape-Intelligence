@@ -22,15 +22,15 @@ class Issue:
         return f"[{self.severity.value}] {self.code} @ {self.location or '-'}: {self.message}"
 
 
-class ResearchMapError(Exception):
-    """Base class for all ResearchMap errors."""
+class ResearchAtlasError(Exception):
+    """Base class for all ResearchAtlas errors."""
 
 
-class ConfigError(ResearchMapError):
+class ConfigError(ResearchAtlasError):
     """Configuration file is missing or invalid."""
 
 
-class OntologyError(ResearchMapError):
+class OntologyError(ResearchAtlasError):
     """The ontology specification is invalid. The build must not continue."""
 
     def __init__(self, problems: Sequence[str]):
@@ -38,11 +38,11 @@ class OntologyError(ResearchMapError):
         super().__init__("Invalid ontology specification:\n  - " + "\n  - ".join(self.problems))
 
 
-class KnowledgeStateCorruptError(ResearchMapError):
+class KnowledgeStateCorruptError(ResearchAtlasError):
     """A knowledge-state file is unreadable or structurally malformed."""
 
 
-class ValidationFailed(ResearchMapError):
+class ValidationFailed(ResearchAtlasError):
     """One or more ERROR-level issues were found. Nothing is silently repaired."""
 
     def __init__(self, issues: Sequence[Issue]):
@@ -51,5 +51,5 @@ class ValidationFailed(ResearchMapError):
         super().__init__(f"{len(errs)} validation error(s):\n  " + "\n  ".join(str(i) for i in errs))
 
 
-class SealMismatchError(ResearchMapError):
+class SealMismatchError(ResearchAtlasError):
     """A sealed file's hash does not match its committed seal."""
