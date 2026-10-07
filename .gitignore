@@ -3,5 +3,4 @@ __pycache__/
 .pytest_cache/
 .venv/
 *.egg-info/
-data/cache/
-data/raw/
+# Raw API responses and acquisition caches are reproducibility artifacts and are committed.

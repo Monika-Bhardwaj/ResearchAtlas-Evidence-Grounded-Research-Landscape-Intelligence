@@ -45,10 +45,13 @@ def test_all_twelve_adrs_exist_with_the_required_sections():
 
 
 def test_no_premature_implementation_only_placeholders_in_later_milestone_packages():
-    for pkg in ("ingestion", "corpus", "reasoning", "interface"):
+    # Milestones 4+ packages remain placeholders; ingestion and corpus are now M2 code.
+    for pkg in ("reasoning", "interface"):
         files = [p.name for p in (REPO_ROOT / "src" / pkg).iterdir() if p.is_file() and p.suffix == ".py"]
         assert files == ["__init__.py"], (pkg, files)
         assert "Placeholder" in (REPO_ROOT / "src" / pkg / "__init__.py").read_text(encoding="utf-8")
+    assert (REPO_ROOT / "src" / "ingestion" / "semantic_scholar.py").exists()
+    assert (REPO_ROOT / "src" / "corpus" / "pool.py").exists()
 
 
 def test_data_directory_holds_only_blank_templates_and_empty_dirs():

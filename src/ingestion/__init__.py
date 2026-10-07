@@ -1,1 +1,1 @@
-"""Placeholder package. Implemented in a later milestone (see README status table)."""
+"""Ingestion clients for M2 corpus acquisition."""

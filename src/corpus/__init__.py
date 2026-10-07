@@ -1,1 +1,1 @@
-"""Placeholder package. Implemented in a later milestone (see README status table)."""
+"""Corpus identity resolution, selection, manifest, and M2 quality reporting."""

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/dhwcWN7E2fxfquDsLqElvJjdgMA</id>
+  <title>arXiv Query: search_query=all:"long-horizon memory agents"&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-07T12:01:54Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22long-horizon+memory+agents%22&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2601.23014v2</id>
+    <title>Mem-T: Densifying Rewards for Long-Horizon Memory Agents</title>
+    <updated>2026-03-09T14:47:04Z</updated>
+    <link href="https://arxiv.org/abs/2601.23014v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.23014v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memory agents, which depart from predefined memory-processing pipelines by endogenously managing the processing, storage, and retrieval of memories, have garnered increasing attention for their autonomy and adaptability. However, existing training paradigms remain constrained: agents often traverse long-horizon sequences of memory operations before receiving sparse and delayed rewards, which hinders truly end-to-end optimization of memory management policies. To address this limitation, we introduce Mem-T, an autonomous memory agent that interfaces with a lightweight hierarchical memory database to perform dynamic updates and multi-turn retrieval over streaming inputs. To effectively train long-horizon memory management capabilities, we further propose MoT-GRPO, a tree-guided reinforcement learning framework that transforms sparse terminal feedback into dense, step-wise supervision via memory operation tree backpropagation and hindsight credit assignment, thereby enabling the joint optimization of memory construction and retrieval. Extensive experiments demonstrate that Mem-T is (1) high-performing, surpassing frameworks such as A-Mem and Mem0 by up to $14.92\%$, and (2) economical, operating on a favorable accuracy-efficiency Pareto frontier and reducing inference tokens per query by $\sim24.45\%$ relative to GAM without sacrificing performance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-30T14:23:33Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yanwei Yue</name>
+    </author>
+    <author>
+      <name>Boci Peng</name>
+    </author>
+    <author>
+      <name>Xuanbo Fan</name>
+    </author>
+    <author>
+      <name>Jiaxin Guo</name>
+    </author>
+    <author>
+      <name>Qiankun Li</name>
+    </author>
+    <author>
+      <name>Yan Zhang</name>
+    </author>
+  </entry>
+</feed>

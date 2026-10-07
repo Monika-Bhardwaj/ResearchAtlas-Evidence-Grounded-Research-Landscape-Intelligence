@@ -1,0 +1,85 @@
+{
+  "queries": {
+    "agentic memory systems": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_agentic_memory_systems.atom",
+        "record_count": 50,
+        "records_path": "data/cache/records/arxiv_agentic_memory_systems.json",
+        "status": "ok"
+      }
+    },
+    "episodic memory LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_episodic_memory_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_episodic_memory_llm_agents.json",
+        "status": "ok"
+      }
+    },
+    "long-horizon memory agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_long-horizon_memory_agents.atom",
+        "record_count": 1,
+        "records_path": "data/cache/records/arxiv_long-horizon_memory_agents.json",
+        "status": "ok"
+      }
+    },
+    "long-term memory LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_long-term_memory_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_long-term_memory_llm_agents.json",
+        "status": "ok"
+      }
+    },
+    "memory architectures LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_memory_architectures_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_memory_architectures_llm_agents.json",
+        "status": "ok"
+      }
+    },
+    "memory consolidation LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_memory_consolidation_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_memory_consolidation_llm_agents.json",
+        "status": "ok"
+      }
+    },
+    "memory retrieval LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_memory_retrieval_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_memory_retrieval_llm_agents.json",
+        "status": "ok"
+      }
+    },
+    "persistent memory LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_persistent_memory_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_persistent_memory_llm_agents.json",
+        "status": "ok"
+      }
+    },
+    "selective forgetting agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_selective_forgetting_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_selective_forgetting_agents.json",
+        "status": "ok"
+      }
+    },
+    "semantic memory LLM agents": {
+      "arxiv": {
+        "raw_path": "data/raw/arxiv/api_query_semantic_memory_llm_agents.atom",
+        "record_count": 0,
+        "records_path": "data/cache/records/arxiv_semantic_memory_llm_agents.json",
+        "status": "ok"
+      }
+    }
+  },
+  "schema_version": "0.1.0"
+}

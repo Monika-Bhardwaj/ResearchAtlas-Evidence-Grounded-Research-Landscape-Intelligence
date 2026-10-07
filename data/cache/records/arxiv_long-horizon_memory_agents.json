@@ -1,0 +1,37 @@
+[
+  {
+    "abstract": "Memory agents, which depart from predefined memory-processing pipelines by endogenously managing the processing, storage, and retrieval of memories, have garnered increasing attention for their autonomy and adaptability. However, existing training paradigms remain constrained: agents often traverse long-horizon sequences of memory operations before receiving sparse and delayed rewards, which hinders truly end-to-end optimization of memory management policies. To address this limitation, we introduce Mem-T, an autonomous memory agent that interfaces with a lightweight hierarchical memory database to perform dynamic updates and multi-turn retrieval over streaming inputs. To effectively train long-horizon memory management capabilities, we further propose MoT-GRPO, a tree-guided reinforcement learning framework that transforms sparse terminal feedback into dense, step-wise supervision via memory operation tree backpropagation and hindsight credit assignment, thereby enabling the joint optimization of memory construction and retrieval. Extensive experiments demonstrate that Mem-T is (1) high-performing, surpassing frameworks such as A-Mem and Mem0 by up to $14.92\\%$, and (2) economical, operating on a favorable accuracy-efficiency Pareto frontier and reducing inference tokens per query by $\\sim24.45\\%$ relative to GAM without sacrificing performance.",
+    "arxiv_id": "2601.23014",
+    "authors": [
+      "Yanwei Yue",
+      "Boci Peng",
+      "Xuanbo Fan",
+      "Jiaxin Guo",
+      "Qiankun Li",
+      "Yan Zhang"
+    ],
+    "citation_count": null,
+    "citations": [],
+    "doi": null,
+    "publication_date": "2026-01-30",
+    "raw_path": "data/raw/arxiv/api_query_long-horizon_memory_agents.atom",
+    "raw_sha256": "65c84d5f3d47592a19b9d4406c28db74306b4927fd934a531ace03358e550686",
+    "reference_count": null,
+    "references": [],
+    "s2_paper_id": null,
+    "seed_queries": [
+      "long-horizon memory agents"
+    ],
+    "source": "arxiv",
+    "source_id": "2601.23014",
+    "source_payload": {
+      "id": "http://arxiv.org/abs/2601.23014v2",
+      "summary": "Memory agents, which depart from predefined memory-processing pipelines by endogenously managing the processing, storage, and retrieval of memories, have garnered increasing attention for their autonomy and adaptability. However, existing training paradigms remain constrained: agents often traverse long-horizon sequences of memory operations before receiving sparse and delayed rewards, which hinders truly end-to-end optimization of memory management policies. To address this limitation, we introduce Mem-T, an autonomous memory agent that interfaces with a lightweight hierarchical memory database to perform dynamic updates and multi-turn retrieval over streaming inputs. To effectively train long-horizon memory management capabilities, we further propose MoT-GRPO, a tree-guided reinforcement learning framework that transforms sparse terminal feedback into dense, step-wise supervision via memory operation tree backpropagation and hindsight credit assignment, thereby enabling the joint optimization of memory construction and retrieval. Extensive experiments demonstrate that Mem-T is (1) high-performing, surpassing frameworks such as A-Mem and Mem0 by up to $14.92\\%$, and (2) economical, operating on a favorable accuracy-efficiency Pareto frontier and reducing inference tokens per query by $\\sim24.45\\%$ relative to GAM without sacrificing performance.",
+      "title": "Mem-T: Densifying Rewards for Long-Horizon Memory Agents"
+    },
+    "title": "Mem-T: Densifying Rewards for Long-Horizon Memory Agents",
+    "url": "http://arxiv.org/abs/2601.23014v2",
+    "venue": "cs.LG",
+    "year": 2026
+  }
+]

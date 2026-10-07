@@ -1,0 +1,53 @@
+# ResearchMap Milestone 2 acquisition/selection configuration.
+# Topic confirmed at M1 approval: persistent/long-term memory for LLM agents.
+# This is the deterministic corpus-acquisition plan. It is not a T2 gold constraint.
+
+corpus:
+  version: "0.1.0"
+  topic: "Persistent / Long-Term Memory for LLM Agents"
+  scope: "persistent memory, episodic/semantic memory, memory consolidation, retrieval, selective forgetting, and long-horizon memory for LLM/agent systems"
+  target_size: 70
+  acceptable_size_min: 50
+  acceptable_size_max: 100
+
+  seed_queries:
+    - "persistent memory LLM agents"
+    - "long-term memory LLM agents"
+    - "episodic memory LLM agents"
+    - "semantic memory LLM agents"
+    - "memory consolidation LLM agents"
+    - "selective forgetting agents"
+    - "memory retrieval LLM agents"
+    - "long-horizon memory agents"
+    - "memory architectures LLM agents"
+    - "agentic memory systems"
+
+  temporal_quotas:
+    le_2021: {min: 8, max: 10}
+    y2022_2023: {min: 20, max: 25}
+    y2024_plus: {min: 35, max: 40}
+
+  selection:
+    provider_priority: ["semantic_scholar", "arxiv"]
+    max_candidates_per_query: 100
+    one_hop_reference_expansion: true
+    score:
+      seed_hit_weight: 10.0
+      citation_count_log_weight: 1.0
+      reference_count_log_weight: 0.5
+      in_pool_citation_weight: 2.0
+      recency_bonus_2024_plus: 1.0
+    tie_break: "canonical_id"
+
+section11:
+  required_stats:
+    - paper_count
+    - publication_year_distribution
+    - citation_edge_count
+    - average_degree
+    - isolated_nodes
+    - connected_components
+    - duplicate_rate
+    - missing_metadata
+    - seed_coverage
+  note: "Concept coverage is reported as seed coverage until the approved controlled vocabulary exists."
