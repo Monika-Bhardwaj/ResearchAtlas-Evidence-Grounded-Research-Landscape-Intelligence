@@ -1,0 +1,169 @@
+{
+  "$defs": {
+    "AmbiguousTerm": {
+      "additionalProperties": false,
+      "properties": {
+        "candidates": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "input": {
+          "minLength": 1,
+          "title": "Input",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input",
+        "candidates"
+      ],
+      "title": "AmbiguousTerm",
+      "type": "object"
+    },
+    "Approval": {
+      "additionalProperties": false,
+      "properties": {
+        "approved_by": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Approved By"
+        },
+        "approved_on": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Approved On"
+        },
+        "status": {
+          "$ref": "#/$defs/ApprovalStatus",
+          "default": "DRAFT"
+        }
+      },
+      "title": "Approval",
+      "type": "object"
+    },
+    "ApprovalStatus": {
+      "enum": [
+        "DRAFT",
+        "APPROVED"
+      ],
+      "title": "ApprovalStatus",
+      "type": "string"
+    },
+    "EntityType": {
+      "enum": [
+        "Paper",
+        "ResearchProblem",
+        "Method",
+        "Technique",
+        "Concept",
+        "Benchmark",
+        "Claim",
+        "Limitation",
+        "ResearchDirection"
+      ],
+      "title": "EntityType",
+      "type": "string"
+    },
+    "VocabularyEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "approval": {
+          "$ref": "#/$defs/Approval",
+          "default": {
+            "approved_by": null,
+            "approved_on": null,
+            "status": "DRAFT"
+          }
+        },
+        "definition": {
+          "minLength": 1,
+          "title": "Definition",
+          "type": "string"
+        },
+        "drafted_with_ai": {
+          "default": false,
+          "title": "Drafted With Ai",
+          "type": "boolean"
+        },
+        "id": {
+          "pattern": "^[a-z]+:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/EntityType"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "label",
+        "definition"
+      ],
+      "title": "VocabularyEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "ambiguous_terms": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/AmbiguousTerm"
+      },
+      "title": "Ambiguous Terms",
+      "type": "array"
+    },
+    "entries": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/VocabularyEntry"
+      },
+      "title": "Entries",
+      "type": "array"
+    },
+    "vocabulary_version": {
+      "minLength": 1,
+      "title": "Vocabulary Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "vocabulary_version"
+  ],
+  "title": "VocabularyFile",
+  "type": "object"
+}

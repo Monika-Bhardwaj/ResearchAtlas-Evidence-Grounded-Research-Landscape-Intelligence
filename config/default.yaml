@@ -1,0 +1,37 @@
+# ResearchMap configuration (Milestone 1).
+# Values marked PROPOSED become frozen when Milestone 1 is approved (Section 49.10 / 49.12).
+schema_version: "0.1.0"
+ontology_version: "0.1.0"
+
+traversal:            # Section 19: bounded traversal
+  max_hops: 3
+  max_nodes: 200
+
+reading_path:         # Section 24: approximately 5-7 papers
+  max_papers: 7
+
+scoring_weights:      # Section 21 starting points; tuned on the DEV set only. Must sum to 1.0.
+  concept_overlap: 0.30
+  method_overlap: 0.20
+  problem_overlap: 0.15
+  benchmark_overlap: 0.10
+  graph_proximity: 0.10
+  citation_connectivity: 0.10
+  temporal_relevance: 0.05
+
+gold:                 # PROPOSED (49.12): gold-set structure rules
+  facets_min: 3
+  facets_max: 5
+  require_combination_facet: true
+  min_facet_words: 6
+  label_hint_terms:   # WARNING-level label-neutrality heuristic (49.5b rule 9)
+    - "well explored"
+    - "well-explored"
+    - "partially explored"
+    - "underrepresented"
+    - "under-represented"
+    - "underexplored"
+    - "under-explored"
+    - "unexplored"
+    - "no prior work"
+    - "novel"

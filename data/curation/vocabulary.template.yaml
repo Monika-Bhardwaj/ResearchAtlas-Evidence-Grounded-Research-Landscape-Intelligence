@@ -1,0 +1,19 @@
+# BLANK TEMPLATE. Human-authored input; the coding agent supplies only this format and its validation.
+# Entities other than Paper come from here. Only APPROVED entries are used by a build.
+# An AI-assisted draft is allowed, but it is not authoritative until you approve it.
+#
+# Example entry (generic, for format only; replace with your own approved vocabulary):
+#   - id: concept:example_concept
+#     type: Concept
+#     label: Example concept
+#     aliases: [example concept alias]
+#     definition: One sentence defining the concept in this corpus.
+#     drafted_with_ai: false
+#     approval: {status: APPROVED, approved_by: "<your name>", approved_on: "2026-01-01"}
+#
+# A term that maps to more than one entry must be declared (ambiguity is never silently resolved):
+#   ambiguous_terms:
+#     - {input: "<term>", candidates: [concept:a, concept:b]}
+vocabulary_version: "0.1.0-template"
+entries: []
+ambiguous_terms: []

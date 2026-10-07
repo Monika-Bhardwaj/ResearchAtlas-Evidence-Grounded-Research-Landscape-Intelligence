@@ -1,0 +1,235 @@
+{
+  "$defs": {
+    "Approval": {
+      "additionalProperties": false,
+      "properties": {
+        "approved_by": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Approved By"
+        },
+        "approved_on": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Approved On"
+        },
+        "status": {
+          "$ref": "#/$defs/ApprovalStatus",
+          "default": "DRAFT"
+        }
+      },
+      "title": "Approval",
+      "type": "object"
+    },
+    "ApprovalStatus": {
+      "enum": [
+        "DRAFT",
+        "APPROVED"
+      ],
+      "title": "ApprovalStatus",
+      "type": "string"
+    },
+    "Attribution": {
+      "description": "Who reports a limitation (REPORTS_LIMITATION only).",
+      "enum": [
+        "SELF_REPORTED",
+        "THIRD_PARTY"
+      ],
+      "title": "Attribution",
+      "type": "string"
+    },
+    "CuratedEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "approval": {
+          "$ref": "#/$defs/Approval",
+          "default": {
+            "approved_by": null,
+            "approved_on": null,
+            "status": "DRAFT"
+          }
+        },
+        "attribution": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Attribution"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "authorship": {
+          "const": "HUMAN",
+          "title": "Authorship",
+          "type": "string"
+        },
+        "curated_by": {
+          "minLength": 1,
+          "title": "Curated By",
+          "type": "string"
+        },
+        "curation_id": {
+          "pattern": "^cur_[0-9]{4,}$",
+          "title": "Curation Id",
+          "type": "string"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "relation": {
+          "$ref": "#/$defs/RelationType"
+        },
+        "source": {
+          "pattern": "^[a-z]+:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "pattern": "^[a-z]+:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Target",
+          "type": "string"
+        }
+      },
+      "required": [
+        "curation_id",
+        "source",
+        "relation",
+        "target",
+        "rationale",
+        "authorship",
+        "curated_by"
+      ],
+      "title": "CuratedEdge",
+      "type": "object"
+    },
+    "EvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "paper_id": {
+          "pattern": "^paper:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Paper Id",
+          "type": "string"
+        },
+        "passage": {
+          "minLength": 1,
+          "title": "Passage",
+          "type": "string"
+        },
+        "source_field": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceField"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "paper_id",
+        "passage"
+      ],
+      "title": "EvidenceRef",
+      "type": "object"
+    },
+    "RelationType": {
+      "enum": [
+        "CITES",
+        "CITED_BY",
+        "ADDRESSES",
+        "PROPOSES",
+        "USES",
+        "DEPENDS_ON",
+        "EVALUATES_ON",
+        "MEASURES_WITH",
+        "BUILDS_ON",
+        "EXTENDS",
+        "COMPARES_WITH",
+        "SUPPORTS",
+        "CHALLENGES",
+        "REPORTS_LIMITATION",
+        "MOTIVATES",
+        "PREREQUISITE_FOR",
+        "ALTERNATIVE_TO",
+        "GENERALIZES",
+        "SPECIALIZES",
+        "COMBINES_WITH"
+      ],
+      "title": "RelationType",
+      "type": "string"
+    },
+    "SourceField": {
+      "enum": [
+        "title",
+        "abstract",
+        "authors",
+        "year",
+        "venue",
+        "identifiers",
+        "references",
+        "citations",
+        "citation_context",
+        "curation_file"
+      ],
+      "title": "SourceField",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "curation_version": {
+      "minLength": 1,
+      "title": "Curation Version",
+      "type": "string"
+    },
+    "curator": {
+      "minLength": 1,
+      "title": "Curator",
+      "type": "string"
+    },
+    "edges": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/CuratedEdge"
+      },
+      "title": "Edges",
+      "type": "array"
+    }
+  },
+  "required": [
+    "curation_version",
+    "curator"
+  ],
+  "title": "CurationFile",
+  "type": "object"
+}

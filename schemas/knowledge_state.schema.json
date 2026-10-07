@@ -1,0 +1,465 @@
+{
+  "$defs": {
+    "AmbiguityRecord": {
+      "additionalProperties": false,
+      "description": "Section 15: ambiguous terms are represented, never silently resolved.",
+      "properties": {
+        "candidates": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "input": {
+          "minLength": 1,
+          "title": "Input",
+          "type": "string"
+        },
+        "status": {
+          "const": "AMBIGUOUS",
+          "default": "AMBIGUOUS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "input",
+        "candidates"
+      ],
+      "title": "AmbiguityRecord",
+      "type": "object"
+    },
+    "Attribution": {
+      "description": "Who reports a limitation (REPORTS_LIMITATION only).",
+      "enum": [
+        "SELF_REPORTED",
+        "THIRD_PARTY"
+      ],
+      "title": "Attribution",
+      "type": "string"
+    },
+    "BuildMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "config_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Config Hash"
+        },
+        "generator": {
+          "minLength": 1,
+          "title": "Generator",
+          "type": "string"
+        },
+        "git_sha": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Git Sha"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "generator"
+      ],
+      "title": "BuildMetadata",
+      "type": "object"
+    },
+    "Edge": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "corroborating_provenance": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Provenance"
+          },
+          "title": "Corroborating Provenance",
+          "type": "array"
+        },
+        "edge_id": {
+          "pattern": "^edge_[0-9]{4,}$",
+          "title": "Edge Id",
+          "type": "string"
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "relation": {
+          "$ref": "#/$defs/RelationType"
+        },
+        "source": {
+          "pattern": "^[a-z]+:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "pattern": "^[a-z]+:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Target",
+          "type": "string"
+        }
+      },
+      "required": [
+        "edge_id",
+        "source",
+        "relation",
+        "target",
+        "provenance",
+        "confidence"
+      ],
+      "title": "Edge",
+      "type": "object"
+    },
+    "Entity": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "attributes": {
+          "additionalProperties": true,
+          "title": "Attributes",
+          "type": "object"
+        },
+        "definition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Definition"
+        },
+        "id": {
+          "pattern": "^[a-z]+:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/EntityType"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "label"
+      ],
+      "title": "Entity",
+      "type": "object"
+    },
+    "EntityType": {
+      "enum": [
+        "Paper",
+        "ResearchProblem",
+        "Method",
+        "Technique",
+        "Concept",
+        "Benchmark",
+        "Claim",
+        "Limitation",
+        "ResearchDirection"
+      ],
+      "title": "EntityType",
+      "type": "string"
+    },
+    "Integrity": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "content_sha256"
+      ],
+      "title": "Integrity",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Attribution"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "curated_by": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Curated By"
+        },
+        "curation_ref": {
+          "anyOf": [
+            {
+              "pattern": "^cur_[0-9]{4,}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Curation Ref"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence"
+        },
+        "knowledge_build_version": {
+          "minLength": 1,
+          "title": "Knowledge Build Version",
+          "type": "string"
+        },
+        "mapping_decision": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mapping Decision"
+        },
+        "ontology_version": {
+          "minLength": 1,
+          "title": "Ontology Version",
+          "type": "string"
+        },
+        "rule_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.\\-]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rule Id"
+        },
+        "source_field": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceField"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_paper_id": {
+          "anyOf": [
+            {
+              "pattern": "^paper:[a-z0-9][a-z0-9_.\\-]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Paper Id"
+        },
+        "type": {
+          "$ref": "#/$defs/ProvenanceType"
+        }
+      },
+      "required": [
+        "type",
+        "ontology_version",
+        "knowledge_build_version"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "ProvenanceType": {
+      "description": "Section 8. UNKNOWN, UNSOURCED and LLM_INFERRED deliberately do not exist.",
+      "enum": [
+        "EXPLICIT_METADATA",
+        "RULE_DERIVED",
+        "MANUALLY_CURATED"
+      ],
+      "title": "ProvenanceType",
+      "type": "string"
+    },
+    "RelationType": {
+      "enum": [
+        "CITES",
+        "CITED_BY",
+        "ADDRESSES",
+        "PROPOSES",
+        "USES",
+        "DEPENDS_ON",
+        "EVALUATES_ON",
+        "MEASURES_WITH",
+        "BUILDS_ON",
+        "EXTENDS",
+        "COMPARES_WITH",
+        "SUPPORTS",
+        "CHALLENGES",
+        "REPORTS_LIMITATION",
+        "MOTIVATES",
+        "PREREQUISITE_FOR",
+        "ALTERNATIVE_TO",
+        "GENERALIZES",
+        "SPECIALIZES",
+        "COMBINES_WITH"
+      ],
+      "title": "RelationType",
+      "type": "string"
+    },
+    "SourceField": {
+      "enum": [
+        "title",
+        "abstract",
+        "authors",
+        "year",
+        "venue",
+        "identifiers",
+        "references",
+        "citations",
+        "citation_context",
+        "curation_file"
+      ],
+      "title": "SourceField",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "ambiguities": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/AmbiguityRecord"
+      },
+      "title": "Ambiguities",
+      "type": "array"
+    },
+    "build_metadata": {
+      "$ref": "#/$defs/BuildMetadata"
+    },
+    "corpus_version": {
+      "minLength": 1,
+      "title": "Corpus Version",
+      "type": "string"
+    },
+    "entities": {
+      "items": {
+        "$ref": "#/$defs/Entity"
+      },
+      "title": "Entities",
+      "type": "array"
+    },
+    "integrity": {
+      "$ref": "#/$defs/Integrity"
+    },
+    "knowledge_build_version": {
+      "minLength": 1,
+      "title": "Knowledge Build Version",
+      "type": "string"
+    },
+    "ontology_version": {
+      "minLength": 1,
+      "title": "Ontology Version",
+      "type": "string"
+    },
+    "relationships": {
+      "items": {
+        "$ref": "#/$defs/Edge"
+      },
+      "title": "Relationships",
+      "type": "array"
+    },
+    "schema_version": {
+      "minLength": 1,
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "ontology_version",
+    "corpus_version",
+    "knowledge_build_version",
+    "build_metadata",
+    "integrity",
+    "entities",
+    "relationships"
+  ],
+  "title": "KnowledgeState",
+  "type": "object"
+}

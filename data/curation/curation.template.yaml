@@ -1,0 +1,20 @@
+# BLANK TEMPLATE. MANUALLY_CURATED edges must be authored by the human researcher.
+# The coding agent supplies only this format and its validation; it never proposes edge content.
+# Only APPROVED edges are used by a build. Sparse is preferable to invented edges.
+#
+# Example (generic, for format only):
+#   - curation_id: cur_0001
+#     source: concept:example_a
+#     relation: PREREQUISITE_FOR
+#     target: method:example_b
+#     rationale: Why this relation holds, in your words.
+#     evidence: []          # required when the source is a Paper: [{paper_id, source_field, passage}]
+#     authorship: HUMAN
+#     curated_by: "<your name>"
+#     approval: {status: APPROVED, approved_by: "<your name>", approved_on: "2026-01-01"}
+#
+# REPORTS_LIMITATION also needs `attribution: SELF_REPORTED | THIRD_PARTY` and an evidence
+# entry naming the reporting paper.
+curation_version: "0.1.0-template"
+curator: "<your name>"
+edges: []

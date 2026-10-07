@@ -1,0 +1,7 @@
+# BLANK TEMPLATE. Human-authored; written BEFORE the rule registry is frozen and WITHOUT viewing any
+# system output. The coding agent must not author or revise gold labels or facet text.
+# See docs/research_contract.md (49.5b rules 8-10, 49.9) for the structure rules.
+# After authoring the test file, seal it:  python scripts/seal_gold.py data/evaluation/gold_dev.yaml
+gold_version: "0.1.0-template"
+split: dev
+proposals: []

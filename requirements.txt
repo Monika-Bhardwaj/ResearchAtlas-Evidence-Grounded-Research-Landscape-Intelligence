@@ -1,0 +1,7 @@
+# Runtime dependencies approved for Milestone 1.
+# Later-milestone dependencies (requests, numpy, networkx, sentence-transformers) were
+# approved in principle at the A-J review but are NOT installed or used until the
+# milestone that needs them.
+pydantic>=2.5
+PyYAML>=6.0
+jsonschema>=4.20

@@ -1,0 +1,386 @@
+{
+  "$defs": {
+    "EntitySource": {
+      "enum": [
+        "CORPUS",
+        "APPROVED_VOCABULARY"
+      ],
+      "title": "EntitySource",
+      "type": "string"
+    },
+    "EntitySpec": {
+      "additionalProperties": false,
+      "properties": {
+        "definition": {
+          "minLength": 1,
+          "title": "Definition",
+          "type": "string"
+        },
+        "entity_source": {
+          "$ref": "#/$defs/EntitySource"
+        },
+        "id_prefix": {
+          "pattern": "^[a-z]+$",
+          "title": "Id Prefix",
+          "type": "string"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "required_attributes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Required Attributes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id_prefix",
+        "entity_source",
+        "definition",
+        "rationale"
+      ],
+      "title": "EntitySpec",
+      "type": "object"
+    },
+    "Estimate": {
+      "additionalProperties": false,
+      "description": "Planning estimates made BEFORE any corpus or rule exists. Not quotas.",
+      "properties": {
+        "curated_edges": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Curated Edges",
+          "type": "array"
+        },
+        "curation_minutes_per_edge": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Curation Minutes Per Edge",
+          "type": "array"
+        },
+        "edges": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Edges",
+          "type": "array"
+        }
+      },
+      "required": [
+        "edges",
+        "curated_edges",
+        "curation_minutes_per_edge"
+      ],
+      "title": "Estimate",
+      "type": "object"
+    },
+    "ExpectedPrecision": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "NOT_APPLICABLE"
+      ],
+      "title": "ExpectedPrecision",
+      "type": "string"
+    },
+    "ProvenanceType": {
+      "description": "Section 8. UNKNOWN, UNSOURCED and LLM_INFERRED deliberately do not exist.",
+      "enum": [
+        "EXPLICIT_METADATA",
+        "RULE_DERIVED",
+        "MANUALLY_CURATED"
+      ],
+      "title": "ProvenanceType",
+      "type": "string"
+    },
+    "ReasonOnly": {
+      "additionalProperties": false,
+      "properties": {
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reason"
+      ],
+      "title": "ReasonOnly",
+      "type": "object"
+    },
+    "RelationSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_provenance": {
+          "items": {
+            "$ref": "#/$defs/ProvenanceType"
+          },
+          "title": "Allowed Provenance",
+          "type": "array"
+        },
+        "category": {
+          "enum": [
+            "bibliographic",
+            "research_structure",
+            "evidence",
+            "research_direction"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "definition": {
+          "minLength": 1,
+          "title": "Definition",
+          "type": "string"
+        },
+        "domain": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Domain",
+          "type": "array"
+        },
+        "estimate": {
+          "$ref": "#/$defs/Estimate"
+        },
+        "estimate_note": {
+          "minLength": 1,
+          "title": "Estimate Note",
+          "type": "string"
+        },
+        "expected_precision": {
+          "$ref": "#/$defs/ExpectedPrecision"
+        },
+        "failure_modes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Failure Modes",
+          "type": "array"
+        },
+        "inverse_of": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RelationType"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "mirror_of": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RelationType"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "primary_source": {
+          "title": "Primary Source",
+          "type": "string"
+        },
+        "range": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Range",
+          "type": "array"
+        },
+        "range_extension": {
+          "default": false,
+          "title": "Range Extension",
+          "type": "boolean"
+        },
+        "range_semantics": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Range Semantics"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "requires_attribution": {
+          "default": false,
+          "title": "Requires Attribution",
+          "type": "boolean"
+        },
+        "requires_evidence": {
+          "default": false,
+          "title": "Requires Evidence",
+          "type": "boolean"
+        },
+        "requires_source_paper": {
+          "default": false,
+          "title": "Requires Source Paper",
+          "type": "boolean"
+        },
+        "status": {
+          "$ref": "#/$defs/RelationStatus"
+        },
+        "symmetric": {
+          "default": false,
+          "title": "Symmetric",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "category",
+        "domain",
+        "range",
+        "status",
+        "definition",
+        "rationale",
+        "allowed_provenance",
+        "primary_source",
+        "expected_precision",
+        "estimate",
+        "estimate_note"
+      ],
+      "title": "RelationSpec",
+      "type": "object"
+    },
+    "RelationStatus": {
+      "enum": [
+        "ACTIVE",
+        "DERIVED_INVERSE",
+        "DEFERRED"
+      ],
+      "title": "RelationStatus",
+      "type": "string"
+    },
+    "RelationType": {
+      "enum": [
+        "CITES",
+        "CITED_BY",
+        "ADDRESSES",
+        "PROPOSES",
+        "USES",
+        "DEPENDS_ON",
+        "EVALUATES_ON",
+        "MEASURES_WITH",
+        "BUILDS_ON",
+        "EXTENDS",
+        "COMPARES_WITH",
+        "SUPPORTS",
+        "CHALLENGES",
+        "REPORTS_LIMITATION",
+        "MOTIVATES",
+        "PREREQUISITE_FOR",
+        "ALTERNATIVE_TO",
+        "GENERALIZES",
+        "SPECIALIZES",
+        "COMBINES_WITH"
+      ],
+      "title": "RelationType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "deferred_entities": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ReasonOnly"
+      },
+      "title": "Deferred Entities",
+      "type": "object"
+    },
+    "entities": {
+      "additionalProperties": {
+        "$ref": "#/$defs/EntitySpec"
+      },
+      "title": "Entities",
+      "type": "object"
+    },
+    "excluded_entities": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ReasonOnly"
+      },
+      "title": "Excluded Entities",
+      "type": "object"
+    },
+    "non_relations": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Non Relations",
+      "type": "object"
+    },
+    "ontology_version": {
+      "minLength": 1,
+      "title": "Ontology Version",
+      "type": "string"
+    },
+    "relations": {
+      "additionalProperties": {
+        "$ref": "#/$defs/RelationSpec"
+      },
+      "title": "Relations",
+      "type": "object"
+    },
+    "schema_version": {
+      "minLength": 1,
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ontology_version",
+    "schema_version",
+    "entities",
+    "deferred_entities",
+    "excluded_entities",
+    "non_relations",
+    "relations"
+  ],
+  "title": "OntologySpec",
+  "type": "object"
+}

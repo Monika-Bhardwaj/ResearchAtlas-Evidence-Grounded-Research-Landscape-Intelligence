@@ -1,0 +1,373 @@
+# ResearchMap ontology v0.1.0 (Milestone 1).
+# Human-reviewed specification. The vocabulary is CLOSED: exactly the 9 entity types and
+# 20 relation types of Sections 6-7. The loader fails on any extra or missing key.
+# Planning estimates below are ESTIMATES made before any corpus or rule exists. They are
+# not quotas, and an edge that cannot be justified is not created (Section 8).
+
+ontology_version: "0.1.0"
+schema_version: "0.1.0"
+
+entities:
+  Paper:
+    id_prefix: paper
+    entity_source: CORPUS
+    definition: A scholarly paper in the frozen corpus, identified by a canonical identifier.
+    rationale: Evidence anchor. Every semantic edge is traceable to a paper.
+    required_attributes: [title]
+  ResearchProblem:
+    id_prefix: problem
+    entity_source: APPROVED_VOCABULARY
+    definition: A named problem that papers address (for example, long-horizon recall in agents).
+    rationale: Positioning facets map to problems; supports the ProblemOverlap feature.
+    required_attributes: []
+  Method:
+    id_prefix: method
+    entity_source: APPROVED_VOCABULARY
+    definition: A named, citable approach proposed by a paper.
+    rationale: Typed method overlap and PROPOSES; subject of reported limitations.
+    required_attributes: []
+  Technique:
+    id_prefix: technique
+    entity_source: APPROVED_VOCABULARY
+    definition: A reusable mechanism that appears across methods (for example, summarization-based consolidation).
+    rationale: Lets methods be compared and given prerequisites at the mechanism level.
+    required_attributes: []
+  Concept:
+    id_prefix: concept
+    entity_source: APPROVED_VOCABULARY
+    definition: A controlled-vocabulary notion (for example, episodic memory, selective forgetting).
+    rationale: Deterministic grounding of proposals and facets; ConceptOverlap.
+    required_attributes: []
+  Benchmark:
+    id_prefix: benchmark
+    entity_source: APPROVED_VOCABULARY
+    definition: A named evaluation suite or dataset-plus-protocol (Dataset is folded into Benchmark).
+    rationale: EVALUATES_ON and the BenchmarkOverlap feature.
+    required_attributes: []
+  Claim:
+    id_prefix: claim
+    entity_source: APPROVED_VOCABULARY
+    definition: A specific assertion that corpus papers support or challenge.
+    rationale: Tension analysis (T4) needs a shared object that papers support or challenge.
+    required_attributes: []
+  Limitation:
+    id_prefix: limitation
+    entity_source: APPROVED_VOCABULARY
+    definition: A reported weakness of a method.
+    rationale: Negative knowledge (Section 23); motivates research directions.
+    required_attributes: []
+  ResearchDirection:
+    id_prefix: direction
+    entity_source: APPROVED_VOCABULARY
+    definition: An open research direction motivated by one or more limitations.
+    rationale: Final link of the decision chain (Section 1).
+    required_attributes: []
+
+deferred_entities:
+  Metric:
+    reason: Metric extraction from abstracts is noisy and no v0.1 task needs it. MEASURES_WITH is defined but not instantiable until Metric is approved.
+
+excluded_entities:
+  Author:
+    reason: A Paper attribute; no reasoning step consumes authors.
+  Dataset:
+    reason: Folded into Benchmark to keep one evaluation-target entity.
+
+# Labels that look like predicates but are NOT ontology relations. The loader fails if any
+# of them appears as a relation key.
+non_relations:
+  CONFLICTING: Tension status. An output and evaluation label derived at query time from SUPPORTS and CHALLENGES edges on a Claim; never stored.
+  INSUFFICIENT_EVIDENCE: Tension and abstention status. An output and evaluation label; never stored.
+  HAS_LIMITATION: Rejected alias. The canonical Method-to-Limitation relation is REPORTS_LIMITATION.
+
+relations:
+  # ---------------------------------------------------------------- Bibliographic
+  CITES:
+    category: bibliographic
+    domain: [Paper]
+    range: [Paper]
+    status: ACTIVE
+    definition: The source paper's reference list contains the target paper (bibliographic metadata from the source API).
+    rationale: Raw bibliographic structure for graph proximity and citation connectivity. Carries no semantic claim.
+    allowed_provenance: [EXPLICIT_METADATA]
+    primary_source: EXPLICIT_METADATA
+    expected_precision: HIGH
+    failure_modes: [Reference lists incomplete or mis-resolved by the source API, Identity ambiguity between versions of a paper]
+    estimate: {edges: [0, 0], curated_edges: [0, 0], curation_minutes_per_edge: [0, 0]}
+    estimate_note: Count is determined by the frozen corpus and is measured at M2, not estimated here.
+  CITED_BY:
+    category: bibliographic
+    domain: [Paper]
+    range: [Paper]
+    status: DERIVED_INVERSE
+    inverse_of: CITES
+    definition: Inverse view of CITES. Computed at query time; never stored.
+    rationale: Avoids storing every citation twice.
+    allowed_provenance: []
+    primary_source: NONE
+    expected_precision: NOT_APPLICABLE
+    failure_modes: []
+    estimate: {edges: [0, 0], curated_edges: [0, 0], curation_minutes_per_edge: [0, 0]}
+    estimate_note: Not stored.
+
+  # ---------------------------------------------------------------- Research structure
+  ADDRESSES:
+    category: research_structure
+    domain: [Paper]
+    range: [ResearchProblem, Concept]
+    range_extension: true
+    status: ACTIVE
+    definition: >-
+      The target is the focal subject of the paper's contribution or analysis. ADDRESSES never
+      means "mentions" or "is related to". Incidental, background, comparative, list-style,
+      negated and "such as" occurrences create no edge.
+    range_semantics:
+      ResearchProblem: The paper states that its aim is to solve, improve on, or measure the problem.
+      Concept: >-
+        The concept is the focal subject of the paper. A rule may create the edge only when an
+        approved alias appears in the title, or as the object of a registered contribution
+        pattern ("we propose/study/evaluate ... <alias>") within a single abstract sentence.
+    rationale: >-
+      Supplies the only Paper-to-Concept link without adding a relation type (range extension of
+      an existing relation, recorded in ADR-0008). Concept overlap is therefore computed over focal
+      concepts only, which lowers recall by design.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: MEDIUM
+    failure_modes: [Alias also names a background topic, Contribution pattern matches a related-work sentence, Low recall because abstracts rarely state focus explicitly]
+    estimate: {edges: [40, 110], curated_edges: [0, 15], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Mostly rule-derived; curation only fills clear rule misses.
+  PROPOSES:
+    category: research_structure
+    domain: [Paper]
+    range: [Method]
+    status: ACTIVE
+    definition: The paper introduces the target as its own named method.
+    rationale: Typed method overlap and attribution of limitations to their proposing paper.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: HIGH
+    failure_modes: [Method name appears in the title of a paper that only evaluates it, Papers that propose a method without a distinctive name]
+    estimate: {edges: [20, 45], curated_edges: [0, 10], curation_minutes_per_edge: [2, 3]}
+    estimate_note: High precision, low recall (title-name matching).
+  USES:
+    category: research_structure
+    domain: [Paper]
+    range: [Method, Technique]
+    status: ACTIVE
+    definition: The paper's own approach or experiments employ the target as a component.
+    rationale: Method and technique overlap beyond what a paper proposes.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: MEDIUM
+    failure_modes: [Mention is treated as use, Use in a baseline versus use in the proposed system is not distinguished]
+    estimate: {edges: [40, 120], curated_edges: [0, 15], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Main precision risk is that a mention is not a use.
+  DEPENDS_ON:
+    category: research_structure
+    domain: [Method]
+    range: [Technique, Concept]
+    status: ACTIVE
+    definition: The method requires the target technique or concept in order to function.
+    rationale: Entity-level structure behind prerequisites and reading paths.
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: HIGH
+    failure_modes: [Optional components recorded as hard dependencies]
+    estimate: {edges: [20, 40], curated_edges: [20, 40], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level, so the curated set stays small.
+  EVALUATES_ON:
+    category: research_structure
+    domain: [Paper]
+    range: [Benchmark]
+    status: ACTIVE
+    definition: The paper reports results on the target benchmark.
+    rationale: BenchmarkOverlap and evaluation-aware reading paths.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: HIGH
+    failure_modes: [Benchmark named only in related work]
+    estimate: {edges: [15, 50], curated_edges: [0, 8], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Exact benchmark names only.
+  MEASURES_WITH:
+    category: research_structure
+    domain: [Paper]
+    range: [Metric]
+    status: DEFERRED
+    definition: Deferred. The paper reports the target metric. Not instantiable until Metric is approved.
+    rationale: Kept in the closed vocabulary so Section 7 remains complete; no v0.1 task needs it.
+    allowed_provenance: []
+    primary_source: NONE
+    expected_precision: NOT_APPLICABLE
+    failure_modes: []
+    estimate: {edges: [0, 0], curated_edges: [0, 0], curation_minutes_per_edge: [0, 0]}
+    estimate_note: Deferred.
+  BUILDS_ON:
+    category: research_structure
+    domain: [Paper]
+    range: [Paper]
+    status: ACTIVE
+    definition: The source paper states that it builds on the target paper, and cites it.
+    rationale: Lineage between papers for foundation-to-recent reading paths.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: MEDIUM
+    failure_modes: [Generic "building on prior work" phrases without a resolvable target]
+    estimate: {edges: [0, 25], curated_edges: [0, 8], curation_minutes_per_edge: [3, 5]}
+    estimate_note: Created only when an explicit phrase, a registered alias and a citation all agree. May be sparse or empty.
+  EXTENDS:
+    category: research_structure
+    domain: [Paper]
+    range: [Paper]
+    status: ACTIVE
+    definition: The source paper states that it extends the target paper's method, and cites it.
+    rationale: A stronger lineage statement than BUILDS_ON.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: MEDIUM
+    failure_modes: [Confusion with BUILDS_ON, Phrase without a resolvable target]
+    estimate: {edges: [0, 25], curated_edges: [0, 8], curation_minutes_per_edge: [3, 5]}
+    estimate_note: Same conditions as BUILDS_ON. May be sparse or empty.
+  COMPARES_WITH:
+    category: research_structure
+    domain: [Paper]
+    range: [Method]
+    status: ACTIVE
+    definition: The paper reports an empirical or analytical comparison against the target method.
+    rationale: Surfaces competing methods for a facet.
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: RULE_DERIVED
+    expected_precision: MEDIUM
+    failure_modes: [Comparison language used for related work, not experiments]
+    estimate: {edges: [5, 30], curated_edges: [0, 8], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Phrase plus registered alias; sparse.
+
+  # ---------------------------------------------------------------- Evidence
+  SUPPORTS:
+    category: evidence
+    domain: [Paper]
+    range: [Claim]
+    status: ACTIVE
+    definition: The paper provides evidence for the target claim.
+    rationale: One side of tension analysis (T4).
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: HIGH
+    failure_modes: [Claim wording drifts from what the paper shows, Single-paper support over-read as consensus]
+    estimate: {edges: [25, 60], curated_edges: [25, 60], curation_minutes_per_edge: [5, 8]}
+    estimate_note: Curated because abstract-only data cannot support rule-derived claim evidence at useful precision.
+  CHALLENGES:
+    category: evidence
+    domain: [Paper]
+    range: [Claim]
+    status: ACTIVE
+    definition: The paper provides evidence against the target claim.
+    rationale: The other side of tension analysis (T4).
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: HIGH
+    failure_modes: [Different experimental regimes read as disagreement]
+    estimate: {edges: [5, 20], curated_edges: [5, 20], curation_minutes_per_edge: [5, 8]}
+    estimate_note: Expected to be rare. Sparse is preferable to invented edges.
+  REPORTS_LIMITATION:
+    category: evidence
+    domain: [Method]
+    range: [Limitation]
+    status: ACTIVE
+    definition: >-
+      Paper P reports that Method M has Limitation L. This is an ATTRIBUTED assertion by P, not a
+      verified property of M. The reporting paper, source field, evidence span and attribution
+      (SELF_REPORTED if P proposes M, THIRD_PARTY otherwise) are mandatory in provenance for every
+      provenance type.
+    rationale: Negative knowledge chain Method -> Limitation -> ResearchDirection (Section 23).
+    allowed_provenance: [RULE_DERIVED, MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    requires_source_paper: true
+    requires_evidence: true
+    requires_attribution: true
+    expected_precision: MEDIUM
+    failure_modes: [Abstracts rarely state limitations, Limitation phrase not linkable to a specific method, Third-party critique recorded as self-report]
+    estimate: {edges: [10, 30], curated_edges: [8, 25], curation_minutes_per_edge: [5, 8]}
+    estimate_note: Rule coverage is expected to be small; most edges will be curated. Sparse is acceptable.
+  # ---------------------------------------------------------------- Research direction
+  MOTIVATES:
+    category: research_direction
+    domain: [Limitation]
+    range: [ResearchDirection]
+    status: ACTIVE
+    definition: Addressing the source limitation is a reason for pursuing the target direction.
+    rationale: Completes Method -> Limitation -> ResearchDirection.
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: MEDIUM
+    failure_modes: [Directions asserted without corpus support]
+    estimate: {edges: [10, 25], curated_edges: [10, 25], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level; the curated set stays small.
+  PREREQUISITE_FOR:
+    category: research_direction
+    domain: [Concept, Technique, Method]
+    range: [Concept, Technique, Method]
+    status: ACTIVE
+    definition: Understanding or implementing the source is required to understand or implement the target.
+    rationale: Drives the prerequisite-aware reading path.
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: MEDIUM
+    failure_modes: [Prerequisite cycles, Pedagogical order confused with technical dependency]
+    estimate: {edges: [20, 40], curated_edges: [20, 40], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level. The validator rejects cycles at M3.
+  ALTERNATIVE_TO:
+    category: research_direction
+    domain: [Method, Technique]
+    range: [Method, Technique]
+    status: ACTIVE
+    symmetric: true
+    definition: The two entities are interchangeable approaches to the same sub-problem. Symmetric; stored once with source id < target id.
+    rationale: Surfaces alternative methods for a facet.
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: MEDIUM
+    failure_modes: [Complementary approaches recorded as alternatives]
+    estimate: {edges: [8, 20], curated_edges: [8, 20], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level.
+  GENERALIZES:
+    category: research_direction
+    domain: [Concept, Technique, Method]
+    range: [Concept, Technique, Method]
+    status: ACTIVE
+    definition: The source is a more general form of the target.
+    rationale: Hierarchy for grounding and facet coverage.
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: MEDIUM
+    failure_modes: [Direction inverted]
+    estimate: {edges: [5, 15], curated_edges: [5, 15], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level. Curate either GENERALIZES or SPECIALIZES for a pair, never both.
+  SPECIALIZES:
+    category: research_direction
+    domain: [Concept, Technique, Method]
+    range: [Concept, Technique, Method]
+    status: ACTIVE
+    mirror_of: GENERALIZES
+    definition: The source is a more specific form of the target. SPECIALIZES(B, A) states the same fact as GENERALIZES(A, B), so the validator rejects storing both.
+    rationale: Kept ACTIVE because it is in Section 7; the mirror rule prevents duplicate facts.
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: MEDIUM
+    failure_modes: [Direction inverted]
+    estimate: {edges: [5, 10], curated_edges: [5, 10], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level.
+  COMBINES_WITH:
+    category: research_direction
+    domain: [Concept, Technique, Method]
+    range: [Concept, Technique, Method]
+    status: ACTIVE
+    symmetric: true
+    definition: The two entities are used together in published work. Symmetric; stored once with source id < target id.
+    rationale: Evidence for combination facets (a facet that joins two concepts).
+    allowed_provenance: [MANUALLY_CURATED]
+    primary_source: MANUALLY_CURATED
+    expected_precision: MEDIUM
+    failure_modes: [Co-occurrence read as combination]
+    estimate: {edges: [5, 15], curated_edges: [5, 15], curation_minutes_per_edge: [2, 3]}
+    estimate_note: Entity-level.

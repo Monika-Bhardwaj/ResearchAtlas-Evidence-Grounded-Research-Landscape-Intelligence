@@ -1,0 +1,323 @@
+{
+  "$defs": {
+    "Annotation": {
+      "additionalProperties": false,
+      "properties": {
+        "annotator": {
+          "minLength": 1,
+          "title": "Annotator",
+          "type": "string"
+        },
+        "authorship": {
+          "const": "HUMAN",
+          "title": "Authorship",
+          "type": "string"
+        },
+        "without_system_output": {
+          "const": true,
+          "title": "Without System Output",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "authorship",
+        "annotator",
+        "without_system_output"
+      ],
+      "title": "Annotation",
+      "type": "object"
+    },
+    "EvidenceSufficiency": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "INSUFFICIENT"
+      ],
+      "title": "EvidenceSufficiency",
+      "type": "string"
+    },
+    "GoldFacet": {
+      "additionalProperties": false,
+      "properties": {
+        "facet_id": {
+          "pattern": "^(dev|test)-[0-9]{3}\\.f[1-9][0-9]*$",
+          "title": "Facet Id",
+          "type": "string"
+        },
+        "facet_text": {
+          "minLength": 1,
+          "title": "Facet Text",
+          "type": "string"
+        },
+        "gold_ambiguous": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Gold Ambiguous",
+          "type": "array"
+        },
+        "gold_concepts": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Gold Concepts",
+          "type": "array"
+        },
+        "gold_label": {
+          "$ref": "#/$defs/PositioningLabel"
+        },
+        "gold_unknown": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Gold Unknown",
+          "type": "array"
+        },
+        "is_combination": {
+          "default": false,
+          "title": "Is Combination",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "facet_id",
+        "facet_text",
+        "gold_label"
+      ],
+      "title": "GoldFacet",
+      "type": "object"
+    },
+    "GoldProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "annotation": {
+          "$ref": "#/$defs/Annotation"
+        },
+        "expected_uncertainty": {
+          "$ref": "#/$defs/EvidenceSufficiency"
+        },
+        "facets": {
+          "items": {
+            "$ref": "#/$defs/GoldFacet"
+          },
+          "minItems": 1,
+          "title": "Facets",
+          "type": "array"
+        },
+        "gold_tensions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/GoldTension"
+          },
+          "title": "Gold Tensions",
+          "type": "array"
+        },
+        "prerequisites": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Prerequisite"
+          },
+          "title": "Prerequisites",
+          "type": "array"
+        },
+        "proposal_id": {
+          "pattern": "^(dev|test)-[0-9]{3}$",
+          "title": "Proposal Id",
+          "type": "string"
+        },
+        "raw_text": {
+          "minLength": 1,
+          "title": "Raw Text",
+          "type": "string"
+        },
+        "relevant_methods": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Relevant Methods",
+          "type": "array"
+        },
+        "relevant_papers": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RelevantPaper"
+          },
+          "title": "Relevant Papers",
+          "type": "array"
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "split": {
+          "$ref": "#/$defs/Split"
+        }
+      },
+      "required": [
+        "proposal_id",
+        "split",
+        "scope",
+        "raw_text",
+        "facets",
+        "expected_uncertainty",
+        "annotation"
+      ],
+      "title": "GoldProposal",
+      "type": "object"
+    },
+    "GoldTension": {
+      "additionalProperties": false,
+      "properties": {
+        "challenging": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Challenging",
+          "type": "array"
+        },
+        "claim_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Claim Id"
+        },
+        "facet_id": {
+          "minLength": 1,
+          "title": "Facet Id",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/TensionStatus"
+        },
+        "supporting": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting",
+          "type": "array"
+        }
+      },
+      "required": [
+        "facet_id",
+        "status"
+      ],
+      "title": "GoldTension",
+      "type": "object"
+    },
+    "PositioningLabel": {
+      "enum": [
+        "WELL_EXPLORED",
+        "PARTIALLY_EXPLORED",
+        "UNDERREPRESENTED",
+        "UNKNOWN"
+      ],
+      "title": "PositioningLabel",
+      "type": "string"
+    },
+    "Prerequisite": {
+      "additionalProperties": false,
+      "properties": {
+        "after": {
+          "minLength": 1,
+          "title": "After",
+          "type": "string"
+        },
+        "before": {
+          "minLength": 1,
+          "title": "Before",
+          "type": "string"
+        }
+      },
+      "required": [
+        "before",
+        "after"
+      ],
+      "title": "Prerequisite",
+      "type": "object"
+    },
+    "RelevantPaper": {
+      "additionalProperties": false,
+      "description": "Only papers a human judged relevant are listed; unlisted papers count as 0.",
+      "properties": {
+        "paper_id": {
+          "pattern": "^paper:[a-z0-9][a-z0-9_.\\-]*$",
+          "title": "Paper Id",
+          "type": "string"
+        },
+        "relevance": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Relevance",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "paper_id",
+        "relevance"
+      ],
+      "title": "RelevantPaper",
+      "type": "object"
+    },
+    "Scope": {
+      "enum": [
+        "IN_SCOPE",
+        "OUT_OF_SCOPE"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "Split": {
+      "enum": [
+        "dev",
+        "test"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "TensionStatus": {
+      "enum": [
+        "CONFLICTING",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "title": "TensionStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "gold_version": {
+      "minLength": 1,
+      "title": "Gold Version",
+      "type": "string"
+    },
+    "proposals": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/GoldProposal"
+      },
+      "title": "Proposals",
+      "type": "array"
+    },
+    "split": {
+      "$ref": "#/$defs/Split"
+    }
+  },
+  "required": [
+    "gold_version",
+    "split"
+  ],
+  "title": "GoldSet",
+  "type": "object"
+}
