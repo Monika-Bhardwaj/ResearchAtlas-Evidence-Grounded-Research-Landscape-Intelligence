@@ -44,17 +44,23 @@ def test_all_twelve_adrs_exist_with_the_required_sections():
             assert h in text, (p.name, h)
 
 
-def test_no_premature_implementation_only_placeholders_in_later_milestone_packages():
-    # Milestones 4+ packages remain placeholders; ingestion and corpus are now M2 code.
-    for pkg in ("reasoning", "interface"):
-        files = [p.name for p in (REPO_ROOT / "src" / pkg).iterdir() if p.is_file() and p.suffix == ".py"]
-        assert files == ["__init__.py"], (pkg, files)
-        assert "Placeholder" in (REPO_ROOT / "src" / pkg / "__init__.py").read_text(encoding="utf-8")
-    assert (REPO_ROOT / "src" / "ingestion" / "semantic_scholar.py").exists()
-    assert (REPO_ROOT / "src" / "corpus" / "pool.py").exists()
+def test_later_milestone_packages_now_have_expected_entrypoints():
+    # M2-M4 code is present; the old placeholder-only test has been retired.
+    for path in (
+        "src/ingestion/arxiv.py",
+        "src/corpus/pool.py",
+        "src/knowledge/builder.py",
+        "src/reasoning/engine.py",
+        "src/interface/cli.py",
+    ):
+        assert (REPO_ROOT / path).exists(), path
 
 
-def test_data_directory_holds_only_blank_templates_and_empty_dirs():
+def test_data_directory_holds_generated_m2_m3_artifacts_and_no_gold_yaml():
     for p in (REPO_ROOT / "data").rglob("*"):
         if p.is_file():
-            assert p.name.endswith(".template.yaml"), f"unexpected data file: {p}"
+            name = p.name
+            if name.endswith(".template.yaml"):
+                continue
+            # Gold files stay blank and must never contain generated agent-authored facets at this stage.
+            assert "gold" not in name or name.endswith(".template.yaml"), p
